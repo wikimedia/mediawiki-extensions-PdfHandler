@@ -103,10 +103,8 @@ class PdfHandler extends ImageHandler {
 							wfMsg( 'pdf_page_error' ) );
 		
 		if ( $flags & self::TRANSFORM_LATER )
-			return new ThumbnailImage(  $dstUrl, 
-						    $width, 
-						    $height, 
-						    $dstPath );
+			return new ThumbnailImage( $image, $dstUrl, $width, 
+						   $height, $dstPath, $page );
 
 		if ( !wfMkdirParents( dirname( $dstPath ) ) )
 			return new MediaTransformError( 'thumbnail_error', 
@@ -134,7 +132,7 @@ class PdfHandler extends ImageHandler {
 				wfHostname(), $retval, trim($err), $cmd ) );
 			return new MediaTransformError( 'thumbnail_error', $width, $height, $err );
 		} else {
-			return new ThumbnailImage( $dstUrl, $width, $height, $dstPath );
+			return new ThumbnailImage( $image, $dstUrl, $width, $height, $dstPath, $page );
 		}
 	}
 

@@ -40,3 +40,22 @@
 	$wgAutoloadClasses['PdfImage'] = dirname(__FILE__) . '/PdfImage.php';
 	$wgAutoloadClasses['PdfHandler'] = dirname(__FILE__) . '/PdfHandler.php';
 	$wgMediaHandlers['application/pdf'] = 'PdfHandler';
+	$wgExtensionFunctions[] = 'wfPdfHandlerLoadMessages';
+
+	/* load messages */
+	function wfPdfHandlerLoadMessages() {
+    		global $wgMessageCache;
+		static $msgLoaded = false;
+
+		if ( $msgLoaded )
+			return false;
+
+		$msgLoaded = true;
+		require( dirname( __FILE__ ) . '/PdfHandler_i18n.php' );
+
+		foreach ( efPdfHandlerMessages() as $lang => $messagesForLang ) {
+			$wgMessageCache->addMessages( $messagesForLang, $lang );
+		}
+
+		return true;
+	}
