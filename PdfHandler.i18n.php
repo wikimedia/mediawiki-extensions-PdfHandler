@@ -16,6 +16,11 @@ function efPdfHandlerMessages() {
 			'pdf_page_error' => 'Seitenzahl außerhalb des Dokumentes.',
 		),
 
+		'hsb' => array(
+			'pdf_no_xml' => 'W pdf žane metadaty njejsu.',
+			'pdf_page_error' => 'Ličba strony zwonka dokumenta.',
+		),
+
 		'nl' => array(
 			'pdf_no_xml' => 'de metadata van de PDF kan niet uitgelezen worden',
 			'pdf_page_error' => 'paginanummer komt niet voor in document',
