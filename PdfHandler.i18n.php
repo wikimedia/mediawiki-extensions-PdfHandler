@@ -26,6 +26,11 @@ function efPdfHandlerMessages() {
 			'pdf_page_error' => 'paginanummer komt niet voor in document',
 		),
 
+		'pt' => array(
+			'pdf_no_xml' => 'não foi possível obter os metadados do pdf',
+			'pdf_page_error' => 'página indisponível neste intervalo',
+		),
+
 		'yue' => array(
 			'pdf_no_xml' => '唔能夠響PDF度拎metadata',
 			'pdf_page_error' => '頁數唔響範圍度',
