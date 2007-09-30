@@ -11,6 +11,10 @@ function efPdfHandlerMessages() {
 			'pdf_page_error' => 'page number not in range',
 		),
 
+		'ar' => array(
+			'pdf_page_error' => 'رقم الصفحة ليس في النطاق',
+		),
+
 		'de' => array(
 			'pdf_no_xml' => 'Keine Metadaten im PDF vorhanden.',
 			'pdf_page_error' => 'Seitenzahl außerhalb des Dokumentes.',
