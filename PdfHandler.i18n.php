@@ -12,6 +12,7 @@ function efPdfHandlerMessages() {
 		),
 
 		'ar' => array(
+			'pdf_no_xml' => 'لم يمكن أخذ معلومات ميتا من pdf',
 			'pdf_page_error' => 'رقم الصفحة ليس في النطاق',
 		),
 
