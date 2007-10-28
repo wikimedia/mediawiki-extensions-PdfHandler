@@ -31,6 +31,11 @@ function efPdfHandlerMessages() {
 			'pdf_page_error' => 'paginanummer komt niet voor in document',
 		),
 
+		'pms' => array(
+			'pdf_no_xml' => 'as peulo nen pijesse ij metadat dal pdf',
+			'pdf_page_error' => 'ël nùmer ëd pàgina a resta fòra da cole ch\'a-i son',
+		),
+
 		'pt' => array(
 			'pdf_no_xml' => 'não foi possível obter os metadados do pdf',
 			'pdf_page_error' => 'página indisponível neste intervalo',
