@@ -21,6 +21,11 @@ function efPdfHandlerMessages() {
 			'pdf_page_error' => 'Seitenzahl außerhalb des Dokumentes.',
 		),
 
+		'fr' => array(
+			'pdf_no_xml' => 'Ne peut obtenir les métadonnées du fichier PDF',
+			'pdf_page_error' => 'Le numéro de page n\'est pas dans l\'étendue.',
+		),
+
 		'gl' => array(
 			'pdf_no_xml' => 'non se puideron obter os metadatos do pdf',
 			'pdf_page_error' => 'o número de páxina non está no rango',
