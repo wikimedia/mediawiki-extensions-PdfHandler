@@ -41,6 +41,11 @@ function efPdfHandlerMessages() {
 			'pdf_page_error' => 'paginanummer komt niet voor in document',
 		),
 
+		'oc' => array(
+			'pdf_no_xml' => 'Pòt pas obténer las metadonadas del fiquièr PDF',
+			'pdf_page_error' => 'Lo numèro de pagina es pas dins l\'espandida.',
+		),
+
 		'pl' => array(
 			'pdf_no_xml' => 'nie można pobrać metadanych z pliku PDF',
 			'pdf_page_error' => 'numer strony poza zakresem',
