@@ -46,9 +46,12 @@ function efPdfHandlerMessages() {
 			'pdf_page_error' => 'sidenummer ikke innen rekkevidde',
 		),
 
+/** Occitan (Occitan)
+ * @author Cedric31
+ */
 		'oc' => array(
-			'pdf_no_xml' => 'Pòt pas obténer las metadonadas del fiquièr PDF',
-			'pdf_page_error' => 'Lo numèro de pagina es pas dins l\'espandida.',
+			'pdf_no_xml'     => 'Pòt pas obténer las metadonadas del fichièr PDF',
+			'pdf_page_error' => "Lo numèro de pagina es pas dins l'espandida.",
 		),
 
 		'pl' => array(
