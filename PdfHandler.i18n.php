@@ -69,6 +69,14 @@ function efPdfHandlerMessages() {
 			'pdf_page_error' => 'página indisponível neste intervalo',
 		),
 
+/** Seeltersk (Seeltersk)
+ * @author Pyt
+ */
+		'stq' => array(
+			'pdf_no_xml'     => 'Neen Metadoaten in dät PDF deer.',
+			'pdf_page_error' => 'Siedentaal buute dät Dokument.',
+		),
+
 		'yue' => array(
 			'pdf_no_xml' => '唔能夠響PDF度拎metadata',
 			'pdf_page_error' => '頁數唔響範圍度',
