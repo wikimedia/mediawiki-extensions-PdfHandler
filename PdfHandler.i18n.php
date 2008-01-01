@@ -16,6 +16,13 @@ function efPdfHandlerMessages() {
 			'pdf_page_error' => 'رقم الصفحة ليس في النطاق',
 		),
 
+/** Bulgarian (Български)
+ * @author DCLXVI
+ */
+		'bg' => array(
+			'pdf_no_xml' => 'невъзможно е да бъдат извлечени метаданни от pdf',
+		),
+
 		'de' => array(
 			'pdf_no_xml' => 'Keine Metadaten im PDF vorhanden.',
 			'pdf_page_error' => 'Seitenzahl außerhalb des Dokumentes.',
