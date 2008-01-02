@@ -29,6 +29,7 @@
 class PdfImage {
 
 	function __construct( $filename ) {
+		wfUsePHP( '5.1.3' ); // SimpleXMLElement::addChild() was added only then
 		$this->mFilename = $filename;
 	}
 
@@ -65,7 +66,7 @@ class PdfImage {
 
 		if ( $wgPdfInfo ) {
 			wfProfileIn( 'pdfinfo' );
-			$cmd = "(" . wfEscapeShellArg( $wgPdfInfo ) . " " . $this->mFilename . ")";
+			$cmd = wfEscapeShellArg( $wgPdfInfo ) . " " . wfEscapeShellArg( $this->mFilename );
 			$dump = wfShellExec( $cmd, $retval );
 			$xml = $this->convertDumpToXML( $dump );
 			wfProfileOut( 'pdfinfo' );
@@ -95,7 +96,7 @@ class PdfImage {
 
 		$lines = explode("\n", $dump);
 
-        	for ($i = 1; $i < count($lines); $i++) {
+        	for ($i = 0; $i < count($lines); $i++) {
 			$value = explode(':', trim($lines[$i]), 2);
 			$doc->BODY[0]->addChild(str_replace(' ', '', $value[0]), trim($value[1]));
 		}
