@@ -76,6 +76,14 @@ function efPdfHandlerMessages() {
 			'pdf_page_error' => 'página indisponível neste intervalo',
 		),
 
+/** Slovak (Slovenčina)
+ * @author Helix84
+ */
+		'sk' => array(
+			'pdf_no_xml'     => 'nie je možné získať metadáta z pdf',
+			'pdf_page_error' => 'číslo stránky nie je v intervale',
+		),
+
 /** Seeltersk (Seeltersk)
  * @author Pyt
  */
