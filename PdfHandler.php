@@ -1,5 +1,4 @@
 <?php
-
  /**
   *
   * Copyright (C) 2007 Martin Seidel (Xarax) <jodeldi@gmx.de>
@@ -21,41 +20,25 @@
   *
   */
 
-	# Not a valid entry point, skip unless MEDIAWIKI is defined
-	if (!defined('MEDIAWIKI')) {
-		echo "PdfHandler extension";
-		exit(1);
-	}
+# Not a valid entry point, skip unless MEDIAWIKI is defined
+if (!defined('MEDIAWIKI')) {
+	echo "PdfHandler extension";
+	exit(1);
+}
 
-	$wgExtensionCredits['other'][] = array(
-		'name' => 'PDF Handler',
-		'author' =>' Xarax',
-		'description' => 'Handler for viewing PDF files in image mode',
-		'url' => 'http://www.mediawiki.org/wiki/Extension:PdfHandler',
-	);
+$wgExtensionCredits['other'][] = array(
+	'name' => 'PDF Handler',
+	'version' => '2008-01-11',
+	'author' =>' Xarax',
+	'description' => 'Handler for viewing PDF files in image mode',
+	'url' => 'http://www.mediawiki.org/wiki/Extension:PdfHandler',
+);
 
-	if ( !isset( $wgPdfOutputExtension ) ) $wgPdfOutputExtension = "jpg";
-	if ( !isset( $wgPdfHandlerDpi ) ) $wgPdfHandlerDpi = 150;
+if ( !isset( $wgPdfOutputExtension ) ) $wgPdfOutputExtension = "jpg";
+if ( !isset( $wgPdfHandlerDpi ) ) $wgPdfHandlerDpi = 150;
 
-	$wgAutoloadClasses['PdfImage'] = dirname(__FILE__) . '/PdfHandler.image.php';
-	$wgAutoloadClasses['PdfHandler'] = dirname(__FILE__) . '/PdfHandler_body.php';
-	$wgMediaHandlers['application/pdf'] = 'PdfHandler';
-	$wgExtensionFunctions[] = 'wfPdfHandlerLoadMessages';
-
-	/* load messages */
-	function wfPdfHandlerLoadMessages() {
-    		global $wgMessageCache;
-		static $msgLoaded = false;
-
-		if ( $msgLoaded )
-			return false;
-
-		$msgLoaded = true;
-		require( dirname( __FILE__ ) . '/PdfHandler.i18n.php' );
-
-		foreach ( efPdfHandlerMessages() as $lang => $messagesForLang ) {
-			$wgMessageCache->addMessages( $messagesForLang, $lang );
-		}
-
-		return true;
-	}
+$dir = dirname(__FILE__) . '/';
+$wgExtensionMessagesFiles['PdfHandler'] = $dir . 'PdfHandler.i18n.php';
+$wgAutoloadClasses['PdfImage'] = dirname(__FILE__) . '/PdfHandler.image.php';
+$wgAutoloadClasses['PdfHandler'] = dirname(__FILE__) . '/PdfHandler_body.php';
+$wgMediaHandlers['application/pdf'] = 'PdfHandler';

@@ -1,5 +1,4 @@
 <?php
-
  /**
   *
   * Copyright (C) 2007 Martin Seidel (Xarax) <jodeldi@gmx.de>
@@ -46,7 +45,7 @@ class PdfHandler extends ImageHandler {
 
 	function validateParam( $name, $value ) {
 		if ( in_array( $name, array( 'width', 'height', 'page' ) ) )
-			return ( $value <= 0 ) ? false : true; 
+			return ( $value <= 0 ) ? false : true;
 		else
 			return false;
 	}
@@ -85,14 +84,16 @@ class PdfHandler extends ImageHandler {
 	        global $wgPdfPostProcessor;
 		global $wgPdfHandlerDpi;
 
+		wfLoadExtensionMessages( 'PdfHandler' );
+
 		$xml = $image->getMetadata();
 
 		if ( !$xml )
-			return new MediaTransformError( 'thumbnail_error', 
-							@$params['width'], 
-							@$params['height'], 
+			return new MediaTransformError( 'thumbnail_error',
+							@$params['width'],
+							@$params['height'],
 							wfMsg( 'pdf_no_xml' ) );
-		
+
 		if ( !$this->normaliseParams( $image, $params ) )
 			return new TransformParameterError( $params );
 
@@ -102,19 +103,19 @@ class PdfHandler extends ImageHandler {
 		$page = $params['page'];
 
 		if ( $page > $this->pageCount( $image ) )
-			return new MediaTransformError( 'thumbnail_error', 
-							$width, 
-							$height, 
+			return new MediaTransformError( 'thumbnail_error',
+							$width,
+							$height,
 							wfMsg( 'pdf_page_error' ) );
-		
+
 		if ( $flags & self::TRANSFORM_LATER )
-			return new ThumbnailImage( $image, $dstUrl, $width, 
+			return new ThumbnailImage( $image, $dstUrl, $width,
 						   $height, $dstPath, $page );
 
 		if ( !wfMkdirParents( dirname( $dstPath ) ) )
-			return new MediaTransformError( 'thumbnail_error', 
-							$width, 
-							$height, 
+			return new MediaTransformError( 'thumbnail_error',
+							$width,
+							$height,
 							wfMsg( 'thumbnail_dest_directory' ) );
 
 		$cmd = '(' . wfEscapeShellArg( $wgPdfProcessor );
@@ -142,7 +143,7 @@ class PdfHandler extends ImageHandler {
 	}
 
 	function getPdfImage( $image, $path ) {
-		if ( !$image ) 
+		if ( !$image )
 			$pdfimg = new PdfImage( $path );
 		elseif ( !isset( $image->pdfImage ) )
 			$pdfimg = $image->pdfImage = new PdfImage( $path );
@@ -153,7 +154,7 @@ class PdfHandler extends ImageHandler {
 	}
 
 	function getMetaTree( $image ) {
-		if ( isset( $image->pdfMetaTree ) ) 
+		if ( isset( $image->pdfMetaTree ) )
 			return $image->pdfMetaTree;
 
 		$metadata = $image->getMetadata();
