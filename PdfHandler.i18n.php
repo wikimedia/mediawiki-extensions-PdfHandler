@@ -108,7 +108,6 @@ $messages['zh-hant'] = array(
 	'pdf_page_error' => '頁數不在範圍中',
 );
 
-# Fallbacks:
 $messages['de-formal'] = $messages['de'];
 $messages['zh'] = $messages['zh-hans'];
 $messages['zh-cn'] = $messages['zh-hans'];
