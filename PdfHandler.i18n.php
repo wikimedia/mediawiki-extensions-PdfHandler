@@ -44,6 +44,14 @@ $messages['hsb'] = array(
 	'pdf_page_error' => 'Ličba strony zwonka dokumenta.',
 );
 
+/** Hungarian (Magyar)
+ * @author Bdanee
+ */
+$messages['hu'] = array(
+	'pdf_no_xml'     => 'nem sikerült lekérni a pdf metaadatait',
+	'pdf_page_error' => 'az oldalszám a tartományon kívül esik',
+);
+
 $messages['nl'] = array(
 	'pdf_no_xml' => 'de metadata van de PDF kan niet uitgelezen worden',
 	'pdf_page_error' => 'paginanummer komt niet voor in document',
