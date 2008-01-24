@@ -85,6 +85,14 @@ $messages['pt'] = array(
 	'pdf_page_error' => 'página indisponível neste intervalo',
 );
 
+/** Russian (Русский)
+ * @author .:Ajvol:.
+ */
+$messages['ru'] = array(
+	'pdf_no_xml'     => 'невозможно получить метаданные из PDF',
+	'pdf_page_error' => 'номер страницы вне диапазона',
+);
+
 /** Slovak (Slovenčina)
  * @author Helix84
  */
