@@ -52,6 +52,14 @@ $messages['hu'] = array(
 	'pdf_page_error' => 'az oldalszám a tartományon kívül esik',
 );
 
+/** Luxembourgish (Lëtzebuergesch)
+ * @author Robby
+ */
+$messages['lb'] = array(
+	'pdf_no_xml'     => 'Meta-Informatiounen aus dem PDF Dokument kënne net gelies ginn',
+	'pdf_page_error' => 'Déi Säitenzuel gëtt et an dem Dokument net.',
+);
+
 $messages['nl'] = array(
 	'pdf_no_xml' => 'de metadata van de PDF kan niet uitgelezen worden',
 	'pdf_page_error' => 'paginanummer komt niet voor in document',
