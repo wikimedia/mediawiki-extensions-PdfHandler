@@ -44,6 +44,6 @@ $wgPdfHandlerDpi = 150;
 
 $dir = dirname(__FILE__) . '/';
 $wgExtensionMessagesFiles['PdfHandler'] = $dir . 'PdfHandler.i18n.php';
-$wgAutoloadClasses['PdfImage'] = dirname(__FILE__) . '/PdfHandler.image.php';
-$wgAutoloadClasses['PdfHandler'] = dirname(__FILE__) . '/PdfHandler_body.php';
+$wgAutoloadClasses['PdfImage'] = $dir . 'PdfHandler.image.php';
+$wgAutoloadClasses['PdfHandler'] = $dir . 'PdfHandler_body.php';
 $wgMediaHandlers['application/pdf'] = 'PdfHandler';
