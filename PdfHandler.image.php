@@ -29,7 +29,6 @@
 class PdfImage {
 
 	function __construct( $filename ) {
-		wfUsePHP( '5.1.3' ); // SimpleXMLElement::addChild() was added only then
 		$this->mFilename = $filename;
 	}
 
@@ -38,68 +37,83 @@ class PdfImage {
 	}
 
 	public function getImageSize() {
-		global $wgPdfHandlerDpi;
-
-		$tree = new SimpleXMLElement( $this->retrieveMetadata( ) );
-
-		if ( !$tree ) return false;
-						
-		$o = $tree->BODY[0]->Pagesize;
+		$data = $this->retrieveMetadata();
+		$size = self::getPageSize( $data, 1 );
 		
-		if ( $o ) {
-			$size = explode("x", $o, 2);
-															
-			if ( $size ) {
-				$width  = intval( round( trim($size[0]) / 72 * $wgPdfHandlerDpi ) );
-				$height = explode( " ", trim($size[1]), 2 );
-				$height = intval( round( trim($height[0]) / 72 * $wgPdfHandlerDpi ) );
-
-				return array( $width, $height, 'Pdf',
-					"width=\"$width\" height=\"$height\"" );
-			}
+		if( $size ) {
+			$width = $size['width'];
+			$height = $size['height'];
+			return array( $width, $height, 'Pdf',
+				"width=\"$width\" height=\"$height\"" );
 		}
 		return false;
 	}
+	
+	public static function getPageSize( $data, $page ) {
+		global $wgPdfHandlerDpi;
 
-	function retrieveMetaData() {
+		if( isset( $data['pages'][$page]['Page size'] ) ) {
+			$o = $data['pages'][$page]['Page size'];
+		} elseif( isset( $data['Page size'] ) ) {
+			$o = $data['Page size'];
+		} else {
+			$o = false;
+		}
+
+		if ( $o ) {
+			$size = explode( "x", $o, 2 );
+
+			if ( $size ) {
+				$width  = intval( trim( $size[0] ) / 72 * $wgPdfHandlerDpi );
+				$height = explode( " ", trim( $size[1] ), 2 );
+				$height = intval( trim( $height[0] ) / 72 * $wgPdfHandlerDpi );
+
+				return array(
+					'width' => $width,
+					'height' => $height
+				);
+			}
+		}
+		
+		return false;
+	}
+
+	public function retrieveMetaData() {
 		global $wgPdfInfo;
 
 		if ( $wgPdfInfo ) {
 			wfProfileIn( 'pdfinfo' );
-			$cmd = wfEscapeShellArg( $wgPdfInfo ) . " " . wfEscapeShellArg( $this->mFilename );
+			$cmd = wfEscapeShellArg( $wgPdfInfo ) .
+				" -enc UTF-8 " . # Report metadata as UTF-8 text...
+				" -l 9999999 " . # Report page sizes for all pages
+				wfEscapeShellArg( $this->mFilename );
 			$dump = wfShellExec( $cmd, $retval );
-			$xml = $this->convertDumpToXML( $dump );
+			$data = $this->convertDumpToArray( $dump );
 			wfProfileOut( 'pdfinfo' );
 		} else {
-			$xml = null;
+			$data = null;
 		}
-		return $xml;
+		return $data;
 	}
 
-	function createMetadataBody() {
-		$xml = "<?xml version=\"1.0\" ?>\n";
-		$xml .= "<!DOCTYPE PdfXML PUBLIC \"-//W3C//DTD PdfXML 1.1//EN\" \"pubtext/PdfXML-s.dtd\">\n";
-		$xml .= "<PdfXML>\n";
-		$xml .= "<HEAD></HEAD>\n";
-		$xml .= "<BODY>\n";
-		$xml .= "</BODY></PdfXML>";
-		return $xml;
-	}
-
-	function convertDumpToXML( $dump ) {
+	protected function convertDumpToArray( $dump ) {
 		if ( strval( $dump ) == '' ) return false;
 
-		$xml = $this->createMetadataBody();
-		$doc = new SimpleXMLElement($xml);
-							
-		if (!$doc) return;
-
 		$lines = explode("\n", $dump);
+		$data = array();
 
-		for ($i = 0; $i < count($lines); $i++) {
-			$value = explode(':', trim($lines[$i]), 2);
-			$doc->BODY[0]->addChild(str_replace(' ', '', $value[0]), trim($value[1]));
+		foreach( $lines as $line ) {
+			$bits = explode( ':', $line, 2 );
+			if( count( $bits ) > 1 ) {
+				$key = trim( $bits[0] );
+				$value = trim( $bits[1] );
+				if( preg_match( '/^Page +(\d+) size$/', $key, $matches ) ) {
+					$data['pages'][$matches[1]]['Page size'] = $value;
+				} else {
+					$data[$key] = $value;
+				}
+			}
 		}
-		return $doc->asXML();
+		return $data;
 	}
 }

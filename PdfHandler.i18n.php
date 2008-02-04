@@ -8,8 +8,8 @@
 $messages = array();
 
 $messages['en'] = array(
-	'pdf_no_xml' => 'cannot get metadata from pdf',
-	'pdf_page_error' => 'page number not in range',
+	'pdf_no_metadata' => 'Cannot get metadata from PDF',
+	'pdf_page_error' => 'Page number not in range',
 );
 
 $messages['ar'] = array(

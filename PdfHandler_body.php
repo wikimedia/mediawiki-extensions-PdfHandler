@@ -81,18 +81,18 @@ class PdfHandler extends ImageHandler {
 
 	function doTransform( $image, $dstPath, $dstUrl, $params, $flags = 0 ) {
 		global $wgPdfProcessor;
-	        global $wgPdfPostProcessor;
+		global $wgPdfPostProcessor;
 		global $wgPdfHandlerDpi;
 
 		wfLoadExtensionMessages( 'PdfHandler' );
 
-		$xml = $image->getMetadata();
+		$metadata = $image->getMetadata();
 
-		if ( !$xml )
+		if ( !$metadata )
 			return new MediaTransformError( 'thumbnail_error',
 							@$params['width'],
 							@$params['height'],
-							wfMsg( 'pdf_no_xml' ) );
+							wfMsg( 'pdf_no_metadata' ) );
 
 		if ( !$this->normaliseParams( $image, $params ) )
 			return new TransformParameterError( $params );
@@ -153,30 +153,24 @@ class PdfHandler extends ImageHandler {
 		return $pdfimg;
 	}
 
-	function getMetaTree( $image ) {
-		if ( isset( $image->pdfMetaTree ) )
-			return $image->pdfMetaTree;
+	function getMetaArray( $image ) {
+		if ( isset( $image->pdfMetaArray ) )
+			return $image->pdfMetaArray;
 
 		$metadata = $image->getMetadata();
 
 		if ( !$this->isMetadataValid( $image, $metadata ) ) {
-			wfDebug( "Pdf XML metadata is invalid or missing, should have been fixed in upgradeRow\n" );
+			wfDebug( "Pdf metadata is invalid or missing, should have been fixed in upgradeRow\n" );
 			return false;
 		}
 
 		wfProfileIn( __METHOD__ );
 		wfSuppressWarnings();
-
-		try {
-			$image->pdfMetaTree = new SimpleXMLElement( $metadata );
-		} catch( Exception $e ) {
-			$image->pdfMetaTree = false;
-		}
-
+		$image->pdfMetaArray = unserialize( $metadata );
 		wfRestoreWarnings();
 		wfProfileOut( __METHOD__ );
 
-		return $image->pdfMetaTree;
+		return $image->pdfMetaArray;
 	}
 
 	function getImageSize( $image, $path ) {
@@ -195,7 +189,7 @@ class PdfHandler extends ImageHandler {
 	}
 
 	function getMetadata( $image, $path ) {
-		return $this->getPdfImage( $image, $path )->retrieveMetaData();
+		return serialize( $this->getPdfImage( $image, $path )->retrieveMetaData() );
 	}
 
 	function isMetadataValid( $image, $metadata ) {
@@ -203,34 +197,17 @@ class PdfHandler extends ImageHandler {
 	}
 
 	function pageCount( $image ) {
-		$tree = $this->getMetaTree( $image );
-		if ( !$tree ) return false;
-		return intval( $tree->BODY[0]->Pages );
+		$data = $this->getMetaArray( $image );
+		if ( !$data ) return false;
+		return intval( $data['Pages'] );
 	}
 
+	/**
+	 * @fixme pdfinfo currently only gives us a per-file page size.
+	 * Some files may have different dimensions per page.
+	 */
 	function getPageDimensions( $image, $page ) {
-		global $wgPdfHandlerDpi;
-
-		$tree = $this->getMetaTree( $image );
-
-		if ( $tree ) {
-			$o = $tree->BODY[0]->Pagesize;
-
-			if ( $o ) {
-				$size = explode( "x", $o, 2 );
-
-				if ( $size ) {
-					$width  = intval( trim( $size[0] ) / 72 * $wgPdfHandlerDpi );
-					$height = explode( " ", trim( $size[1] ), 2 );
-					$height = intval( trim( $height[0] ) / 72 * $wgPdfHandlerDpi );
-
-					return array(
-						'width' => $width,
-						'height' => $height
-					);
-				}
-			}
-		}
-		return false;
+		$data = $this->getMetaArray( $image );
+		return PdfImage::getPageSize( $data, $page );
 	}
 }
