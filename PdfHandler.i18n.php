@@ -98,10 +98,12 @@ $messages['pms'] = array(
 	'pdf_page_error'  => "ël nùmer ëd pàgina a resta fòra da cole ch'a-i son",
 );
 
-/** Portuguese (Português) */
+/** Portuguese (Português)
+ * @author Malafaya
+ */
 $messages['pt'] = array(
 	'pdf_no_metadata' => 'não foi possível obter os metadados do PDF',
-	'pdf_page_error'  => 'página indisponível neste intervalo',
+	'pdf_page_error'  => 'Número de página fora do intervalo',
 );
 
 /** Russian (Русский)
