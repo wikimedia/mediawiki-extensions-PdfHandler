@@ -3,7 +3,7 @@
  * Internationalisation file for extension PdfHandler.
  *
  * @addtogroup Extensions
-*/
+ */
 
 $messages = array();
 

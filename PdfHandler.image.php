@@ -55,7 +55,7 @@ class PdfImage {
 				$height = intval( round( trim($height[0]) / 72 * $wgPdfHandlerDpi ) );
 
 				return array( $width, $height, 'Pdf',
-					      "width=\"$width\" height=\"$height\"" );
+					"width=\"$width\" height=\"$height\"" );
 			}
 		}
 		return false;
@@ -83,8 +83,8 @@ class PdfImage {
 		$xml .= "<HEAD></HEAD>\n";
 		$xml .= "<BODY>\n";
 		$xml .= "</BODY></PdfXML>";
-    		return $xml;
-        }
+		return $xml;
+	}
 
 	function convertDumpToXML( $dump ) {
 		if ( strval( $dump ) == '' ) return false;
@@ -96,7 +96,7 @@ class PdfImage {
 
 		$lines = explode("\n", $dump);
 
-        	for ($i = 0; $i < count($lines); $i++) {
+		for ($i = 0; $i < count($lines); $i++) {
 			$value = explode(':', trim($lines[$i]), 2);
 			$doc->BODY[0]->addChild(str_replace(' ', '', $value[0]), trim($value[1]));
 		}

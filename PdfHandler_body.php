@@ -67,17 +67,17 @@ class PdfHandler extends ImageHandler {
 
 	function getScriptParams( $params ) {
 		return array(
-		    'width' => $params['width'],
-		    'page' => $params['page'],
+			'width' => $params['width'],
+			'page' => $params['page'],
 		);
 	}
 
 	function getParamMap() {
-               return array(
-                       'img_width' => 'width',
-                       'img_page' => 'page',
-               );
-       }
+		return array(
+			'img_width' => 'width',
+			'img_page' => 'page',
+		);
+	}
 
 	function doTransform( $image, $dstPath, $dstUrl, $params, $flags = 0 ) {
 		global $wgPdfProcessor;
@@ -161,11 +161,11 @@ class PdfHandler extends ImageHandler {
 
 		if ( !$this->isMetadataValid( $image, $metadata ) ) {
 			wfDebug( "Pdf XML metadata is invalid or missing, should have been fixed in upgradeRow\n" );
-		        return false;
+			return false;
 		}
 
 		wfProfileIn( __METHOD__ );
-	        wfSuppressWarnings();
+		wfSuppressWarnings();
 
 		try {
 			$image->pdfMetaTree = new SimpleXMLElement( $metadata );
@@ -185,7 +185,7 @@ class PdfHandler extends ImageHandler {
 
 	function getThumbType( $ext, $mime ) {
 		global $wgPdfOutputExtension;
-	        static $mime;
+		static $mime;
 
 		if ( !isset( $mime ) ) {
 			$magic = MimeMagic::singleton();
