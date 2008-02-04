@@ -34,8 +34,13 @@ $wgExtensionCredits['other'][] = array(
 	'url' => 'http://www.mediawiki.org/wiki/Extension:PdfHandler',
 );
 
-if ( !isset( $wgPdfOutputExtension ) ) $wgPdfOutputExtension = "jpg";
-if ( !isset( $wgPdfHandlerDpi ) ) $wgPdfHandlerDpi = 150;
+// External program requirements...
+$wgPdfProcessor     = null; // gs
+$wgPdfPostProcessor = null; // convert
+$wgPdfInfo          = null; // pdfinfo
+
+$wgPdfOutputExtension = "jpg";
+$wgPdfHandlerDpi = 150;
 
 $dir = dirname(__FILE__) . '/';
 $wgExtensionMessagesFiles['PdfHandler'] = $dir . 'PdfHandler.i18n.php';
