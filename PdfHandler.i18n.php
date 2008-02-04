@@ -12,9 +12,10 @@ $messages['en'] = array(
 	'pdf_page_error' => 'Page number not in range',
 );
 
+/** Arabic (العربية) */
 $messages['ar'] = array(
 	'pdf_no_metadata' => 'لم يمكن أخذ معلومات ميتا من PDF',
-	'pdf_page_error' => 'رقم الصفحة ليس في النطاق',
+	'pdf_page_error'  => 'رقم الصفحة ليس في النطاق',
 );
 
 /** Bulgarian (Български)
@@ -29,14 +30,20 @@ $messages['de'] = array(
 	'pdf_page_error' => 'Seitenzahl außerhalb des Dokumentes.',
 );
 
+/** French (Français)
+ * @author Grondin
+ */
 $messages['fr'] = array(
 	'pdf_no_metadata' => 'Ne peut obtenir les métadonnées du fichier PDF',
-	'pdf_page_error' => 'Le numéro de page n\'est pas dans l\'étendue.',
+	'pdf_page_error'  => "Le numéro de page n'est pas dans la gamme.",
 );
 
+/** Galician (Galego)
+ * @author Alma
+ */
 $messages['gl'] = array(
 	'pdf_no_metadata' => 'non se puideron obter os metadatos do PDF',
-	'pdf_page_error' => 'o número de páxina non está no rango',
+	'pdf_page_error'  => 'O número da páxina non está no rango',
 );
 
 $messages['hsb'] = array(
@@ -48,16 +55,16 @@ $messages['hsb'] = array(
  * @author Bdanee
  */
 $messages['hu'] = array(
-	'pdf_no_metadata'     => 'nem sikerült lekérni a PDF metaadatait',
-	'pdf_page_error' => 'az oldalszám a tartományon kívül esik',
+	'pdf_no_metadata' => 'nem sikerült lekérni a PDF metaadatait',
+	'pdf_page_error'  => 'az oldalszám a tartományon kívül esik',
 );
 
 /** Luxembourgish (Lëtzebuergesch)
  * @author Robby
  */
 $messages['lb'] = array(
-	'pdf_no_metadata'     => 'Meta-Informatiounen aus dem PDF Dokument kënne net gelies ginn',
-	'pdf_page_error' => 'Déi Säitenzuel gëtt et an dem Dokument net.',
+	'pdf_no_metadata' => 'Meta-Informatiounen aus dem PDF Dokument kënne net gelies ginn',
+	'pdf_page_error'  => 'Déi Säitenzuel gëtt et an dem Dokument net.',
 );
 
 $messages['nl'] = array(
@@ -65,56 +72,60 @@ $messages['nl'] = array(
 	'pdf_page_error' => 'paginanummer komt niet voor in document',
 );
 
+/** Norwegian (‪Norsk (bokmål)‬) */
 $messages['no'] = array(
 	'pdf_no_metadata' => 'kan ikke hente metadata fra PDF',
-	'pdf_page_error' => 'sidenummer ikke innen rekkevidde',
+	'pdf_page_error'  => 'sidenummer ikke innen rekkevidde',
 );
 
 /** Occitan (Occitan)
  * @author Cedric31
  */
 $messages['oc'] = array(
-	'pdf_no_metadata'     => 'Pòt pas obténer las metadonadas del fichièr PDF',
-	'pdf_page_error' => "Lo numèro de pagina es pas dins l'espandida.",
+	'pdf_no_metadata' => 'Pòt pas obténer las metadonadas del fichièr PDF',
+	'pdf_page_error'  => "Lo numèro de pagina es pas dins l'espandida.",
 );
 
+/** Polish (Polski) */
 $messages['pl'] = array(
 	'pdf_no_metadata' => 'nie można pobrać metadanych z pliku PDF',
-	'pdf_page_error' => 'numer strony poza zakresem',
+	'pdf_page_error'  => 'numer strony poza zakresem',
 );
 
+/** Piemontèis (Piemontèis) */
 $messages['pms'] = array(
 	'pdf_no_metadata' => 'as peulo nen pijesse ij metadat dal PDF',
-	'pdf_page_error' => 'ël nùmer ëd pàgina a resta fòra da cole ch\'a-i son',
+	'pdf_page_error'  => "ël nùmer ëd pàgina a resta fòra da cole ch'a-i son",
 );
 
+/** Portuguese (Português) */
 $messages['pt'] = array(
 	'pdf_no_metadata' => 'não foi possível obter os metadados do PDF',
-	'pdf_page_error' => 'página indisponível neste intervalo',
+	'pdf_page_error'  => 'página indisponível neste intervalo',
 );
 
 /** Russian (Русский)
  * @author .:Ajvol:.
  */
 $messages['ru'] = array(
-	'pdf_no_metadata'     => 'невозможно получить метаданные из PDF',
-	'pdf_page_error' => 'номер страницы вне диапазона',
+	'pdf_no_metadata' => 'невозможно получить метаданные из PDF',
+	'pdf_page_error'  => 'номер страницы вне диапазона',
 );
 
 /** Slovak (Slovenčina)
  * @author Helix84
  */
 $messages['sk'] = array(
-	'pdf_no_metadata'     => 'nie je možné získať metadáta z PDF',
-	'pdf_page_error' => 'číslo stránky nie je v intervale',
+	'pdf_no_metadata' => 'nie je možné získať metadáta z PDF',
+	'pdf_page_error'  => 'číslo stránky nie je v intervale',
 );
 
 /** Seeltersk (Seeltersk)
  * @author Pyt
  */
 $messages['stq'] = array(
-	'pdf_no_metadata'     => 'Neen Metadoaten in dät PDF deer.',
-	'pdf_page_error' => 'Siedentaal buute dät Dokument.',
+	'pdf_no_metadata' => 'Neen Metadoaten in dät PDF deer.',
+	'pdf_page_error'  => 'Siedentaal buute dät Dokument.',
 );
 
 $messages['yue'] = array(
