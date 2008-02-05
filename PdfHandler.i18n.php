@@ -25,6 +25,14 @@ $messages['bg'] = array(
 	'pdf_no_metadata' => 'невъзможно е да бъдат извлечени метаданни от PDF',
 );
 
+/** Czech (Česky)
+ * @author Matěj Grabovský
+ */
+$messages['cs'] = array(
+	'pdf_no_metadata' => 'Nelze získat metadata z PDF',
+	'pdf_page_error'  => 'Číslo stránky není v rozsahu',
+);
+
 $messages['de'] = array(
 	'pdf_no_metadata' => 'Keine Metadaten im PDF vorhanden.',
 	'pdf_page_error' => 'Seitenzahl außerhalb des Dokumentes.',
@@ -72,10 +80,12 @@ $messages['nl'] = array(
 	'pdf_page_error' => 'paginanummer komt niet voor in document',
 );
 
-/** Norwegian (‪Norsk (bokmål)‬) */
+/** Norwegian (‪Norsk (bokmål)‬)
+ * @author Jon Harald Søby
+ */
 $messages['no'] = array(
 	'pdf_no_metadata' => 'kan ikke hente metadata fra PDF',
-	'pdf_page_error'  => 'sidenummer ikke innen rekkevidde',
+	'pdf_page_error'  => 'Sidenummer overstiger antall sider i dokumentet',
 );
 
 /** Occitan (Occitan)
@@ -119,7 +129,7 @@ $messages['ru'] = array(
  */
 $messages['sk'] = array(
 	'pdf_no_metadata' => 'nie je možné získať metadáta z PDF',
-	'pdf_page_error'  => 'číslo stránky nie je v intervale',
+	'pdf_page_error'  => 'Číslo stránky nie je v intervale',
 );
 
 /** Seeltersk (Seeltersk)
