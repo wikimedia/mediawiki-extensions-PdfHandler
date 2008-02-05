@@ -78,21 +78,22 @@ class PdfHandler extends ImageHandler {
 			'img_page' => 'page',
 		);
 	}
+	
+	protected function doThumbError( $width, $height, $msg ) {
+		wfLoadExtensionMessages( 'PdfHandler' );
+		return new MediaTransformError( 'thumbnail_error',
+			$width, $height, wfMsgForContent( $msg ) );
+	}
 
 	function doTransform( $image, $dstPath, $dstUrl, $params, $flags = 0 ) {
 		global $wgPdfProcessor;
 		global $wgPdfPostProcessor;
 		global $wgPdfHandlerDpi;
 
-		wfLoadExtensionMessages( 'PdfHandler' );
-
 		$metadata = $image->getMetadata();
 
 		if ( !$metadata )
-			return new MediaTransformError( 'thumbnail_error',
-							@$params['width'],
-							@$params['height'],
-							wfMsg( 'pdf_no_metadata' ) );
+			return $this->doThumbError( @$params['width'], @$params['height'], 'pdf_no_metadata' );
 
 		if ( !$this->normaliseParams( $image, $params ) )
 			return new TransformParameterError( $params );
@@ -103,20 +104,14 @@ class PdfHandler extends ImageHandler {
 		$page = $params['page'];
 
 		if ( $page > $this->pageCount( $image ) )
-			return new MediaTransformError( 'thumbnail_error',
-							$width,
-							$height,
-							wfMsg( 'pdf_page_error' ) );
+			return $this->doTHumbError( $width, $height, 'pdf_page_error' );
 
 		if ( $flags & self::TRANSFORM_LATER )
 			return new ThumbnailImage( $image, $dstUrl, $width,
 						   $height, $dstPath, $page );
 
 		if ( !wfMkdirParents( dirname( $dstPath ) ) )
-			return new MediaTransformError( 'thumbnail_error',
-							$width,
-							$height,
-							wfMsg( 'thumbnail_dest_directory' ) );
+			return $this->doThumbError( $width, $height, 'thumbnail_dest_directory' );
 
 		$cmd = '(' . wfEscapeShellArg( $wgPdfProcessor );
 		$cmd .= " -sDEVICE=jpeg -sOutputFile=- -dFirstPage={$page} -dLastPage={$page}";
@@ -124,6 +119,7 @@ class PdfHandler extends ImageHandler {
 		$cmd .= " | " . wfEscapeShellArg( $wgPdfPostProcessor );
 		$cmd .= " -depth 8 -resize {$width} - ";
 		$cmd .= wfEscapeShellArg( $dstPath ) . ")";
+		$cmd .= " 2>&1";
 
 		wfProfileIn( 'PdfHandler' );
 		wfDebug( __METHOD__.": $cmd\n" );
