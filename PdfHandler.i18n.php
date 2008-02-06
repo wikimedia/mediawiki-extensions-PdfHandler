@@ -12,7 +12,9 @@ $messages['en'] = array(
 	'pdf_page_error' => 'Page number not in range',
 );
 
-/** Arabic (العربية) */
+/** Arabic (العربية)
+ * @author Meno25
+ */
 $messages['ar'] = array(
 	'pdf_no_metadata' => 'لم يمكن أخذ معلومات ميتا من PDF',
 	'pdf_page_error'  => 'رقم الصفحة ليس في النطاق',
@@ -72,7 +74,7 @@ $messages['hu'] = array(
  */
 $messages['lb'] = array(
 	'pdf_no_metadata' => 'Meta-Informatiounen aus dem PDF Dokument kënne net gelies ginn',
-	'pdf_page_error'  => 'Déi Säitenzuel gëtt et an dem Dokument net.',
+	'pdf_page_error'  => "D'Säitenzuel ass net an dem Beräich.",
 );
 
 $messages['nl'] = array(
