@@ -156,11 +156,3 @@ $messages['zh-hant'] = array(
 	'pdf_no_metadata' => '無法在PDF中擷取元數據',
 	'pdf_page_error' => '頁數不在範圍中',
 );
-
-$messages['de-formal'] = $messages['de'];
-$messages['zh'] = $messages['zh-hans'];
-$messages['zh-cn'] = $messages['zh-hans'];
-$messages['zh-hk'] = $messages['zh-hant'];
-$messages['zh-sg'] = $messages['zh-hans'];
-$messages['zh-tw'] = $messages['zh-hant'];
-$messages['zh-yue'] = $messages['yue'];
