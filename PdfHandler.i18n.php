@@ -95,7 +95,7 @@ $messages['no'] = array(
  */
 $messages['oc'] = array(
 	'pdf_no_metadata' => 'Pòt pas obténer las metadonadas del fichièr PDF',
-	'pdf_page_error'  => "Lo numèro de pagina es pas dins l'espandida.",
+	'pdf_page_error'  => 'Lo numèro de pagina es pas dins la gama.',
 );
 
 /** Polish (Polski) */
@@ -156,3 +156,4 @@ $messages['zh-hant'] = array(
 	'pdf_no_metadata' => '無法在PDF中擷取元數據',
 	'pdf_page_error' => '頁數不在範圍中',
 );
+
