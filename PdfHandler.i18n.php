@@ -17,6 +17,7 @@ $messages['en'] = array(
  * @author Meno25
  */
 $messages['ar'] = array(
+	'pdf-desc'        => 'متحكم لرؤية ملفات PDF في نمط صورة',
 	'pdf_no_metadata' => 'لم يمكن أخذ معلومات ميتا من PDF',
 	'pdf_page_error'  => 'رقم الصفحة ليس في النطاق',
 );
@@ -79,9 +80,13 @@ $messages['lb'] = array(
 	'pdf_page_error'  => "D'Säitenzuel ass net an dem Beräich.",
 );
 
+/** Dutch (Nederlands)
+ * @author Siebrand
+ */
 $messages['nl'] = array(
+	'pdf-desc'        => 'Handelt PDF-bestanden af en maakt het mogelijk ze als afbeeldingen te bekijken',
 	'pdf_no_metadata' => 'de metadata van de PDF kan niet uitgelezen worden',
-	'pdf_page_error' => 'paginanummer komt niet voor in document',
+	'pdf_page_error'  => 'paginanummer komt niet voor in document',
 );
 
 /** Norwegian (‪Norsk (bokmål)‬)
