@@ -8,6 +8,7 @@
 $messages = array();
 
 $messages['en'] = array(
+	'pdf-desc' => 'Handler for viewing PDF files in image mode',
 	'pdf_no_metadata' => 'Cannot get metadata from PDF',
 	'pdf_page_error' => 'Page number not in range',
 );
@@ -44,6 +45,7 @@ $messages['de'] = array(
  * @author Grondin
  */
 $messages['fr'] = array(
+	'pdf-desc'        => 'Utilitaire pour visualiser les fichiers PDF en mode image',
 	'pdf_no_metadata' => 'Ne peut obtenir les métadonnées du fichier PDF',
 	'pdf_page_error'  => "Le numéro de page n'est pas dans la gamme.",
 );

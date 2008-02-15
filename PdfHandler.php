@@ -31,6 +31,7 @@ $wgExtensionCredits['other'][] = array(
 	'version' => '2008-01-11',
 	'author' =>' Xarax',
 	'description' => 'Handler for viewing PDF files in image mode',
+	'descriptionmsg' => 'pdf-desc',
 	'url' => 'http://www.mediawiki.org/wiki/Extension:PdfHandler',
 );
 
