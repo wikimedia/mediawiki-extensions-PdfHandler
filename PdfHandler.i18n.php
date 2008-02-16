@@ -137,6 +137,7 @@ $messages['ru'] = array(
  * @author Helix84
  */
 $messages['sk'] = array(
+	'pdf-desc'        => 'Obsluha zobrazovania PDF súborov v režime obrázkov',
 	'pdf_no_metadata' => 'nie je možné získať metadáta z PDF',
 	'pdf_page_error'  => 'Číslo stránky nie je v intervale',
 );
