@@ -59,9 +59,13 @@ $messages['gl'] = array(
 	'pdf_page_error'  => 'O número da páxina non está no rango',
 );
 
+/** Upper Sorbian (Hornjoserbsce)
+ * @author Michawiki
+ */
 $messages['hsb'] = array(
+	'pdf-desc'        => 'Program za wobhladowanje datajow PDF we wobrazowym modusu',
 	'pdf_no_metadata' => 'W PDF žane metadaty njejsu.',
-	'pdf_page_error' => 'Ličba strony zwonka dokumenta.',
+	'pdf_page_error'  => 'Ličba strony zwonka dokumenta.',
 );
 
 /** Hungarian (Magyar)
