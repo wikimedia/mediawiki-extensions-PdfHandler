@@ -129,6 +129,7 @@ $messages['pms'] = array(
  * @author Malafaya
  */
 $messages['pt'] = array(
+	'pdf-desc'        => 'Manuseador de visualização de ficheiros PDF em modo de imagem',
 	'pdf_no_metadata' => 'não foi possível obter os metadados do PDF',
 	'pdf_page_error'  => 'Número de página fora do intervalo',
 );
