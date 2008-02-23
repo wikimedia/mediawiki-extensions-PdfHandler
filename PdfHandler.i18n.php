@@ -101,6 +101,7 @@ $messages['nl'] = array(
  * @author Jon Harald Søby
  */
 $messages['no'] = array(
+	'pdf-desc'        => 'Behandler for visning av PDF-filer i bildemodus',
 	'pdf_no_metadata' => 'kan ikke hente metadata fra PDF',
 	'pdf_page_error'  => 'Sidenummer overstiger antall sider i dokumentet',
 );
