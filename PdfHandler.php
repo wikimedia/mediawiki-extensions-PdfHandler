@@ -28,7 +28,7 @@ if (!defined('MEDIAWIKI')) {
 
 $wgExtensionCredits['other'][] = array(
 	'name' => 'PDF Handler',
-	'version' => '2008-01-11',
+	'version' => preg_replace('/^.* (\d\d\d\d-\d\d-\d\d) .*$/', '\1', '$LastChangedDate$'), #just the date of the last change
 	'author' =>' Xarax',
 	'description' => 'Handler for viewing PDF files in image mode',
 	'descriptionmsg' => 'pdf-desc',
