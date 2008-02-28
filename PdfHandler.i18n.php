@@ -110,6 +110,7 @@ $messages['no'] = array(
  * @author Cedric31
  */
 $messages['oc'] = array(
+	'pdf-desc'        => 'Utilitari per visualizar los fichièrs PDF en mòde imatge',
 	'pdf_no_metadata' => 'Pòt pas obténer las metadonadas del fichièr PDF',
 	'pdf_page_error'  => 'Lo numèro de pagina es pas dins la gama.',
 );
