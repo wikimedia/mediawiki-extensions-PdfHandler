@@ -80,6 +80,13 @@ $messages['hu'] = array(
 	'pdf_page_error'  => 'az oldalszám a tartományon kívül esik',
 );
 
+/** Khmer (ភាសាខ្មែរ)
+ * @author Chhorran
+ */
+$messages['km'] = array(
+	'pdf_page_error' => 'គ្មានលេខទំព័រ ក្នុងដែនកំណត់',
+);
+
 /** Luxembourgish (Lëtzebuergesch)
  * @author Robby
  */
