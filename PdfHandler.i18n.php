@@ -46,6 +46,15 @@ $messages['de'] = array(
 	'pdf_page_error'  => 'Seitenzahl außerhalb des Dokumentes.',
 );
 
+/** Esperanto (Esperanto)
+ * @author Yekrats
+ */
+$messages['eo'] = array(
+	'pdf-desc'        => 'Ilo por vidi PDF-dosierojn en bilda reĝimo',
+	'pdf_no_metadata' => 'Ne povas preni metadatenon el PDF',
+	'pdf_page_error'  => 'Paĝnombro ekster valida intervalo',
+);
+
 /** French (Français)
  * @author Grondin
  */
@@ -148,7 +157,7 @@ $messages['pt'] = array(
  */
 $messages['ru'] = array(
 	'pdf_no_metadata' => 'невозможно получить метаданные из PDF',
-	'pdf_page_error'  => 'номер страницы вне диапазона',
+	'pdf_page_error'  => 'Номер страницы вне диапазона',
 );
 
 /** Slovak (Slovenčina)
