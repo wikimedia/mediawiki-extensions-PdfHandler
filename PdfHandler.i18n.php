@@ -131,10 +131,12 @@ $messages['oc'] = array(
 	'pdf_page_error'  => 'Lo numèro de pagina es pas dins la gama.',
 );
 
-/** Polish (Polski) */
+/** Polish (Polski)
+ * @author Holek
+ */
 $messages['pl'] = array(
 	'pdf_no_metadata' => 'nie można pobrać metadanych z pliku PDF',
-	'pdf_page_error'  => 'numer strony poza zakresem',
+	'pdf_page_error'  => 'Numer strony poza zakresem',
 );
 
 /** Piemontèis (Piemontèis) */
