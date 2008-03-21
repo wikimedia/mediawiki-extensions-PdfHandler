@@ -82,7 +82,7 @@ $messages['hsb'] = array(
 );
 
 /** Hungarian (Magyar)
- * @author Bdanee
+ * @author Dani
  */
 $messages['hu'] = array(
 	'pdf_no_metadata' => 'nem sikerült lekérni a PDF metaadatait',
