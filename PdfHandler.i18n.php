@@ -8,9 +8,9 @@
 $messages = array();
 
 $messages['en'] = array(
-	'pdf-desc' => 'Handler for viewing PDF files in image mode',
+	'pdf-desc'        => 'Handler for viewing PDF files in image mode',
 	'pdf_no_metadata' => 'Cannot get metadata from PDF',
-	'pdf_page_error' => 'Page number not in range',
+	'pdf_page_error'  => 'Page number not in range',
 );
 
 /** Arabic (العربية)
