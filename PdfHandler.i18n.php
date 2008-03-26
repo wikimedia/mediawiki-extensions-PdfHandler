@@ -104,6 +104,13 @@ $messages['lb'] = array(
 	'pdf_page_error'  => "D'Säitenzuel ass net an dem Beräich.",
 );
 
+/** Marathi (मराठी)
+ * @author Kaustubh
+ */
+$messages['mr'] = array(
+	'pdf_no_metadata' => 'पीडीएफ मधून मेटाडाटा घेऊ शकत नाही',
+);
+
 /** Dutch (Nederlands)
  * @author Siebrand
  */
