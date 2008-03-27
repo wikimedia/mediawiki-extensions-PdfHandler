@@ -108,7 +108,9 @@ $messages['lb'] = array(
  * @author Kaustubh
  */
 $messages['mr'] = array(
+	'pdf-desc'        => 'चित्र मोड मध्ये पीडीएफ संचिका पाहण्यासाठी आवश्यक प्रणाली',
 	'pdf_no_metadata' => 'पीडीएफ मधून मेटाडाटा घेऊ शकत नाही',
+	'pdf_page_error'  => 'पान क्रमांक सीमेमध्ये नाही',
 );
 
 /** Dutch (Nederlands)
@@ -120,11 +122,11 @@ $messages['nl'] = array(
 	'pdf_page_error'  => 'paginanummer komt niet voor in document',
 );
 
-/** Norwegian (‪Norsk (bokmål)‬)
+/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
  * @author Jon Harald Søby
  */
 $messages['no'] = array(
-	'pdf-desc'        => 'Behandler for visning av PDF-filer i bildemodus',
+	'pdf-desc'        => 'Håndtering av PDF-visning i bildemodus',
 	'pdf_no_metadata' => 'kan ikke hente metadata fra PDF',
 	'pdf_page_error'  => 'Sidenummer overstiger antall sider i dokumentet',
 );
