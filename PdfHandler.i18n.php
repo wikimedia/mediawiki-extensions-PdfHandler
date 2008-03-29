@@ -167,6 +167,7 @@ $messages['pt'] = array(
  * @author .:Ajvol:.
  */
 $messages['ru'] = array(
+	'pdf-desc'        => 'Обработчик для просмотра PDF-файлов в виде изображений',
 	'pdf_no_metadata' => 'невозможно получить метаданные из PDF',
 	'pdf_page_error'  => 'Номер страницы вне диапазона',
 );
