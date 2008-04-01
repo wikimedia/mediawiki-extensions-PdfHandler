@@ -142,8 +142,10 @@ $messages['oc'] = array(
 
 /** Polish (Polski)
  * @author Holek
+ * @author Sp5uhe
  */
 $messages['pl'] = array(
+	'pdf-desc'        => 'Konwerter graficznego podglądu plików PDF',
 	'pdf_no_metadata' => 'nie można pobrać metadanych z pliku PDF',
 	'pdf_page_error'  => 'Numer strony poza zakresem',
 );
