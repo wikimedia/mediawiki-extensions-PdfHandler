@@ -72,6 +72,15 @@ $messages['gl'] = array(
 	'pdf_page_error'  => 'O número da páxina non está no rango',
 );
 
+/** Hindi (हिन्दी)
+ * @author Kaustubh
+ */
+$messages['hi'] = array(
+	'pdf-desc'        => 'चित्र मोड में पीडीएफ फ़ाईल देखनेके लिये आवश्यक प्रणाली',
+	'pdf_no_metadata' => 'पीडीएफ से मेटाडाटा ले नहीं पायें',
+	'pdf_page_error'  => 'पन्ने का क्रमांक सीमामें नहीं हैं',
+);
+
 /** Upper Sorbian (Hornjoserbsce)
  * @author Michawiki
  */
