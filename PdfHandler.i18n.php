@@ -200,6 +200,15 @@ $messages['stq'] = array(
 	'pdf_page_error'  => 'Siedentaal buute dät Dokument.',
 );
 
+/** Swedish (Svenska)
+ * @author M.M.S.
+ */
+$messages['sv'] = array(
+	'pdf-desc'        => 'Hantering av PDF-visning i bildläge',
+	'pdf_no_metadata' => 'Kan inte hämta metadata från PDF',
+	'pdf_page_error'  => 'Sidnummer överstiger antal sidor i dokumentet',
+);
+
 $messages['yue'] = array(
 	'pdf_no_metadata' => '唔能夠響PDF度拎metadata',
 	'pdf_page_error' => '頁數唔響範圍度',
