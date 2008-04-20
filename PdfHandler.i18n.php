@@ -197,7 +197,7 @@ $messages['sk'] = array(
  */
 $messages['stq'] = array(
 	'pdf_no_metadata' => 'Neen Metadoaten in dät PDF deer.',
-	'pdf_page_error'  => 'Siedentaal buute dät Dokument.',
+	'pdf_page_error'  => 'Siedentaal buute Riege.',
 );
 
 /** Swedish (Svenska)
