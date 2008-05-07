@@ -98,6 +98,13 @@ $messages['hu'] = array(
 	'pdf_page_error'  => 'az oldalszám a tartományon kívül esik',
 );
 
+/** Javanese (Basa Jawa)
+ * @author Meursault2004
+ */
+$messages['jv'] = array(
+	'pdf_no_metadata' => 'Ora bisa olèh metadata saka PDF',
+);
+
 /** Khmer (ភាសាខ្មែរ)
  * @author Chhorran
  */
