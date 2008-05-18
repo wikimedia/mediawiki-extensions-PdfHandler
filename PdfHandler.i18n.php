@@ -120,6 +120,13 @@ $messages['lb'] = array(
 	'pdf_page_error'  => "D'Säitenzuel ass net an dem Beräich.",
 );
 
+/** Malayalam (മലയാളം)
+ * @author Shijualex
+ */
+$messages['ml'] = array(
+	'pdf_no_metadata' => 'PDF-ല്‍ നിന്നു മെറ്റാഡാറ്റ ലഭിച്ചില്ല',
+);
+
 /** Marathi (मराठी)
  * @author Kaustubh
  */
