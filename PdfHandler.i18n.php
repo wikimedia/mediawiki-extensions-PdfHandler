@@ -189,7 +189,7 @@ $messages['pt'] = array(
 );
 
 /** Russian (Русский)
- * @author .:Ajvol:.
+ * @author Александр Сигачёв
  */
 $messages['ru'] = array(
 	'pdf-desc'        => 'Обработчик для просмотра PDF-файлов в виде изображений',
