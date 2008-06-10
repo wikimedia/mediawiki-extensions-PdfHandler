@@ -223,6 +223,15 @@ $messages['sv'] = array(
 	'pdf_page_error'  => 'Sidnummer överstiger antal sidor i dokumentet',
 );
 
+/** Vietnamese (Tiếng Việt)
+ * @author Vinhtantran
+ */
+$messages['vi'] = array(
+	'pdf-desc'        => 'Bộ xử lý để xem tập tin PDF ở dạng hình ảnh',
+	'pdf_no_metadata' => 'Không thấy truy xuất siêu dữ liệu từ PDF',
+	'pdf_page_error'  => 'Số trang không nằm trong giới hạn',
+);
+
 $messages['yue'] = array(
 	'pdf_no_metadata' => '唔能夠響PDF度拎metadata',
 	'pdf_page_error' => '頁數唔響範圍度',
