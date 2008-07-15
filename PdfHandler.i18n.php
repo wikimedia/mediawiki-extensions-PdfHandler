@@ -109,9 +109,11 @@ $messages['jv'] = array(
 
 /** Khmer (ភាសាខ្មែរ)
  * @author Chhorran
+ * @author Lovekhmer
  */
 $messages['km'] = array(
-	'pdf_page_error' => 'គ្មានលេខទំព័រ ក្នុងដែនកំណត់',
+	'pdf_no_metadata' => 'មិនអាចទទួលយកទិ្ន្នន័យមេតាពី PDF បានទេ',
+	'pdf_page_error'  => 'គ្មានលេខទំព័រ ក្នុងដែនកំណត់',
 );
 
 /** Luxembourgish (Lëtzebuergesch)
