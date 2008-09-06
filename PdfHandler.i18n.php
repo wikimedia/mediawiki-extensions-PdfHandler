@@ -22,6 +22,15 @@ $messages['ar'] = array(
 	'pdf_page_error' => 'رقم الصفحة ليس في النطاق',
 );
 
+/** Egyptian Spoken Arabic (مصرى)
+ * @author Meno25
+ */
+$messages['arz'] = array(
+	'pdf-desc' => 'متحكم لرؤية ملفات PDF فى نمط صورة',
+	'pdf_no_metadata' => 'لم يمكن أخذ معلومات ميتا من PDF',
+	'pdf_page_error' => 'رقم الصفحة ليس فى النطاق',
+);
+
 /** Bulgarian (Български)
  * @author DCLXVI
  */
