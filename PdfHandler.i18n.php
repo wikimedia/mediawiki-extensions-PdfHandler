@@ -138,7 +138,7 @@ $messages['ksh'] = array(
  * @author Robby
  */
 $messages['lb'] = array(
-	'pdf_no_metadata' => 'Meta-Informatiounen aus dem PDF Dokument kënne net gelies ginn',
+	'pdf_no_metadata' => 'Meta-Informatiounen aus dem PDF Dokument kënnen net gelies ginn',
 	'pdf_page_error' => "D'Säitenzuel ass net an dem Beräich.",
 );
 
