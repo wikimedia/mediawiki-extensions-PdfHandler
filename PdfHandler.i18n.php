@@ -13,6 +13,13 @@ $messages['en'] = array(
 	'pdf_page_error'  => 'Page number not in range',
 );
 
+/** Message documentation (Message documentation)
+ * @author Purodha
+ */
+$messages['qqq'] = array(
+	'pdf-desc' => 'Short description of the extension, shown in [[Special:Version]]. Do not translate or change links.',
+);
+
 /** Arabic (العربية)
  * @author Meno25
  */
@@ -36,6 +43,15 @@ $messages['arz'] = array(
  */
 $messages['bg'] = array(
 	'pdf_no_metadata' => 'невъзможно е да бъдат извлечени метаданни от PDF',
+);
+
+/** Catalan (Català)
+ * @author Aleator
+ */
+$messages['ca'] = array(
+	'pdf-desc' => 'Gestor per a visualitzar arxius PDF en mode imatge',
+	'pdf_no_metadata' => "No s'han pogut obtenir metadades del PDF",
+	'pdf_page_error' => "Número de pàgina fora d'abast",
 );
 
 /** Czech (Česky)
@@ -107,6 +123,15 @@ $messages['hsb'] = array(
 $messages['hu'] = array(
 	'pdf_no_metadata' => 'nem sikerült lekérni a PDF metaadatait',
 	'pdf_page_error' => 'az oldalszám a tartományon kívül esik',
+);
+
+/** Interlingua (Interlingua)
+ * @author McDutchie
+ */
+$messages['ia'] = array(
+	'pdf-desc' => 'Gestor pro visualisar files PDF in modo de imagine',
+	'pdf_no_metadata' => 'Non pote obtener metadatos ab PDF',
+	'pdf_page_error' => 'Numero de pagina foras del intervallo',
 );
 
 /** Javanese (Basa Jawa)
