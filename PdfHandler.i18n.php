@@ -80,6 +80,15 @@ $messages['eo'] = array(
 	'pdf_page_error' => 'Paĝnombro ekster valida intervalo',
 );
 
+/** Spanish (Español)
+ * @author Sanbec
+ */
+$messages['es'] = array(
+	'pdf-desc' => 'Manejador para ver archivos PDF en modo imagen',
+	'pdf_no_metadata' => 'No se obtuvieron metadatos del PDF',
+	'pdf_page_error' => 'Número de página fuera de rango',
+);
+
 /** French (Français)
  * @author Grondin
  */
