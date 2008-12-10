@@ -153,9 +153,10 @@ $messages['jv'] = array(
 /** Khmer (ភាសាខ្មែរ)
  * @author Chhorran
  * @author Lovekhmer
+ * @author Thearith
  */
 $messages['km'] = array(
-	'pdf_no_metadata' => 'មិនអាចទទួលយកទិ្ន្នន័យមេតាពី PDF បានទេ',
+	'pdf_no_metadata' => 'មិនអាចទទួលយកទិន្នន័យមេតាពី PDF បានទេ',
 	'pdf_page_error' => 'គ្មានលេខទំព័រ ក្នុងដែនកំណត់',
 );
 
