@@ -71,6 +71,15 @@ $messages['de'] = array(
 	'pdf_page_error' => 'Seitenzahl außerhalb des Dokumentes.',
 );
 
+/** Lower Sorbian (Dolnoserbski)
+ * @author Michawiki
+ */
+$messages['dsb'] = array(
+	'pdf-desc' => 'Źěłowy rěd za woglědowanje PDF-datajow we wobrazowem modusu',
+	'pdf_no_metadata' => 'Metadaty njedaju se z PDF dobyś',
+	'pdf_page_error' => 'Bokowe cysło zwenka wobcerka',
+);
+
 /** Esperanto (Esperanto)
  * @author Yekrats
  */
