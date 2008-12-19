@@ -152,6 +152,15 @@ $messages['ia'] = array(
 	'pdf_page_error' => 'Numero de pagina foras del intervallo',
 );
 
+/** Japanese (日本語)
+ * @author Fryed-peach
+ */
+$messages['ja'] = array(
+	'pdf-desc' => 'PDFファイルを画像風に閲覧するためのハンドラ',
+	'pdf_no_metadata' => 'PDFのメタデータを得ることができません',
+	'pdf_page_error' => '範囲内にないページ番号',
+);
+
 /** Javanese (Basa Jawa)
  * @author Meursault2004
  */
