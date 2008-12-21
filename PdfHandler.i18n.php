@@ -139,8 +139,9 @@ $messages['hsb'] = array(
  * @author Dani
  */
 $messages['hu'] = array(
+	'pdf-desc' => 'PDF fájlok megjelenítse képként',
 	'pdf_no_metadata' => 'nem sikerült lekérni a PDF metaadatait',
-	'pdf_page_error' => 'az oldalszám a tartományon kívül esik',
+	'pdf_page_error' => 'Az oldalszám a tartományon kívül esik',
 );
 
 /** Interlingua (Interlingua)
