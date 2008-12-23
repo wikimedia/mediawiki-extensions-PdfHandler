@@ -221,6 +221,15 @@ $messages['nl'] = array(
 	'pdf_page_error' => 'paginanummer komt niet voor in document',
 );
 
+/** Norwegian Nynorsk (‪Norsk (nynorsk)‬)
+ * @author Harald Khan
+ */
+$messages['nn'] = array(
+	'pdf-desc' => 'Handering av PDF-vising i biletmodus',
+	'pdf_no_metadata' => 'Kan ikkje henta metadata frå PDF',
+	'pdf_page_error' => 'Sidenummer overstig talet på sider i dokumentet',
+);
+
 /** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
  * @author Jon Harald Søby
  */
