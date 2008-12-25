@@ -37,12 +37,15 @@ $wgExtensionCredits['other'][] = array(
 );
 
 // External program requirements...
-$wgPdfProcessor     = null; // gs
-$wgPdfPostProcessor = null; // convert
-$wgPdfInfo          = null; // pdfinfo
+$wgPdfProcessor     = 'gs';
+$wgPdfPostProcessor = 'convert';
+$wgPdfInfo          = 'pdfinfo';
 
 $wgPdfOutputExtension = "jpg";
 $wgPdfHandlerDpi = 150;
+
+// To upload new PDF files you'll need to do this too:
+// $wgFileExtensions[] = 'pdf';
 
 $dir = dirname(__FILE__) . '/';
 $wgExtensionMessagesFiles['PdfHandler'] = $dir . 'PdfHandler.i18n.php';
