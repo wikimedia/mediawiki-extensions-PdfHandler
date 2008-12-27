@@ -98,6 +98,16 @@ $messages['es'] = array(
 	'pdf_page_error' => 'Número de página fuera de rango',
 );
 
+/** Finnish (Suomi)
+ * @author Nike
+ * @author Vililikku
+ */
+$messages['fi'] = array(
+	'pdf-desc' => 'Käsittelijä PDF-tiedostojen katsomiseen kuvatilassa.',
+	'pdf_no_metadata' => 'Metatietojen hakeminen PDF-tiedostosta epäonnistui',
+	'pdf_page_error' => 'Sivunumero ei ole alueella.',
+);
+
 /** French (Français)
  * @author Grondin
  */
