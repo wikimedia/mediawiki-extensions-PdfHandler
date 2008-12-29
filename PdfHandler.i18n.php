@@ -127,6 +127,16 @@ $messages['gl'] = array(
 	'pdf_page_error' => 'O número da páxina non está no rango',
 );
 
+/** Hebrew (עברית)
+ * @author Rotemliss
+ * @author YaronSh
+ */
+$messages['he'] = array(
+	'pdf-desc' => 'טיפול בצפייה בקובצי PDF במצב תמונה',
+	'pdf_no_metadata' => 'לא ניתן לאחזר את נתוני המסמך מה־PDF',
+	'pdf_page_error' => 'מספר הדף אינו בטווח',
+);
+
 /** Hindi (हिन्दी)
  * @author Kaustubh
  */
