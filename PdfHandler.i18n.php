@@ -328,6 +328,15 @@ $messages['sv'] = array(
 	'pdf_page_error' => 'Sidnummer överstiger antal sidor i dokumentet',
 );
 
+/** Tagalog (Tagalog)
+ * @author AnakngAraw
+ */
+$messages['tl'] = array(
+	'pdf-desc' => 'Tagapaghawak para sa pagtanaw ng mga talaksang PDF na nasa modalidad na panglarawan',
+	'pdf_no_metadata' => 'Hindi makuha ang dato ng meta mula sa PDF',
+	'pdf_page_error' => 'Wala sa sakop ang bilang ng pahina',
+);
+
 /** Vietnamese (Tiếng Việt)
  * @author Vinhtantran
  */
