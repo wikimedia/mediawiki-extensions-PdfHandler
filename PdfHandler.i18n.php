@@ -316,6 +316,7 @@ $messages['sk'] = array(
  * @author Pyt
  */
 $messages['stq'] = array(
+	'pdf-desc' => 'Snitsteede foar dät Bekiekjen fon PDF-Doatäie in dän Bielde-Modus',
 	'pdf_no_metadata' => 'Neen Metadoaten in dät PDF deer.',
 	'pdf_page_error' => 'Siedentaal buute Riege.',
 );
