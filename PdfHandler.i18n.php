@@ -127,6 +127,15 @@ $messages['gl'] = array(
 	'pdf_page_error' => 'O número da páxina non está no rango',
 );
 
+/** Swiss German (Alemannisch)
+ * @author Als-Holder
+ */
+$messages['gsw'] = array(
+	'pdf-desc' => 'Schnittstell fir d Aasicht vu PDF-Dateien im Bilder-Modus',
+	'pdf_no_metadata' => 'Kei Metadate im PDF vorhande.',
+	'pdf_page_error' => 'Sytezahl usserhalb vum Dokumänt.',
+);
+
 /** Hebrew (עברית)
  * @author Rotemliss
  * @author YaronSh
