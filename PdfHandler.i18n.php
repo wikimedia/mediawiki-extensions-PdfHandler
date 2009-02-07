@@ -303,6 +303,15 @@ $messages['pt'] = array(
 	'pdf_page_error' => 'Número de página fora do intervalo',
 );
 
+/** Brazilian Portuguese (Português do Brasil)
+ * @author Eduardo.mps
+ */
+$messages['pt-br'] = array(
+	'pdf-desc' => 'Manuseador de visualização de arquivos PDF em modo de imagem',
+	'pdf_no_metadata' => 'Não foi possível obter os metadados do PDF',
+	'pdf_page_error' => 'Número de página fora do intervalo',
+);
+
 /** Russian (Русский)
  * @author Александр Сигачёв
  */
