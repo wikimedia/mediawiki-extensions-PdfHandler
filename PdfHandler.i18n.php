@@ -45,6 +45,15 @@ $messages['bg'] = array(
 	'pdf_no_metadata' => 'невъзможно е да бъдат извлечени метаданни от PDF',
 );
 
+/** Bosnian (Bosanski)
+ * @author CERminator
+ */
+$messages['bs'] = array(
+	'pdf-desc' => 'Uređivač za pregled PDF datoteka u modu za slike',
+	'pdf_no_metadata' => 'Ne mogu se naći metapodaci u PDFu',
+	'pdf_page_error' => 'Broj stranice nije u rasponu',
+);
+
 /** Catalan (Català)
  * @author Aleator
  */
