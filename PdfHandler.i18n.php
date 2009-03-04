@@ -321,6 +321,15 @@ $messages['pt-br'] = array(
 	'pdf_page_error' => 'Número de página fora do intervalo',
 );
 
+/** Tarandíne (Tarandíne)
+ * @author Joetaras
+ */
+$messages['roa-tara'] = array(
+	'pdf-desc' => 'Gestore pe vedè le file PDF in mode immaggine',
+	'pdf_no_metadata' => "Non ge pozze pigghià le metadata da 'u PDF",
+	'pdf_page_error' => "Numere de pàgene fore da l'indervalle",
+);
+
 /** Russian (Русский)
  * @author Александр Сигачёв
  */
