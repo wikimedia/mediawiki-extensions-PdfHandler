@@ -38,6 +38,16 @@ $messages['arz'] = array(
 	'pdf_page_error' => 'رقم الصفحة ليس فى النطاق',
 );
 
+/** Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
+ * @author EugeneZelenko
+ * @author Jim-by
+ */
+$messages['be-tarask'] = array(
+	'pdf-desc' => 'Апрацоўшчык для прагляду PDF-файлаў у выглядзе выяваў',
+	'pdf_no_metadata' => 'Немагчыма атрымаць мэта-зьвесткі з PDF-файла',
+	'pdf_page_error' => 'Нумар старонкі паза дыяпазонам',
+);
+
 /** Bulgarian (Български)
  * @author DCLXVI
  */
