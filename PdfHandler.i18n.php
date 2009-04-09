@@ -396,21 +396,21 @@ $messages['vi'] = array(
 
 /** Yue (粵語) */
 $messages['yue'] = array(
-	'pdf-desc'        => '響圖像模式睇PDF檔嘅處理器',
+	'pdf-desc' => '響圖像模式睇PDF檔嘅處理器',
 	'pdf_no_metadata' => '唔能夠響PDF度拎metadata',
-	'pdf_page_error'  => '頁數唔響範圍度',
+	'pdf_page_error' => '頁數唔響範圍度',
 );
 
 /** Simplified Chinese (‪中文(简体)‬) */
 $messages['zh-hans'] = array(
-	'pdf-desc'        => '在图像方式中PDF档的处理器',
+	'pdf-desc' => '在图像方式中PDF档的处理器',
 	'pdf_no_metadata' => '无法在PDF中撷取元数据',
 	'pdf_page_error' => '页数不在范围中',
 );
 
 /** Traditional Chinese (‪中文(繁體)‬) */
 $messages['zh-hant'] = array(
-	'pdf-desc'        => '在圖像模式中PDF檔的處理器',
+	'pdf-desc' => '在圖像模式中PDF檔的處理器',
 	'pdf_no_metadata' => '無法在PDF中擷取元數據',
 	'pdf_page_error' => '頁數不在範圍中',
 );
