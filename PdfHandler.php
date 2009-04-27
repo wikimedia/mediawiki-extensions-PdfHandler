@@ -27,6 +27,7 @@ if (!defined('MEDIAWIKI')) {
 }
 
 $wgExtensionCredits['other'][] = array(
+	'path' => __FILE__,
 	'name' => 'PDF Handler',
 	'author' =>' Xarax',
 	'description' => 'Handler for viewing PDF files in image mode',
