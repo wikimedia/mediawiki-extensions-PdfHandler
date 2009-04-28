@@ -358,6 +358,15 @@ $messages['sk'] = array(
 	'pdf_page_error' => 'Číslo stránky nie je v intervale',
 );
 
+/** Serbian Cyrillic ekavian (ћирилица)
+ * @author Михајло Анђелковић
+ */
+$messages['sr-ec'] = array(
+	'pdf-desc' => 'Хандлер за преглед PDF фајлова као слика',
+	'pdf_no_metadata' => 'Не могу се добити мета-подаци из PDF-а',
+	'pdf_page_error' => 'Број стране излази ван опсега',
+);
+
 /** Seeltersk (Seeltersk)
  * @author Pyt
  */
