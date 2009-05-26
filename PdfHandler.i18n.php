@@ -128,12 +128,13 @@ $messages['fi'] = array(
 );
 
 /** French (Français)
+ * @author Crochet.david
  * @author Grondin
  */
 $messages['fr'] = array(
 	'pdf-desc' => 'Utilitaire pour visualiser les fichiers PDF en mode image',
 	'pdf_no_metadata' => 'Ne peut obtenir les métadonnées du fichier PDF',
-	'pdf_page_error' => "Le numéro de page n'est pas dans la gamme.",
+	'pdf_page_error' => 'Le numéro de page n’est pas dans la gamme.',
 );
 
 /** Galician (Galego)
