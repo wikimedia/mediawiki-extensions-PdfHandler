@@ -395,6 +395,15 @@ $messages['tl'] = array(
 	'pdf_page_error' => 'Wala sa sakop ang bilang ng pahina',
 );
 
+/** Turkish (Türkçe)
+ * @author Joseph
+ */
+$messages['tr'] = array(
+	'pdf-desc' => 'PDF dosyalarını görüntü modunda görüntülemek için işleyici',
+	'pdf_no_metadata' => "PDF'den metadata alınamıyor",
+	'pdf_page_error' => 'Sayfa numarası aralıkta değil',
+);
+
 /** Vietnamese (Tiếng Việt)
  * @author Vinhtantran
  */
