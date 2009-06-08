@@ -406,6 +406,15 @@ $messages['tr'] = array(
 	'pdf_page_error' => 'Sayfa numarası aralıkta değil',
 );
 
+/** Vèneto (Vèneto)
+ * @author Candalua
+ */
+$messages['vec'] = array(
+	'pdf-desc' => 'Handler par vardar i file PDF in modalità imagine',
+	'pdf_no_metadata' => 'No se riesse a recuperar i metadati dal PDF',
+	'pdf_page_error' => "Nùmaro de pagina mia conpreso in te l'intervalo",
+);
+
 /** Vietnamese (Tiếng Việt)
  * @author Vinhtantran
  */
