@@ -352,6 +352,15 @@ $messages['ru'] = array(
 	'pdf_page_error' => 'Номер страницы вне диапазона',
 );
 
+/** Yakut (Саха тыла)
+ * @author HalanTul
+ */
+$messages['sah'] = array(
+	'pdf-desc' => 'PDF билэлэри ойуу курдук көрдөрөөччү',
+	'pdf_no_metadata' => 'PDF-тан мета дааннайдарын ылар кыах суох',
+	'pdf_page_error' => 'Сирэй нүөмэрэ диапазоҥҥа киирбэт',
+);
+
 /** Slovak (Slovenčina)
  * @author Helix84
  */
