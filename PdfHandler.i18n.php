@@ -204,6 +204,15 @@ $messages['ia'] = array(
 	'pdf_page_error' => 'Numero de pagina foras del intervallo',
 );
 
+/** Italian (Italiano)
+ * @author Darth Kule
+ */
+$messages['it'] = array(
+	'pdf-desc' => 'Gestore per la visualizzazione di file PDF in modalità immagine',
+	'pdf_no_metadata' => 'Impossibile ottenere i metadati da PDF',
+	'pdf_page_error' => "Numero di pagina non compreso nell'intervallo",
+);
+
 /** Japanese (日本語)
  * @author Fryed-peach
  */
