@@ -204,6 +204,15 @@ $messages['ia'] = array(
 	'pdf_page_error' => 'Numero de pagina foras del intervallo',
 );
 
+/** Indonesian (Bahasa Indonesia)
+ * @author Bennylin
+ */
+$messages['id'] = array(
+	'pdf-desc' => 'Yang menangani tampilan berkas PDF dalam mode gambar',
+	'pdf_no_metadata' => 'Tidak dapat membaca metadata dari PDF',
+	'pdf_page_error' => 'Nomor halaman di luar batas',
+);
+
 /** Italian (Italiano)
  * @author Darth Kule
  */
