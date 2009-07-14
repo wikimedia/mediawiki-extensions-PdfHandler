@@ -101,6 +101,13 @@ $messages['dsb'] = array(
 	'pdf_page_error' => 'Bokowe cysło zwenka wobcerka',
 );
 
+/** Greek (Ελληνικά)
+ * @author Omnipaedista
+ */
+$messages['el'] = array(
+	'pdf_page_error' => 'Αριθμός σελίδας εκτός ορίου',
+);
+
 /** Esperanto (Esperanto)
  * @author Yekrats
  */
