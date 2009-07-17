@@ -273,6 +273,15 @@ $messages['lb'] = array(
 	'pdf_page_error' => "D'Säitenzuel ass net an dem Beräich.",
 );
 
+/** Lithuanian (Lietuvių)
+ * @author Matasg
+ */
+$messages['lt'] = array(
+	'pdf-desc' => 'Įrankis PDF failų peržiūrai vaizdo režime',
+	'pdf_no_metadata' => 'Nepavyko gauti metaduomenų iš PDF',
+	'pdf_page_error' => 'Puslapis numeris nėra diapazone',
+);
+
 /** Malayalam (മലയാളം)
  * @author Shijualex
  */
