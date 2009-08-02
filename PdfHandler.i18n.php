@@ -249,8 +249,10 @@ $messages['jv'] = array(
  * @author Chhorran
  * @author Lovekhmer
  * @author Thearith
+ * @author គីមស៊្រុន
  */
 $messages['km'] = array(
+	'pdf-desc' => 'កម្មវិធីសំរាប់បើកមើលឯកសារ PDF ជាទំរង់រូបភាព',
 	'pdf_no_metadata' => 'មិនអាចទទួលយកទិន្នន័យមេតាពី PDF បានទេ',
 	'pdf_page_error' => 'គ្មានលេខទំព័រ ក្នុងដែនកំណត់',
 );
