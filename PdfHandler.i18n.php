@@ -415,6 +415,15 @@ $messages['sr-ec'] = array(
 	'pdf_page_error' => 'Број стране излази ван опсега',
 );
 
+/** latinica (latinica)
+ * @author Michaello
+ */
+$messages['sr-el'] = array(
+	'pdf-desc' => 'Handler za pregled PDF fajlova kao slika',
+	'pdf_no_metadata' => 'Ne mogu se dobiti meta-podaci iz PDF-a',
+	'pdf_page_error' => 'Broj strane izlazi van opsega',
+);
+
 /** Seeltersk (Seeltersk)
  * @author Pyt
  */
