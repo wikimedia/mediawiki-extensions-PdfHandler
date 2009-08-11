@@ -105,6 +105,7 @@ $messages['dsb'] = array(
  * @author Omnipaedista
  */
 $messages['el'] = array(
+	'pdf_no_metadata' => 'Αδύνατη η απόκτηση μεταδεδομένων από PDF',
 	'pdf_page_error' => 'Αριθμός σελίδας εκτός ορίου',
 );
 
@@ -124,6 +125,14 @@ $messages['es'] = array(
 	'pdf-desc' => 'Manejador para ver archivos PDF en modo imagen',
 	'pdf_no_metadata' => 'No se obtuvieron metadatos del PDF',
 	'pdf_page_error' => 'Número de página fuera de rango',
+);
+
+/** Estonian (Eesti)
+ * @author Pikne
+ */
+$messages['et'] = array(
+	'pdf-desc' => 'Töötleja PDF-failide piltidena kuvamiseks',
+	'pdf_no_metadata' => 'Ei õnnestu PDF-faili meta-andmeid saada',
 );
 
 /** Finnish (Suomi)
@@ -156,6 +165,14 @@ $messages['gl'] = array(
 	'pdf_page_error' => 'O número da páxina non está no rango',
 );
 
+/** Ancient Greek (Ἀρχαία ἑλληνικὴ)
+ * @author Omnipaedista
+ */
+$messages['grc'] = array(
+	'pdf_no_metadata' => 'Ἀδύνατον τὸ ἀποκομίζειν μεταδεδομένα ἐκ PDF',
+	'pdf_page_error' => 'Ἀριθμὸς δέλτου ἐκτὸς ἐμβελείας',
+);
+
 /** Swiss German (Alemannisch)
  * @author Als-Holder
  */
@@ -182,6 +199,15 @@ $messages['hi'] = array(
 	'pdf-desc' => 'चित्र मोड में पीडीएफ फ़ाईल देखनेके लिये आवश्यक प्रणाली',
 	'pdf_no_metadata' => 'पीडीएफ से मेटाडाटा ले नहीं पायें',
 	'pdf_page_error' => 'पन्ने का क्रमांक सीमामें नहीं हैं',
+);
+
+/** Croatian (Hrvatski)
+ * @author Suradnik13
+ */
+$messages['hr'] = array(
+	'pdf-desc' => 'Program za gledanje PDF datoteka u slikovnom modu',
+	'pdf_no_metadata' => 'Nije moguće dobiti metapodatke iz PDF',
+	'pdf_page_error' => 'Broj stranice nije u opsegu',
 );
 
 /** Upper Sorbian (Hornjoserbsce)
