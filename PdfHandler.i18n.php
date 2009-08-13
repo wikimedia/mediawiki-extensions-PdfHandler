@@ -105,6 +105,7 @@ $messages['dsb'] = array(
  * @author Omnipaedista
  */
 $messages['el'] = array(
+	'pdf-desc' => 'Διαχειριστής για την εμφάνιση αρχείων PDF σε μορφή εικόνας',
 	'pdf_no_metadata' => 'Αδύνατη η απόκτηση μεταδεδομένων από PDF',
 	'pdf_page_error' => 'Αριθμός σελίδας εκτός ορίου',
 );
