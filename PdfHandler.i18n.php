@@ -311,6 +311,15 @@ $messages['lt'] = array(
 	'pdf_page_error' => 'Puslapis numeris nėra diapazone',
 );
 
+/** Macedonian (Македонски)
+ * @author Bjankuloski06
+ */
+$messages['mk'] = array(
+	'pdf-desc' => 'Помагало за гледање на PDF податотеки во сликовен режим',
+	'pdf_no_metadata' => 'Не можам да земам метаподатоци од PDF податотеката',
+	'pdf_page_error' => 'Бројот на страницата не е во опсегот',
+);
+
 /** Malayalam (മലയാളം)
  * @author Shijualex
  */
