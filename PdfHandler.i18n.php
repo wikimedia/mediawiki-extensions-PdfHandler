@@ -382,10 +382,13 @@ $messages['pl'] = array(
 	'pdf_page_error' => 'Numer strony poza zakresem',
 );
 
-/** Piedmontese (Piemontèis) */
+/** Piedmontese (Piemontèis)
+ * @author Dragonòt
+ */
 $messages['pms'] = array(
+	'pdf-desc' => 'Ël gestor për vëdde ij file PDF an manera image',
 	'pdf_no_metadata' => 'as peulo nen pijesse ij metadat dal PDF',
-	'pdf_page_error' => "ël nùmer ëd pàgina a resta fòra da cole ch'a-i son",
+	'pdf_page_error' => "Ël nùmer ëd pàgina a l'é pa ant ël range",
 );
 
 /** Portuguese (Português)
