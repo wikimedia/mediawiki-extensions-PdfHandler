@@ -322,11 +322,12 @@ $messages['lt'] = array(
 
 /** Macedonian (Македонски)
  * @author Bjankuloski06
+ * @author Brest
  */
 $messages['mk'] = array(
-	'pdf-desc' => 'Помагало за гледање на PDF податотеки во сликовен режим',
-	'pdf_no_metadata' => 'Не можам да земам метаподатоци од PDF податотеката',
-	'pdf_page_error' => 'Бројот на страницата не е во опсегот',
+	'pdf-desc' => 'Ракувач за прегледување PDF податотеки во сликовен режим',
+	'pdf_no_metadata' => 'Не може да се земат метаподатоци од PDF',
+	'pdf_page_error' => 'Бројот на страница е надвор од опсег',
 );
 
 /** Malayalam (മലയാളം)
