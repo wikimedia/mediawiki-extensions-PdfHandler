@@ -79,7 +79,7 @@ class PdfImage {
 	}
 
 	public function retrieveMetaData() {
-		global $wgPdfInfo;
+		global $wgPdfInfo, $wgPdftoText;
 
 		if ( $wgPdfInfo ) {
 			wfProfileIn( 'pdfinfo' );
@@ -92,6 +92,25 @@ class PdfImage {
 			wfProfileOut( 'pdfinfo' );
 		} else {
 			$data = null;
+		}
+
+		# Read text layer
+		if ( isset( $wgPdftoText ) ) { 
+			wfProfileIn( 'pdftotext' );
+			$cmd = wfEscapeShellArg( $wgPdftoText ) . ' '. wfEscapeShellArg( $this->mFilename ) . ' - ';
+			wfDebug( __METHOD__.": $cmd\n" );
+			$txt = wfShellExec( $cmd, $retval );
+			wfProfileOut( 'pdftotext' );
+			if( $retval == 0) {
+				# Get rid of invalid UTF-8, strip control characters
+				wfSuppressWarnings();
+				$txt = iconv( "UTF-8","UTF-8//IGNORE", $txt );
+				wfRestoreWarnings();
+				$txt = preg_replace( "/[\013\035\037]/", "", $txt );
+				$txt = htmlspecialchars($txt);
+				$pages = preg_split("/\f/s", $txt  );
+				$data['text'] = $pages;
+			}
 		}
 		return $data;
 	}

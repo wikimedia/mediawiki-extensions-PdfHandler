@@ -39,6 +39,7 @@ $wgExtensionCredits['other'][] = array(
 $wgPdfProcessor     = 'gs';
 $wgPdfPostProcessor = 'convert';
 $wgPdfInfo          = 'pdfinfo';
+$wgPdftoText        = 'pdftotext';
 
 $wgPdfOutputExtension = "jpg";
 $wgPdfHandlerDpi = 150;
