@@ -101,14 +101,14 @@ class PdfImage {
 			wfDebug( __METHOD__.": $cmd\n" );
 			$txt = wfShellExec( $cmd, $retval );
 			wfProfileOut( 'pdftotext' );
-			if( $retval == 0) {
-				# Get rid of invalid UTF-8, strip control characters
-				wfSuppressWarnings();
-				$txt = iconv( "UTF-8","UTF-8//IGNORE", $txt );
-				wfRestoreWarnings();
-				$txt = preg_replace( "/[\013\035\037]/", "", $txt );
-				$txt = htmlspecialchars($txt);
-				$pages = preg_split("/\f/s", $txt  );
+			if( $retval == 0 ) {
+				$txt = str_replace( "\r\n", "\n", $txt );
+				$pages = explode( "\f", $txt );
+				foreach( $pages as $page => $pageText ) {
+					# Get rid of invalid UTF-8, strip control characters
+					# Note we need to do this per page, as \f page feed would be stripped.
+					$pages[$page] = UtfNormal::cleanUp( $pageText );
+				}
 				$data['text'] = $pages;
 			}
 		}
