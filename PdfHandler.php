@@ -26,10 +26,10 @@ if (!defined('MEDIAWIKI')) {
 	exit(1);
 }
 
-$wgExtensionCredits['other'][] = array(
+$wgExtensionCredits['media'][] = array(
 	'path' => __FILE__,
 	'name' => 'PDF Handler',
-	'author' =>' Xarax',
+	'author' => 'Xarax',
 	'description' => 'Handler for viewing PDF files in image mode',
 	'descriptionmsg' => 'pdf-desc',
 	'url' => 'http://www.mediawiki.org/wiki/Extension:PdfHandler',
