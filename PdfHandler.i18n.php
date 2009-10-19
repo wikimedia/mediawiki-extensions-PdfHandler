@@ -101,6 +101,15 @@ $messages['de'] = array(
 	'pdf_page_error' => 'Seitenzahl außerhalb des Dokumentes.',
 );
 
+/** Zazaki (Zazaki)
+ * @author Aspar
+ */
+$messages['diq'] = array(
+	'pdf-desc' => 'şuxulnayoxo ke dosyayê PDFyan modê mocnayiş de mocneno',
+	'pdf_no_metadata' => 'PDF ra metadata nêgeriyeno',
+	'pdf_page_error' => 'numreyê peli benate de niyo',
+);
+
 /** Lower Sorbian (Dolnoserbski)
  * @author Michawiki
  */
