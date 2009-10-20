@@ -340,10 +340,12 @@ $messages['mk'] = array(
 );
 
 /** Malayalam (മലയാളം)
+ * @author Praveenp
  * @author Shijualex
  */
 $messages['ml'] = array(
 	'pdf_no_metadata' => 'PDF-ല്‍ നിന്നു മെറ്റാഡാറ്റ ലഭിച്ചില്ല',
+	'pdf_page_error' => 'താളിന്റെ ക്രമസംഖ്യ പരിധിയിലധികമാണ്',
 );
 
 /** Marathi (मराठी)
