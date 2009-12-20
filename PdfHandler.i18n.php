@@ -302,6 +302,13 @@ $messages['km'] = array(
 	'pdf_page_error' => 'គ្មានលេខទំព័រ ក្នុងដែនកំណត់',
 );
 
+/** Korean (한국어)
+ * @author Kwj2772
+ */
+$messages['ko'] = array(
+	'pdf_no_metadata' => 'PDF 파일에서 메타데이터를 추출할 수 없습니다.',
+);
+
 /** Ripoarisch (Ripoarisch)
  * @author Purodha
  */
