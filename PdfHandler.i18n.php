@@ -438,6 +438,13 @@ $messages['pt-br'] = array(
 	'pdf_page_error' => 'Número de página fora do intervalo',
 );
 
+/** Romanian (Română)
+ * @author Stelistcristi
+ */
+$messages['ro'] = array(
+	'pdf_page_error' => 'Numărul paginii nu e în şir',
+);
+
 /** Tarandíne (Tarandíne)
  * @author Joetaras
  */
