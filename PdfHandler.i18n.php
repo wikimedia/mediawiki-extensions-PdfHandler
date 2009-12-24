@@ -517,6 +517,13 @@ $messages['sv'] = array(
 	'pdf_page_error' => 'Sidnummer överstiger antal sidor i dokumentet',
 );
 
+/** Turkmen (Türkmençe)
+ * @author Hanberke
+ */
+$messages['tk'] = array(
+	'pdf_no_metadata' => 'PDF-den meta-maglumat alyp bolanok',
+);
+
 /** Tagalog (Tagalog)
  * @author AnakngAraw
  */
