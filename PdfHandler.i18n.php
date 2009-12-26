@@ -306,7 +306,9 @@ $messages['km'] = array(
  * @author Kwj2772
  */
 $messages['ko'] = array(
+	'pdf-desc' => 'PDF 파일을 이미지 방식으로 볼 수 있게 하는 핸들러',
 	'pdf_no_metadata' => 'PDF 파일에서 메타데이터를 추출할 수 없습니다.',
+	'pdf_page_error' => '쪽수가 범위 안에 있지 않습니다.',
 );
 
 /** Ripoarisch (Ripoarisch)
@@ -442,6 +444,8 @@ $messages['pt-br'] = array(
  * @author Stelistcristi
  */
 $messages['ro'] = array(
+	'pdf-desc' => 'Operator pentru vizualizarea fişierelor PDF în modul de imagine',
+	'pdf_no_metadata' => 'Nu se poate obţine metadate din PDF',
 	'pdf_page_error' => 'Numărul paginii nu e în şir',
 );
 
@@ -542,6 +546,15 @@ $messages['tr'] = array(
 	'pdf_page_error' => 'Sayfa numarası aralıkta değil',
 );
 
+/** Ukrainian (Українська)
+ * @author Prima klasy4na
+ */
+$messages['uk'] = array(
+	'pdf-desc' => 'Оброблювач для перегляду PDF-файлів в режимі зображень',
+	'pdf_no_metadata' => 'Не виходить отримати метадані з PDF',
+	'pdf_page_error' => 'Номер сторінки не в діапазоні',
+);
+
 /** Vèneto (Vèneto)
  * @author Candalua
  */
@@ -574,9 +587,11 @@ $messages['zh-hans'] = array(
 	'pdf_page_error' => '页数不在范围中',
 );
 
-/** Traditional Chinese (‪中文(繁體)‬) */
+/** Traditional Chinese (‪中文(繁體)‬)
+ * @author Mark85296341
+ */
 $messages['zh-hant'] = array(
-	'pdf-desc' => '在圖像模式中PDF檔的處理器',
+	'pdf-desc' => '在圖片模式中PDF檔的處理器',
 	'pdf_no_metadata' => '無法在PDF中擷取元數據',
 	'pdf_page_error' => '頁數不在範圍中',
 );
