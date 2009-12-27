@@ -174,6 +174,15 @@ $messages['fr'] = array(
 	'pdf_page_error' => 'Le numéro de page n’est pas dans la gamme.',
 );
 
+/** Franco-Provençal (Arpetan)
+ * @author ChrisPtDe
+ */
+$messages['frp'] = array(
+	'pdf-desc' => 'Utilitèro por vêre los fichiérs PDF en fôrma émâge.',
+	'pdf_no_metadata' => 'Pôt pas avêr les mètabalyês du fichiér PDF.',
+	'pdf_page_error' => 'Lo numerô de pâge est pas dens la gama.',
+);
+
 /** Galician (Galego)
  * @author Alma
  * @author Toliño
