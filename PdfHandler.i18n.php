@@ -20,6 +20,14 @@ $messages['qqq'] = array(
 	'pdf-desc' => 'Short description of the extension, shown in [[Special:Version]]. Do not translate or change links.',
 );
 
+/** Afrikaans (Afrikaans)
+ * @author Naudefj
+ */
+$messages['af'] = array(
+	'pdf_no_metadata' => 'Kan nie metadata uit PDF kry nie',
+	'pdf_page_error' => 'Bladsynommer kom nie in dokument voor nie',
+);
+
 /** Arabic (العربية)
  * @author Meno25
  */
@@ -535,6 +543,7 @@ $messages['sv'] = array(
  */
 $messages['tk'] = array(
 	'pdf_no_metadata' => 'PDF-den meta-maglumat alyp bolanok',
+	'pdf_page_error' => 'Sahypa belgisi diapazonda däl',
 );
 
 /** Tagalog (Tagalog)
