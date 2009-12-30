@@ -58,9 +58,11 @@ $messages['be-tarask'] = array(
 
 /** Bulgarian (Български)
  * @author DCLXVI
+ * @author Turin
  */
 $messages['bg'] = array(
 	'pdf_no_metadata' => 'невъзможно е да бъдат извлечени метаданни от PDF',
+	'pdf_page_error' => 'Номерът на страница е извън обхвата',
 );
 
 /** Breton (Brezhoneg)
