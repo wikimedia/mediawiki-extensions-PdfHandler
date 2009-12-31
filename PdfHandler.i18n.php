@@ -544,6 +544,7 @@ $messages['sv'] = array(
  * @author Hanberke
  */
 $messages['tk'] = array(
+	'pdf-desc' => 'PDF faýllaryny görkeziş režiminde görkezmek üçin işleýji',
 	'pdf_no_metadata' => 'PDF-den meta-maglumat alyp bolanok',
 	'pdf_page_error' => 'Sahypa belgisi diapazonda däl',
 );
