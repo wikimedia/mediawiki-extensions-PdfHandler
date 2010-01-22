@@ -240,7 +240,7 @@ $messages['hi'] = array(
 );
 
 /** Croatian (Hrvatski)
- * @author Suradnik13
+ * @author Ex13
  */
 $messages['hr'] = array(
 	'pdf-desc' => 'Program za gledanje PDF datoteka u slikovnom modu',
