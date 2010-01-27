@@ -198,8 +198,8 @@ $messages['frp'] = array(
  * @author Toliño
  */
 $messages['gl'] = array(
-	'pdf-desc' => 'Manipulador para ver ficheiros PDF no modo de imaxes',
-	'pdf_no_metadata' => 'non se puideron obter os metadatos do PDF',
+	'pdf-desc' => 'Manipulador para ver ficheiros PDF no modo de imaxe',
+	'pdf_no_metadata' => 'Non se puideron obter os metadatos do PDF',
 	'pdf_page_error' => 'O número da páxina non está no rango',
 );
 
