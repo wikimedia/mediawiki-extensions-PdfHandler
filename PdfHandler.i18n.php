@@ -464,9 +464,9 @@ $messages['pt-br'] = array(
  * @author Stelistcristi
  */
 $messages['ro'] = array(
-	'pdf-desc' => 'Operator pentru vizualizarea fişierelor PDF în modul de imagine',
-	'pdf_no_metadata' => 'Nu se poate obţine metadate din PDF',
-	'pdf_page_error' => 'Numărul paginii nu e în şir',
+	'pdf-desc' => 'Operator pentru vizualizarea fișierelor PDF în modul de imagine',
+	'pdf_no_metadata' => 'Nu se poate obține metadate din PDF',
+	'pdf_page_error' => 'Numărul paginii nu e în șir',
 );
 
 /** Tarandíne (Tarandíne)
