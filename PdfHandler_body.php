@@ -39,9 +39,9 @@ class PdfHandler extends ImageHandler {
 		return true;
 	}
 
-	function mustRender() { return true; }
+	function mustRender( $file ) { return true; }
 
-	function isMultiPage() { return true; }
+	function isMultiPage( $file ) { return true; }
 
 	function validateParam( $name, $value ) {
 		if ( in_array( $name, array( 'width', 'height', 'page' ) ) )
