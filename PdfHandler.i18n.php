@@ -28,6 +28,15 @@ $messages['af'] = array(
 	'pdf_page_error' => 'Bladsynommer kom nie in dokument voor nie',
 );
 
+/** Gheg Albanian (Gegë)
+ * @author Mdupont
+ */
+$messages['aln'] = array(
+	'pdf-desc' => 'Mbajtës për shikimin PDF files në imazh mode',
+	'pdf_no_metadata' => 'Nuk mund të merrni nga metadata PDF',
+	'pdf_page_error' => 'numrin e faqes nuk është në varg',
+);
+
 /** Arabic (العربية)
  * @author Meno25
  */
