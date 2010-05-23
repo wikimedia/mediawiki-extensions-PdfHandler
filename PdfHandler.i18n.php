@@ -318,6 +318,13 @@ $messages['jv'] = array(
 	'pdf_no_metadata' => 'Ora bisa olèh metadata saka PDF',
 );
 
+/** Georgian (ქართული)
+ * @author BRUTE
+ */
+$messages['ka'] = array(
+	'pdf_no_metadata' => 'შეუძლებელია PDF-დან მეტამონაცემების მიღება',
+);
+
 /** Khmer (ភាសាខ្មែរ)
  * @author Chhorran
  * @author Lovekhmer
