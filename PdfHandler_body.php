@@ -80,6 +80,7 @@ class PdfHandler extends ImageHandler {
 	}
 	
 	protected function doThumbError( $width, $height, $msg ) {
+		wfLoadExtensionMessages( 'PdfHandler' );
 		return new MediaTransformError( 'thumbnail_error',
 			$width, $height, wfMsgForContent( $msg ) );
 	}
