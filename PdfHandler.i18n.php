@@ -102,6 +102,15 @@ $messages['ca'] = array(
 	'pdf_page_error' => "Número de pàgina fora d'abast",
 );
 
+/** Chechen (Нохчийн)
+ * @author Sasan700
+ */
+$messages['ce'] = array(
+	'pdf-desc' => 'Хьажа аттон кечйо PDF-хlумнаш суьрта куьцехь',
+	'pdf_no_metadata' => 'схьацаэцало чура бух оцу PDF',
+	'pdf_page_error' => 'Агlон терахь дозан чулацамца дац',
+);
+
 /** Czech (Česky)
  * @author Matěj Grabovský
  * @author Mormegil
