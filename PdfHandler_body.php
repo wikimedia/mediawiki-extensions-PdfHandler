@@ -173,7 +173,7 @@ class PdfHandler extends ImageHandler {
 		return $this->getPdfImage( $image, $path )->getImageSize();
 	}
 
-	function getThumbType( $ext, $mime ) {
+	function getThumbType( $ext, $mime, $params = null ) {
 		global $wgPdfOutputExtension;
 		static $mime;
 
