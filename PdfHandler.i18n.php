@@ -531,6 +531,15 @@ $messages['sk'] = array(
 	'pdf_page_error' => 'Číslo stránky nie je v intervale',
 );
 
+/** Slovenian (Slovenščina)
+ * @author Dbc334
+ */
+$messages['sl'] = array(
+	'pdf-desc' => 'Upravljavec ogledovanja datotek PDF v slikovnem načinu',
+	'pdf_no_metadata' => 'Ne morem pridobiti metapodatkov iz PDF',
+	'pdf_page_error' => 'Številka strani ni v dosegu',
+);
+
 /** Serbian Cyrillic ekavian (Српски (ћирилица))
  * @author Михајло Анђелковић
  */
