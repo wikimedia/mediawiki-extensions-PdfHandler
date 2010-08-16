@@ -183,6 +183,14 @@ $messages['et'] = array(
 	'pdf_no_metadata' => 'Ei õnnestu PDF-faili meta-andmeid saada',
 );
 
+/** Persian (فارسی)
+ * @author Wayiran
+ */
+$messages['fa'] = array(
+	'pdf_no_metadata' => 'نمی‌توان ابرداده‌ها را از پی‌دی‌اف گرفت',
+	'pdf_page_error' => 'شماره صفحه در محدوده نیست',
+);
+
 /** Finnish (Suomi)
  * @author Nike
  * @author Vililikku
