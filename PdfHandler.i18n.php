@@ -184,9 +184,11 @@ $messages['et'] = array(
 );
 
 /** Persian (فارسی)
+ * @author Sahim
  * @author Wayiran
  */
 $messages['fa'] = array(
+	'pdf-desc' => 'متصدیای برای مشاهده فایل های پی دی اف در حالت تصویر',
 	'pdf_no_metadata' => 'نمی‌توان ابرداده‌ها را از پی‌دی‌اف گرفت',
 	'pdf_page_error' => 'شماره صفحه در محدوده نیست',
 );
