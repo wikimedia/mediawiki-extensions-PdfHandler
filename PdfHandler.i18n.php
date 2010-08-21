@@ -16,9 +16,10 @@ $messages['en'] = array(
 
 /** Message documentation (Message documentation)
  * @author Purodha
+ * @author The Evil IP address
  */
 $messages['qqq'] = array(
-	'pdf-desc' => 'Short description of the extension, shown in [[Special:Version]]. Do not translate or change links.',
+	'pdf-desc' => '{{desc}}',
 );
 
 /** Afrikaans (Afrikaans)
@@ -184,11 +185,12 @@ $messages['et'] = array(
 );
 
 /** Persian (فارسی)
+ * @author Ebraminio
  * @author Sahim
  * @author Wayiran
  */
 $messages['fa'] = array(
-	'pdf-desc' => 'متصدیای برای مشاهده فایل های پی دی اف در حالت تصویر',
+	'pdf-desc' => 'متصدیای برای مشاهده فایل های پی‌دی‌اف در حالت تصویر',
 	'pdf_no_metadata' => 'نمی‌توان ابرداده‌ها را از پی‌دی‌اف گرفت',
 	'pdf_page_error' => 'شماره صفحه در محدوده نیست',
 );
@@ -382,6 +384,15 @@ $messages['lb'] = array(
 	'pdf-desc' => '"Programm" den et erméiglecht PDF-Fichieren als Bild ze kucken',
 	'pdf_no_metadata' => 'Meta-Informatiounen aus dem PDF Dokument kënnen net gelies ginn',
 	'pdf_page_error' => "D'Säitenzuel ass net an dem Beräich.",
+);
+
+/** Limburgish (Limburgs)
+ * @author Ooswesthoesbes
+ */
+$messages['li'] = array(
+	'pdf-desc' => "Hanjeltj PDF-bestenj aaf en maak 't meugelik die es aafbeildjing te zeen",
+	'pdf_no_metadata' => 'Kèn gein metadata vanne PDF kriege',
+	'pdf_page_error' => 'paginanómmer besteit neet',
 );
 
 /** Lithuanian (Lietuvių)
