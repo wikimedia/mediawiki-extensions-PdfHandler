@@ -208,11 +208,12 @@ $messages['fi'] = array(
 /** French (Français)
  * @author Crochet.david
  * @author Grondin
+ * @author Verdy p
  */
 $messages['fr'] = array(
-	'pdf-desc' => 'Utilitaire pour visualiser les fichiers PDF en mode image',
-	'pdf_no_metadata' => 'Ne peut obtenir les métadonnées du fichier PDF',
-	'pdf_page_error' => 'Le numéro de page n’est pas dans la gamme.',
+	'pdf-desc' => 'Gestionnaire permettant de visualiser les fichiers PDF en mode image',
+	'pdf_no_metadata' => 'Impossible d’obtenir les métadonnées du fichier PDF',
+	'pdf_page_error' => 'Le numéro de page est hors de l’étendue.',
 );
 
 /** Franco-Provençal (Arpetan)
