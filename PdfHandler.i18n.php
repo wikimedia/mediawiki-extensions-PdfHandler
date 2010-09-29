@@ -222,7 +222,7 @@ $messages['fr'] = array(
 $messages['frp'] = array(
 	'pdf-desc' => 'Utilitèro por vêre los fichiérs PDF en fôrma émâge.',
 	'pdf_no_metadata' => 'Pôt pas avêr les mètabalyês du fichiér PDF.',
-	'pdf_page_error' => 'Lo numerô de pâge est pas dens la gama.',
+	'pdf_page_error' => 'Lo numerô de pâge est en defôr de la portâ.',
 );
 
 /** Galician (Galego)
