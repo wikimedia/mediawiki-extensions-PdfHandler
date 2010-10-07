@@ -598,6 +598,13 @@ $messages['sv'] = array(
 	'pdf_page_error' => 'Sidnummer överstiger antal sidor i dokumentet',
 );
 
+/** Tamil (தமிழ்)
+ * @author TRYPPN
+ */
+$messages['ta'] = array(
+	'pdf_page_error' => 'பக்கத்தின் எண் குறிப்பிட்ட வரையறையில் இல்லை',
+);
+
 /** Turkmen (Türkmençe)
  * @author Hanberke
  */
