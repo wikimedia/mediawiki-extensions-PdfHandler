@@ -605,6 +605,13 @@ $messages['ta'] = array(
 	'pdf_page_error' => 'பக்கத்தின் எண் குறிப்பிட்ட வரையறையில் இல்லை',
 );
 
+/** Telugu (తెలుగు)
+ * @author Veeven
+ */
+$messages['te'] = array(
+	'pdf_page_error' => 'పుట సంఖ్య అవధిలో లేదు',
+);
+
 /** Turkmen (Türkmençe)
  * @author Hanberke
  */
