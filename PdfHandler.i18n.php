@@ -182,6 +182,7 @@ $messages['es'] = array(
 $messages['et'] = array(
 	'pdf-desc' => 'Töötleja PDF-failide piltidena kuvamiseks',
 	'pdf_no_metadata' => 'Ei õnnestu PDF-faili meta-andmeid saada',
+	'pdf_page_error' => 'Leheküljenumber pole vahemikus.',
 );
 
 /** Persian (فارسی)
@@ -533,6 +534,15 @@ $messages['ru'] = array(
 	'pdf-desc' => 'Обработчик для просмотра PDF-файлов в виде изображений',
 	'pdf_no_metadata' => 'невозможно получить метаданные из PDF',
 	'pdf_page_error' => 'Номер страницы вне диапазона',
+);
+
+/** Rusyn (Русиньскый)
+ * @author Gazeb
+ */
+$messages['rue'] = array(
+	'pdf-desc' => 'Овладач про перегляд PDF файлів як образків',
+	'pdf_no_metadata' => 'Не годен обтримати метадата з PDF',
+	'pdf_page_error' => 'Чісло сторінкы не є в россягу',
 );
 
 /** Yakut (Саха тыла)
