@@ -676,6 +676,13 @@ $messages['vi'] = array(
 	'pdf_page_error' => 'Số trang không nằm trong giới hạn',
 );
 
+/** Yoruba (Yorùbá)
+ * @author Demmy
+ */
+$messages['yo'] = array(
+	'pdf_no_metadata' => 'Dátà-àtẹ̀yìnwá kó ṣe é mú láti inú PDF',
+);
+
 /** Cantonese (粵語) */
 $messages['yue'] = array(
 	'pdf-desc' => '響圖像模式睇PDF檔嘅處理器',
