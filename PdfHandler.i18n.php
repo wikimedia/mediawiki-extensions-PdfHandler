@@ -57,6 +57,15 @@ $messages['arz'] = array(
 	'pdf_page_error' => 'رقم الصفحة ليس فى النطاق',
 );
 
+/** Bashkir (Башҡорт)
+ * @author Assele
+ */
+$messages['ba'] = array(
+	'pdf-desc' => 'PDF файлдарҙы рәсемдәр рәүешендә ҡарау өсөн эшкәртеүсе ҡорал',
+	'pdf_no_metadata' => 'PDF-тан мета-мәғлүмәтте алыу мөмкин түгел',
+	'pdf_page_error' => 'Бит һаны биттәр һанынан ашҡан',
+);
+
 /** Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
  * @author EugeneZelenko
  * @author Jim-by
