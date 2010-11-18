@@ -78,7 +78,6 @@ class CreatePdfThumbnailsJob extends Job {
 				break;
 
 			case self::SMALL_THUMB:
-				// @TODO: Minor, get rid of thumbnail preferences ($wgUser dependance)
 				global $wgUser;
 				$sk = $wgUser->getSkin();
 				$sk->makeThumbLinkObj( $this->title, $file, '', '', 'none', array( 'page' => $this->params['page'] ) );
