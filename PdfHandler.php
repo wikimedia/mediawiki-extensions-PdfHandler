@@ -32,7 +32,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 $wgExtensionCredits['media'][] = array(
 	'path' => __FILE__,
 	'name' => 'PDF Handler',
-	'author' => 'Martin Seidel',
+	'author' => array( 'Martin Seidel', 'Mike Połtyn'),
 	'descriptionmsg' => 'pdf-desc',
 	'url' => 'http://www.mediawiki.org/wiki/Extension:PdfHandler',
 );
@@ -46,6 +46,11 @@ $wgPdftoText        = 'pdftotext';
 $wgPdfOutputExtension = 'jpg';
 $wgPdfHandlerDpi = 150;
 
+// This setting, if enabled, will put creating thumbnails into a job queue,
+// so they do not have to be created on-the-fly,
+// but rather inconspicuously during normal wiki browsing
+$wgPdfCreateThumbnailsInJobQueue = false;
+
 // To upload new PDF files you'll need to do this too:
 // $wgFileExtensions[] = 'pdf';
 
@@ -53,4 +58,7 @@ $dir = dirname( __FILE__ ) . '/';
 $wgExtensionMessagesFiles['PdfHandler'] = $dir . 'PdfHandler.i18n.php';
 $wgAutoloadClasses['PdfImage'] = $dir . 'PdfHandler.image.php';
 $wgAutoloadClasses['PdfHandler'] = $dir . 'PdfHandler_body.php';
+$wgAutoloadClasses['CreatePdfThumbnailsJob'] = $dir . 'CreatePdfThumbnailsJob.class.php';
 $wgMediaHandlers['application/pdf'] = 'PdfHandler';
+$wgJobClasses['createPdfThumbnailsJob'] = 'CreatePdfThumbnailsJob';
+$wgHooks['UploadVerifyFile'][] = 'CreatePdfThumbnailsJob::insertJobs';
