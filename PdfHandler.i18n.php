@@ -131,6 +131,15 @@ $messages['cs'] = array(
 	'pdf_page_error' => 'Číslo stránky není v rozsahu',
 );
 
+/** Welsh (Cymraeg)
+ * @author Lloffiwr
+ */
+$messages['cy'] = array(
+	'pdf-desc' => 'Teclyn i weld ffeiliau PDF ar lun delwedd',
+	'pdf_no_metadata' => "Yn methu cael y metadata o'r PDF",
+	'pdf_page_error' => "Nid yw'r rhif hwn oddi mewn i ystod rhifau'r tudalennau",
+);
+
 /** German (Deutsch)
  * @author Raimond Spekking
  */
