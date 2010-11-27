@@ -489,6 +489,13 @@ $messages['oc'] = array(
 	'pdf_page_error' => 'Lo numèro de pagina es pas dins la gama.',
 );
 
+/** Deitsch (Deitsch)
+ * @author Xqt
+ */
+$messages['pdc'] = array(
+	'pdf_no_metadata' => 'Keene Meta-Daade im PDF',
+);
+
 /** Polish (Polski)
  * @author Holek
  * @author Sp5uhe
