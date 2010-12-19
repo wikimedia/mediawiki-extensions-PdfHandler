@@ -579,6 +579,14 @@ $messages['sah'] = array(
 	'pdf_page_error' => 'Сирэй нүөмэрэ диапазоҥҥа киирбэт',
 );
 
+/** Sinhala (සිංහල)
+ * @author Budhajeewa
+ */
+$messages['si'] = array(
+	'pdf_no_metadata' => 'PDF ගොනුවෙන් මෙටාදත්ත ගත නොහැක',
+	'pdf_page_error' => 'පිටු අංකය නිවැරදි පරාසයේ නොමැත',
+);
+
 /** Slovak (Slovenčina)
  * @author Helix84
  */
