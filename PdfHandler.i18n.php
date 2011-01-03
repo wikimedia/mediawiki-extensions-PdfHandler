@@ -583,6 +583,7 @@ $messages['sah'] = array(
  * @author Budhajeewa
  */
 $messages['si'] = array(
+	'pdf-desc' => 'PDF ගොනු රූප මාදිලියෙන් හසුරුවනය',
 	'pdf_no_metadata' => 'PDF ගොනුවෙන් මෙටාදත්ත ගත නොහැක',
 	'pdf_page_error' => 'පිටු අංකය නිවැරදි පරාසයේ නොමැත',
 );
