@@ -735,8 +735,8 @@ $messages['zh-hans'] = array(
  * @author Mark85296341
  */
 $messages['zh-hant'] = array(
-	'pdf-desc' => '在圖片模式中PDF檔的處理器',
-	'pdf_no_metadata' => '無法在PDF中擷取元數據',
+	'pdf-desc' => '在圖片模式中 PDF 檔的處理器',
+	'pdf_no_metadata' => '無法在 PDF 中擷取元數據',
 	'pdf_page_error' => '頁數不在範圍中',
 );
 
