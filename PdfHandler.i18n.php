@@ -140,6 +140,15 @@ $messages['cy'] = array(
 	'pdf_page_error' => "Nid yw'r rhif hwn oddi mewn i ystod rhifau'r tudalennau",
 );
 
+/** Danish (Dansk)
+ * @author Peter Alberti
+ */
+$messages['da'] = array(
+	'pdf-desc' => 'Håndtering af PDF-visning i billedtilstand',
+	'pdf_no_metadata' => 'Kan ikke hente metadata fra PDF',
+	'pdf_page_error' => 'Sidetallet er større end antallet af sider i dokumentet',
+);
+
 /** German (Deutsch)
  * @author Raimond Spekking
  */
