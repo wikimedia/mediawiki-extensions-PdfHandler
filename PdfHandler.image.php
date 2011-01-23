@@ -85,6 +85,7 @@ class PdfImage {
 				" -enc UTF-8 " . # Report metadata as UTF-8 text...
 				" -l 9999999 " . # Report page sizes for all pages
 				wfEscapeShellArg( $this->mFilename );
+			$retval = '';
 			$dump = wfShellExec( $cmd, $retval );
 			$data = $this->convertDumpToArray( $dump );
 			wfProfileOut( 'pdfinfo' );
@@ -97,6 +98,7 @@ class PdfImage {
 			wfProfileIn( 'pdftotext' );
 			$cmd = wfEscapeShellArg( $wgPdftoText ) . ' '. wfEscapeShellArg( $this->mFilename ) . ' - ';
 			wfDebug( __METHOD__.": $cmd\n" );
+			$retval = '';
 			$txt = wfShellExec( $cmd, $retval );
 			wfProfileOut( 'pdftotext' );
 			if( $retval == 0 ) {
@@ -126,6 +128,7 @@ class PdfImage {
 			if( count( $bits ) > 1 ) {
 				$key = trim( $bits[0] );
 				$value = trim( $bits[1] );
+				$matches = array();
 				if( preg_match( '/^Page +(\d+) size$/', $key, $matches ) ) {
 					$data['pages'][$matches[1]]['Page size'] = $value;
 				} else {

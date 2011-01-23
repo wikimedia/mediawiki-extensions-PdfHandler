@@ -129,6 +129,7 @@ class PdfHandler extends ImageHandler {
 
 		wfProfileIn( 'PdfHandler' );
 		wfDebug( __METHOD__ . ": $cmd\n" );
+		$retval = '';
 		$err = wfShellExec( $cmd, $retval );
 		wfProfileOut( 'PdfHandler' );
 
