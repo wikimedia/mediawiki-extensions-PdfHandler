@@ -615,6 +615,15 @@ $messages['sl'] = array(
 	'pdf_page_error' => 'Številka strani ni v dosegu',
 );
 
+/** Albanian (Shqip)
+ * @author Olsi
+ */
+$messages['sq'] = array(
+	'pdf-desc' => 'Mbajtës për pamjen e skedave PDF në mënyrën e figurave',
+	'pdf_no_metadata' => 'Nuk mund të merren metadata nga PDF',
+	'pdf_page_error' => 'Numri i faqes nuk është në varg',
+);
+
 /** Serbian Cyrillic ekavian (‪Српски (ћирилица)‬)
  * @author Михајло Анђелковић
  */
