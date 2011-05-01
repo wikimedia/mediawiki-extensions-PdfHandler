@@ -85,6 +85,14 @@ $messages['bg'] = array(
 	'pdf_page_error' => 'Номерът на страница е извън обхвата',
 );
 
+/** Bengali (বাংলা)
+ * @author Wikitanvir
+ */
+$messages['bn'] = array(
+	'pdf_no_metadata' => 'পিডিএফ থেকে মেটাডেটা পাওয়া যায়নি',
+	'pdf_page_error' => 'পাতার নম্বর সীমার মধ্যে নেই',
+);
+
 /** Breton (Brezhoneg)
  * @author Fulup
  */
