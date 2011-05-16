@@ -158,10 +158,11 @@ $messages['da'] = array(
 );
 
 /** German (Deutsch)
+ * @author Kghbln
  * @author Raimond Spekking
  */
 $messages['de'] = array(
-	'pdf-desc' => 'Schnittstelle für die Ansicht von PDF-Dateien im Bilder-Modus',
+	'pdf-desc' => 'Stellt eine Schnittstelle zur Ansicht von PDF-Dateien im Bildermodus bereit',
 	'pdf_no_metadata' => 'Keine Metadaten im PDF vorhanden.',
 	'pdf_page_error' => 'Seitenzahl außerhalb des Dokumentes.',
 );
