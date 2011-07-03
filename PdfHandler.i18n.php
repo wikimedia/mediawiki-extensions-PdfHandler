@@ -471,6 +471,15 @@ $messages['mr'] = array(
 	'pdf_page_error' => 'पान क्रमांक सीमेमध्ये नाही',
 );
 
+/** Malay (Bahasa Melayu)
+ * @author Anakmalaysia
+ */
+$messages['ms'] = array(
+	'pdf-desc' => 'Pengendali untuk melihat fail PDF dalam mod imej',
+	'pdf_no_metadata' => 'Metadata tidak boleh diperoleh dari PDF',
+	'pdf_page_error' => 'Nombor halaman tiada dalam julat',
+);
+
 /** Dutch (Nederlands)
  * @author Siebrand
  */
