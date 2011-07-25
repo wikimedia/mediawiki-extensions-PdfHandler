@@ -115,7 +115,7 @@ class PdfHandler extends ImageHandler {
 							$height, $dstPath, $page );
 		}
 
-		if ( !wfMkdirParents( dirname( $dstPath ) ) ) {
+		if ( !wfMkdirParents( dirname( $dstPath ), null, __METHOD__ ) ) {
 			return $this->doThumbError( $width, $height, 'thumbnail_dest_directory' );
 		}
 
