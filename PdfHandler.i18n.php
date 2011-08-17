@@ -597,7 +597,7 @@ $messages['rue'] = array(
 	'pdf_page_error' => 'Чісло сторінкы не є в россягу',
 );
 
-/** Yakut (Саха тыла)
+/** Sakha (Саха тыла)
  * @author HalanTul
  */
 $messages['sah'] = array(
