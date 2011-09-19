@@ -516,6 +516,15 @@ $messages['oc'] = array(
 	'pdf_page_error' => 'Lo numèro de pagina es pas dins la gama.',
 );
 
+/** Oriya (ଓଡ଼ିଆ)
+ * @author Psubhashish
+ */
+$messages['or'] = array(
+	'pdf-desc' => 'PDF ଫାଇଲକୁ ଛବି ମୋଡ଼ରେ ଦେଖିବାର ପରିଚାଳକ',
+	'pdf_no_metadata' => 'ପି.ଡ଼ି.ଏଫ.ରୁ ମେଟାଡାଟା ବାହାର କରିପାରିଲୁଁ ନାହିଁ',
+	'pdf_page_error' => 'ପୃଷ୍ଠା ସଂଖ୍ୟା ସୀମା ଭିତରେ ନାହିଁ',
+);
+
 /** Deitsch (Deitsch)
  * @author Xqt
  */
