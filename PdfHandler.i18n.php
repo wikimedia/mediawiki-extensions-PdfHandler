@@ -551,6 +551,15 @@ $messages['pms'] = array(
 	'pdf_page_error' => "Ël nùmer ëd pàgina a l'é pa ant ël range",
 );
 
+/** Western Punjabi (پنجابی)
+ * @author Khalid Mahmood
+ */
+$messages['pnb'] = array(
+	'pdf-desc' => 'پی ڈی ایف  فائلاں امیج موڈ چ ویکھن لئی ہینڈلر',
+	'pdf_no_metadata' => 'پی ڈی ایف توں میٹاڈیٹا نئیں مل سکیا۔',
+	'pdf_page_error' => 'صفہ نمبر ولگن چ نئیں۔',
+);
+
 /** Portuguese (Português)
  * @author Hamilton Abreu
  * @author Malafaya
