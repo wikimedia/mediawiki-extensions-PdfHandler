@@ -661,13 +661,14 @@ $messages['sq'] = array(
 	'pdf_page_error' => 'Numri i faqes nuk është në varg',
 );
 
-/** Serbian Cyrillic ekavian (‪Српски (ћирилица)‬)
+/** Serbian (Cyrillic script) (‪Српски (ћирилица)‬)
+ * @author Rancher
  * @author Михајло Анђелковић
  */
 $messages['sr-ec'] = array(
-	'pdf-desc' => 'Хандлер за преглед PDF фајлова као слика',
-	'pdf_no_metadata' => 'Не могу се добити мета-подаци из PDF-а',
-	'pdf_page_error' => 'Број стране излази ван опсега',
+	'pdf-desc' => 'Програм за прегледање PDF докумената у сликовном режиму',
+	'pdf_no_metadata' => 'Не могу да преузмем метаподатке из PDF-а',
+	'pdf_page_error' => 'Број страница ван опсега',
 );
 
 /** Serbian Latin ekavian (‪Srpski (latinica)‬)
