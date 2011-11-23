@@ -671,7 +671,7 @@ $messages['sr-ec'] = array(
 	'pdf_page_error' => 'Број страница ван опсега',
 );
 
-/** Serbian Latin ekavian (‪Srpski (latinica)‬)
+/** Serbian (Latin script) (‪Srpski (latinica)‬)
  * @author Michaello
  */
 $messages['sr-el'] = array(
