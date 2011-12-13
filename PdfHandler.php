@@ -34,7 +34,7 @@ $wgExtensionCredits['media'][] = array(
 	'name' => 'PDF Handler',
 	'author' => array( 'Martin Seidel', 'Mike Połtyn'),
 	'descriptionmsg' => 'pdf-desc',
-	'url' => 'http://www.mediawiki.org/wiki/Extension:PdfHandler',
+	'url' => 'https://www.mediawiki.org/wiki/Extension:PdfHandler',
 );
 
 // External program requirements...
