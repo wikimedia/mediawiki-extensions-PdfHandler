@@ -502,7 +502,7 @@ $messages['nn'] = array(
 /** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
  * @author Jon Harald Søby
  */
-$messages['no'] = array(
+$messages['nb'] = array(
 	'pdf-desc' => 'Håndtering av PDF-visning i bildemodus',
 	'pdf_no_metadata' => 'kan ikke hente metadata fra PDF',
 	'pdf_page_error' => 'Sidenummer overstiger antall sider i dokumentet',
