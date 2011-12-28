@@ -354,6 +354,15 @@ $messages['id'] = array(
 	'pdf_page_error' => 'Nomor halaman di luar batas',
 );
 
+/** Iloko (Ilokano)
+ * @author Lam-ang
+ */
+$messages['ilo'] = array(
+	'pdf-desc' => 'Agtengngel para iti papeles a PDF iti imahen a moda',
+	'pdf_no_metadata' => 'Saan a makaala ti metadata manipud idiay PDF',
+	'pdf_page_error' => 'Saan a masakup ti numero ti panid',
+);
+
 /** Italian (Italiano)
  * @author Darth Kule
  */
@@ -481,6 +490,15 @@ $messages['ms'] = array(
 	'pdf_page_error' => 'Nombor halaman tiada dalam julat',
 );
 
+/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+ * @author Jon Harald Søby
+ */
+$messages['nb'] = array(
+	'pdf-desc' => 'Håndtering av PDF-visning i bildemodus',
+	'pdf_no_metadata' => 'kan ikke hente metadata fra PDF',
+	'pdf_page_error' => 'Sidenummer overstiger antall sider i dokumentet',
+);
+
 /** Dutch (Nederlands)
  * @author Siebrand
  */
@@ -497,15 +515,6 @@ $messages['nn'] = array(
 	'pdf-desc' => 'Handering av PDF-vising i biletmodus',
 	'pdf_no_metadata' => 'Kan ikkje henta metadata frå PDF',
 	'pdf_page_error' => 'Sidenummer overstig talet på sider i dokumentet',
-);
-
-/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
- * @author Jon Harald Søby
- */
-$messages['nb'] = array(
-	'pdf-desc' => 'Håndtering av PDF-visning i bildemodus',
-	'pdf_no_metadata' => 'kan ikke hente metadata fra PDF',
-	'pdf_page_error' => 'Sidenummer overstiger antall sider i dokumentet',
 );
 
 /** Occitan (Occitan)
