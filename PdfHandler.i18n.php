@@ -708,9 +708,12 @@ $messages['sv'] = array(
 );
 
 /** Tamil (தமிழ்)
+ * @author Shanmugamp7
  * @author TRYPPN
  */
 $messages['ta'] = array(
+	'pdf-desc' => 'PDF கோப்புகளை உருவ முறையில் பார்க்க கையாளுனர்',
+	'pdf_no_metadata' => 'PDF இருந்து மேல்தரவை பெற இயலவில்லை',
 	'pdf_page_error' => 'பக்கத்தின் எண் குறிப்பிட்ட வரையறையில் இல்லை',
 );
 
