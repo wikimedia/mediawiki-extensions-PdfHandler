@@ -24,8 +24,10 @@ $messages['qqq'] = array(
 
 /** Afrikaans (Afrikaans)
  * @author Naudefj
+ * @author පසිඳු කාවින්ද
  */
 $messages['af'] = array(
+	'pdf-desc' => 'Handler vir die lees van PDF-lêers in beeld af',
 	'pdf_no_metadata' => 'Kan nie metadata uit PDF kry nie',
 	'pdf_page_error' => 'Bladsynommer kom nie in dokument voor nie',
 );
