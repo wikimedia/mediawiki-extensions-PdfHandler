@@ -41,6 +41,15 @@ $messages['aln'] = array(
 	'pdf_page_error' => 'numrin e faqes nuk është në varg',
 );
 
+/** Aragonese (Aragonés)
+ * @author Juanpabl
+ */
+$messages['an'] = array(
+	'pdf-desc' => 'Maneyador ta veyer fichers PDF en modo imachen',
+	'pdf_no_metadata' => "No s'obtenioron metadatos d'o PDF",
+	'pdf_page_error' => 'Numero de pachina difuera de rango',
+);
+
 /** Arabic (العربية)
  * @author Meno25
  */
