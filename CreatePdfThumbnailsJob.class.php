@@ -53,7 +53,7 @@ class CreatePdfThumbnailsJob extends Job {
 				$max = $wgImageLimits[$sizeSel];
 				$maxWidth = $max[0];
 				$maxHeight = $max[1];
-				
+
 				$width_orig = $file->getWidth( $this->params['page'] );
 				$width = $width_orig;
 				$height_orig = $file->getHeight( $this->params['page'] );
@@ -87,7 +87,12 @@ class CreatePdfThumbnailsJob extends Job {
 		return true;
 	}
 
-
+	/**
+	 * @param $upload
+	 * @param $mime
+	 * @param $error
+	 * @return bool
+	 */
 	public static function insertJobs( $upload, $mime, &$error ) {
 		global $wgPdfCreateThumbnailsInJobQueue;
 		if ( !$wgPdfCreateThumbnailsInJobQueue ) {

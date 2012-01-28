@@ -26,14 +26,23 @@
 
 class PdfImage {
 
+	/**
+	 * @param $filename
+	 */
 	function __construct( $filename ) {
 		$this->mFilename = $filename;
 	}
 
+	/**
+	 * @return bool
+	 */
 	public function isValid() {
 		return true;
 	}
 
+	/**
+	 * @return array|bool
+	 */
 	public function getImageSize() {
 		$data = $this->retrieveMetadata();
 		$size = self::getPageSize( $data, 1 );
@@ -47,6 +56,11 @@ class PdfImage {
 		return false;
 	}
 
+	/**
+	 * @param $data array
+	 * @param $page
+	 * @return array|bool
+	 */
 	public static function getPageSize( $data, $page ) {
 		global $wgPdfHandlerDpi;
 
@@ -57,15 +71,15 @@ class PdfImage {
 		} else {
 			$o = false;
 		}
-		if( isset( $data['pages'][$page]['Page rot'] ) ) {
-			$r = $data['pages'][$page]['Page rot'];
-		} elseif( isset( $data['Page rot'] ) ) {
-			$r = $data['Page rot'];
-		} else {
-			$r = 0;
-		}
 
 		if ( $o ) {
+			if( isset( $data['pages'][$page]['Page rot'] ) ) {
+				$r = $data['pages'][$page]['Page rot'];
+			} elseif( isset( $data['Page rot'] ) ) {
+				$r = $data['Page rot'];
+			} else {
+				$r = 0;
+			}
 			$size = explode( 'x', $o, 2 );
 
 			if ( $size ) {
@@ -89,6 +103,9 @@ class PdfImage {
 		return false;
 	}
 
+	/**
+	 * @return array|bool|null
+	 */
 	public function retrieveMetaData() {
 		global $wgPdfInfo, $wgPdftoText;
 
@@ -128,6 +145,10 @@ class PdfImage {
 		return $data;
 	}
 
+	/**
+	 * @param $dump string
+	 * @return array|bool
+	 */
 	protected function convertDumpToArray( $dump ) {
 		if ( strval( $dump ) == '' ) {
 			return false;
