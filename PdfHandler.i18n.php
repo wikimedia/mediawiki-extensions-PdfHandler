@@ -485,10 +485,11 @@ $messages['ml'] = array(
 
 /** Marathi (मराठी)
  * @author Kaustubh
+ * @author Sankalpdravid
  */
 $messages['mr'] = array(
-	'pdf-desc' => 'चित्र मोड मध्ये पीडीएफ संचिका पाहण्यासाठी आवश्यक प्रणाली',
-	'pdf_no_metadata' => 'पीडीएफ मधून मेटाडाटा घेऊ शकत नाही',
+	'pdf-desc' => 'चित्र मोडमध्ये पीडीएफ संचिका पाहण्यासाठी आवश्यक प्रणाली',
+	'pdf_no_metadata' => 'पीडीएफमधून मेटाडाटा घेऊ शकत नाही',
 	'pdf_page_error' => 'पान क्रमांक सीमेमध्ये नाही',
 );
 
