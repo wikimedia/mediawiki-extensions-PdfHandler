@@ -301,6 +301,13 @@ $messages['gsw'] = array(
 	'pdf_page_error' => 'Sytezahl usserhalb vum Dokumänt.',
 );
 
+/** Gujarati (ગુજરાતી)
+ * @author KartikMistry
+ */
+$messages['gu'] = array(
+	'pdf_page_error' => 'પાનાં ક્રમાંક અવધિમાં નથી',
+);
+
 /** Hebrew (עברית)
  * @author Rotemliss
  * @author YaronSh
