@@ -103,21 +103,21 @@ class PdfHandler extends ImageHandler {
 
 		$width = $params['width'];
 		$height = $params['height'];
-		$srcPath = $image->getPath();
 		$page = $params['page'];
 
 		if ( $page > $this->pageCount( $image ) ) {
-			return $this->doTHumbError( $width, $height, 'pdf_page_error' );
+			return $this->doThumbError( $width, $height, 'pdf_page_error' );
 		}
 
 		if ( $flags & self::TRANSFORM_LATER ) {
-			return new ThumbnailImage( $image, $dstUrl, $width,
-							$height, $dstPath, $page );
+			return new ThumbnailImage( $image, $dstUrl, $width, $height, false, $page );
 		}
 
 		if ( !wfMkdirParents( dirname( $dstPath ), null, __METHOD__ ) ) {
 			return $this->doThumbError( $width, $height, 'thumbnail_dest_directory' );
 		}
+
+		$srcPath = $image->getLocalRefPath();
 
 		$cmd = '(' . wfEscapeShellArg( $wgPdfProcessor );
 		$cmd .= " -sDEVICE=jpeg -sOutputFile=- -dFirstPage={$page} -dLastPage={$page}";
