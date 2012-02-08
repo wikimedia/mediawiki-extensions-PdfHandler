@@ -303,8 +303,10 @@ $messages['gsw'] = array(
 
 /** Gujarati (ગુજરાતી)
  * @author KartikMistry
+ * @author Sushant savla
  */
 $messages['gu'] = array(
+	'pdf_no_metadata' => 'PDFમાંથી મેટા ડાટા ન મેળવી શકાયો',
 	'pdf_page_error' => 'પાનાં ક્રમાંક અવધિમાં નથી',
 );
 
