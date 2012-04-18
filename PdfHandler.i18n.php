@@ -603,8 +603,8 @@ $messages['pt'] = array(
 );
 
 /** Brazilian Portuguese (Português do Brasil)
- * @author Eduardo.mps
  * @author 555
+ * @author Eduardo.mps
  */
 $messages['pt-br'] = array(
 	'pdf-desc' => 'Ferramenta de visualização de arquivos PDF em modo de imagem',
