@@ -395,10 +395,11 @@ $messages['it'] = array(
 
 /** Japanese (日本語)
  * @author Fryed-peach
+ * @author Shirayuki
  */
 $messages['ja'] = array(
 	'pdf-desc' => 'PDFファイルを画像風に閲覧するためのハンドラ',
-	'pdf_no_metadata' => 'PDFのメタデータを得ることができません',
+	'pdf_no_metadata' => 'PDFからメタデータを取得できません',
 	'pdf_page_error' => '範囲内にないページ番号',
 );
 
