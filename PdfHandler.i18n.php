@@ -68,6 +68,15 @@ $messages['arz'] = array(
 	'pdf_page_error' => 'رقم الصفحة ليس فى النطاق',
 );
 
+/** Asturian (Asturianu)
+ * @author Xuacu
+ */
+$messages['ast'] = array(
+	'pdf-desc' => "Xestor pa ver los ficheros PDF en mou d'imaxe",
+	'pdf_no_metadata' => 'Nun se pudieron sacar los metadatos del PDF',
+	'pdf_page_error' => 'El númberu de la páxina nun ta nel rangu',
+);
+
 /** Bashkir (Башҡортса)
  * @author Assele
  */
@@ -412,9 +421,12 @@ $messages['jv'] = array(
 
 /** Georgian (ქართული)
  * @author BRUTE
+ * @author David1010
  */
 $messages['ka'] = array(
+	'pdf-desc' => 'დამამუშავებელი PDF-ფაილების სურათების სახით დასათვალიერებლად',
 	'pdf_no_metadata' => 'შეუძლებელია PDF-დან მეტამონაცემების მიღება',
+	'pdf_page_error' => 'გვერდის ნომერი არ არის დიაპაზონში',
 );
 
 /** Khmer (ភាសាខ្មែរ)
@@ -533,6 +545,7 @@ $messages['nl'] = array(
 
 /** Norwegian Nynorsk (‪Norsk (nynorsk)‬)
  * @author Harald Khan
+ * @author Njardarlogar
  */
 $messages['nn'] = array(
 	'pdf-desc' => 'Handering av PDF-vising i biletmodus',
