@@ -539,8 +539,8 @@ $messages['nb'] = array(
  */
 $messages['nl'] = array(
 	'pdf-desc' => 'Handelt PDF-bestanden af en maakt het mogelijk ze als afbeeldingen te bekijken',
-	'pdf_no_metadata' => 'de metadata van de PDF kan niet uitgelezen worden',
-	'pdf_page_error' => 'paginanummer komt niet voor in document',
+	'pdf_no_metadata' => 'De metadata van het PDF-bestand kan niet uitgelezen worden',
+	'pdf_page_error' => 'Het paginanummer ligt niet binnen het bereik',
 );
 
 /** Norwegian Nynorsk (‪Norsk (nynorsk)‬)
