@@ -106,9 +106,11 @@ $messages['bg'] = array(
 );
 
 /** Bengali (বাংলা)
+ * @author Nasir8891
  * @author Wikitanvir
  */
 $messages['bn'] = array(
+	'pdf-desc' => 'পিডিএফ ফাইল ছবি হিসাবে ব্যবহারের পদ্ধতি',
 	'pdf_no_metadata' => 'পিডিএফ থেকে মেটাডেটা পাওয়া যায়নি',
 	'pdf_page_error' => 'পাতার নম্বর সীমার মধ্যে নেই',
 );
