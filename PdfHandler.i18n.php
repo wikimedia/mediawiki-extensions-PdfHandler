@@ -68,6 +68,14 @@ $messages['arz'] = array(
 	'pdf_page_error' => 'رقم الصفحة ليس فى النطاق',
 );
 
+/** Assamese (অসমীয়া)
+ * @author Bishnu Saikia
+ */
+$messages['as'] = array(
+	'pdf-desc' => 'পিডিএফ ফাইল ছবি হিচাপে ব্যৱহাৰৰ পদ্ধতি',
+	'pdf_page_error' => 'পৃষ্ঠাৰ নম্বৰ সীমাৰ ভিতৰত নাই',
+);
+
 /** Asturian (Asturianu)
  * @author Xuacu
  */
