@@ -77,7 +77,7 @@ $messages['as'] = array(
 	'pdf_page_error' => 'পৃষ্ঠাৰ নম্বৰ সীমাৰ ভিতৰত নাই',
 );
 
-/** Asturian (Asturianu)
+/** Asturian (asturianu)
  * @author Xuacu
  */
 $messages['ast'] = array(
@@ -105,7 +105,7 @@ $messages['be-tarask'] = array(
 	'pdf_page_error' => 'Нумар старонкі паза дыяпазонам',
 );
 
-/** Bulgarian (Български)
+/** Bulgarian (български)
  * @author DCLXVI
  * @author Turin
  */
@@ -124,7 +124,7 @@ $messages['bn'] = array(
 	'pdf_page_error' => 'পাতার নম্বর সীমার মধ্যে নেই',
 );
 
-/** Breton (Brezhoneg)
+/** Breton (brezhoneg)
  * @author Fulup
  */
 $messages['br'] = array(
@@ -133,7 +133,7 @@ $messages['br'] = array(
 	'pdf_page_error' => "N'emañ ket niverenn ar bajenn er skeuliad",
 );
 
-/** Bosnian (Bosanski)
+/** Bosnian (bosanski)
  * @author CERminator
  */
 $messages['bs'] = array(
@@ -142,7 +142,7 @@ $messages['bs'] = array(
 	'pdf_page_error' => 'Broj stranice nije u rasponu',
 );
 
-/** Catalan (Català)
+/** Catalan (català)
  * @author Aleator
  */
 $messages['ca'] = array(
@@ -160,7 +160,7 @@ $messages['ce'] = array(
 	'pdf_page_error' => 'Агlон терахь дозан чулацамца дац',
 );
 
-/** Czech (Česky)
+/** Czech (česky)
  * @author Matěj Grabovský
  * @author Mormegil
  */
@@ -179,7 +179,7 @@ $messages['cy'] = array(
 	'pdf_page_error' => "Nid yw'r rhif hwn oddi mewn i ystod rhifau'r tudalennau",
 );
 
-/** Danish (Dansk)
+/** Danish (dansk)
  * @author Peter Alberti
  */
 $messages['da'] = array(
@@ -234,7 +234,7 @@ $messages['eo'] = array(
 	'pdf_page_error' => 'Paĝnombro ekster valida intervalo',
 );
 
-/** Spanish (Español)
+/** Spanish (español)
  * @author Sanbec
  */
 $messages['es'] = array(
@@ -243,7 +243,7 @@ $messages['es'] = array(
 	'pdf_page_error' => 'Número de página fuera de rango',
 );
 
-/** Estonian (Eesti)
+/** Estonian (eesti)
  * @author Pikne
  */
 $messages['et'] = array(
@@ -264,7 +264,7 @@ $messages['fa'] = array(
 	'pdf_page_error' => 'شماره صفحه در محدوده نیست',
 );
 
-/** Finnish (Suomi)
+/** Finnish (suomi)
  * @author Nike
  * @author Vililikku
  */
@@ -274,7 +274,7 @@ $messages['fi'] = array(
 	'pdf_page_error' => 'Sivunumero ei ole alueella.',
 );
 
-/** French (Français)
+/** French (français)
  * @author Crochet.david
  * @author Grondin
  * @author Verdy p
@@ -285,7 +285,7 @@ $messages['fr'] = array(
 	'pdf_page_error' => 'Le numéro de page est hors de l’étendue.',
 );
 
-/** Franco-Provençal (Arpetan)
+/** Franco-Provençal (arpetan)
  * @author ChrisPtDe
  */
 $messages['frp'] = array(
@@ -350,7 +350,7 @@ $messages['hi'] = array(
 	'pdf_page_error' => 'पन्ने का क्रमांक सीमामें नहीं हैं',
 );
 
-/** Croatian (Hrvatski)
+/** Croatian (hrvatski)
  * @author Ex13
  */
 $messages['hr'] = array(
@@ -368,7 +368,7 @@ $messages['hsb'] = array(
 	'pdf_page_error' => 'Ličba strony zwonka dokumenta.',
 );
 
-/** Hungarian (Magyar)
+/** Hungarian (magyar)
  * @author Dani
  */
 $messages['hu'] = array(
@@ -377,7 +377,7 @@ $messages['hu'] = array(
 	'pdf_page_error' => 'Az oldalszám a tartományon kívül esik',
 );
 
-/** Interlingua (Interlingua)
+/** Interlingua (interlingua)
  * @author McDutchie
  */
 $messages['ia'] = array(
@@ -404,7 +404,7 @@ $messages['ilo'] = array(
 	'pdf_page_error' => 'Saan a masakup ti numero ti panid',
 );
 
-/** Italian (Italiano)
+/** Italian (italiano)
  * @author Darth Kule
  */
 $messages['it'] = array(
@@ -488,7 +488,7 @@ $messages['li'] = array(
 	'pdf_page_error' => 'paginanómmer besteit neet',
 );
 
-/** Lithuanian (Lietuvių)
+/** Lithuanian (lietuvių)
  * @author Matasg
  */
 $messages['lt'] = array(
@@ -497,7 +497,7 @@ $messages['lt'] = array(
 	'pdf_page_error' => 'Puslapis numeris nėra diapazone',
 );
 
-/** Macedonian (Македонски)
+/** Macedonian (македонски)
  * @author Bjankuloski06
  * @author Brest
  */
@@ -554,7 +554,7 @@ $messages['nl'] = array(
 	'pdf_page_error' => 'Het paginanummer ligt niet binnen het bereik',
 );
 
-/** Norwegian Nynorsk (‪Norsk (nynorsk)‬)
+/** Norwegian Nynorsk (‪norsk (nynorsk)‬)
  * @author Harald Khan
  * @author Njardarlogar
  */
@@ -564,7 +564,7 @@ $messages['nn'] = array(
 	'pdf_page_error' => 'Sidenummer overstig talet på sider i dokumentet',
 );
 
-/** Occitan (Occitan)
+/** Occitan (occitan)
  * @author Cedric31
  */
 $messages['oc'] = array(
@@ -589,7 +589,7 @@ $messages['pdc'] = array(
 	'pdf_no_metadata' => 'Keene Meta-Daade im PDF',
 );
 
-/** Polish (Polski)
+/** Polish (polski)
  * @author Holek
  * @author Sp5uhe
  */
@@ -617,7 +617,7 @@ $messages['pnb'] = array(
 	'pdf_page_error' => 'صفہ نمبر ولگن چ نئیں۔',
 );
 
-/** Portuguese (Português)
+/** Portuguese (português)
  * @author Hamilton Abreu
  * @author Malafaya
  */
@@ -627,7 +627,7 @@ $messages['pt'] = array(
 	'pdf_page_error' => 'Número de página fora do intervalo',
 );
 
-/** Brazilian Portuguese (Português do Brasil)
+/** Brazilian Portuguese (português do Brasil)
  * @author 555
  * @author Eduardo.mps
  */
@@ -637,7 +637,7 @@ $messages['pt-br'] = array(
 	'pdf_page_error' => 'Número de página fora do intervalo',
 );
 
-/** Romanian (Română)
+/** Romanian (română)
  * @author Stelistcristi
  */
 $messages['ro'] = array(
@@ -646,7 +646,7 @@ $messages['ro'] = array(
 	'pdf_page_error' => 'Numărul paginii nu e în șir',
 );
 
-/** Tarandíne (Tarandíne)
+/** tarandíne (tarandíne)
  * @author Joetaras
  */
 $messages['roa-tara'] = array(
@@ -655,7 +655,7 @@ $messages['roa-tara'] = array(
 	'pdf_page_error' => "Numere de pàgene fore da l'indervalle",
 );
 
-/** Russian (Русский)
+/** Russian (русский)
  * @author Александр Сигачёв
  */
 $messages['ru'] = array(
@@ -673,7 +673,7 @@ $messages['rue'] = array(
 	'pdf_page_error' => 'Чісло сторінкы не є в россягу',
 );
 
-/** Sakha (Саха тыла)
+/** Sakha (саха тыла)
  * @author HalanTul
  */
 $messages['sah'] = array(
@@ -691,7 +691,7 @@ $messages['si'] = array(
 	'pdf_page_error' => 'පිටු අංකය නිවැරදි පරාසයේ නොමැත',
 );
 
-/** Slovak (Slovenčina)
+/** Slovak (slovenčina)
  * @author Helix84
  */
 $messages['sk'] = array(
@@ -700,7 +700,7 @@ $messages['sk'] = array(
 	'pdf_page_error' => 'Číslo stránky nie je v intervale',
 );
 
-/** Slovenian (Slovenščina)
+/** Slovenian (slovenščina)
  * @author Dbc334
  */
 $messages['sl'] = array(
@@ -709,7 +709,7 @@ $messages['sl'] = array(
 	'pdf_page_error' => 'Številka strani ni v dosegu',
 );
 
-/** Albanian (Shqip)
+/** Albanian (shqip)
  * @author Olsi
  */
 $messages['sq'] = array(
@@ -718,7 +718,7 @@ $messages['sq'] = array(
 	'pdf_page_error' => 'Numri i faqes nuk është në varg',
 );
 
-/** Serbian (Cyrillic script) (‪Српски (ћирилица)‬)
+/** Serbian (Cyrillic script) (‪српски (ћирилица)‬)
  * @author Rancher
  * @author Михајло Анђелковић
  */
@@ -728,7 +728,7 @@ $messages['sr-ec'] = array(
 	'pdf_page_error' => 'Број страница ван опсега',
 );
 
-/** Serbian (Latin script) (‪Srpski (latinica)‬)
+/** Serbian (Latin script) (‪srpski (latinica)‬)
  * @author Michaello
  */
 $messages['sr-el'] = array(
@@ -746,7 +746,7 @@ $messages['stq'] = array(
 	'pdf_page_error' => 'Siedentaal buute Riege.',
 );
 
-/** Swedish (Svenska)
+/** Swedish (svenska)
  * @author M.M.S.
  */
 $messages['sv'] = array(
@@ -799,7 +799,7 @@ $messages['tr'] = array(
 	'pdf_page_error' => 'Sayfa numarası aralıkta değil',
 );
 
-/** Ukrainian (Українська)
+/** Ukrainian (українська)
  * @author Prima klasy4na
  */
 $messages['uk'] = array(
@@ -808,7 +808,7 @@ $messages['uk'] = array(
 	'pdf_page_error' => 'Номер сторінки не в діапазоні',
 );
 
-/** Vèneto (Vèneto)
+/** vèneto (vèneto)
  * @author Candalua
  */
 $messages['vec'] = array(
@@ -840,14 +840,14 @@ $messages['yue'] = array(
 	'pdf_page_error' => '頁數唔響範圍度',
 );
 
-/** Simplified Chinese (‪中文(简体)‬) */
+/** Simplified Chinese (‪中文（简体）‬) */
 $messages['zh-hans'] = array(
 	'pdf-desc' => '在图像方式中PDF档的处理器',
 	'pdf_no_metadata' => '无法在PDF中撷取元数据',
 	'pdf_page_error' => '页数不在范围中',
 );
 
-/** Traditional Chinese (‪中文(繁體)‬)
+/** Traditional Chinese (‪中文（繁體）‬)
  * @author Mark85296341
  */
 $messages['zh-hant'] = array(
