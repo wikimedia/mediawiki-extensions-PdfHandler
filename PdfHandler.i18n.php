@@ -41,7 +41,7 @@ $messages['aln'] = array(
 	'pdf_page_error' => 'numrin e faqes nuk është në varg',
 );
 
-/** Aragonese (Aragonés)
+/** Aragonese (aragonés)
  * @author Juanpabl
  */
 $messages['an'] = array(
@@ -95,7 +95,7 @@ $messages['ba'] = array(
 	'pdf_page_error' => 'Бит һаны биттәр һанынан ашҡан',
 );
 
-/** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
+/** Belarusian (Taraškievica orthography) (‪беларуская (тарашкевіца)‬)
  * @author EugeneZelenko
  * @author Jim-by
  */
@@ -207,7 +207,7 @@ $messages['diq'] = array(
 	'pdf_page_error' => 'numreyê peli benate de niyo',
 );
 
-/** Lower Sorbian (Dolnoserbski)
+/** Lower Sorbian (dolnoserbski)
  * @author Michawiki
  */
 $messages['dsb'] = array(
@@ -294,7 +294,7 @@ $messages['frp'] = array(
 	'pdf_page_error' => 'Lo numerô de pâge est en defôr de la portâ.',
 );
 
-/** Galician (Galego)
+/** Galician (galego)
  * @author Alma
  * @author Toliño
  */
@@ -359,7 +359,7 @@ $messages['hr'] = array(
 	'pdf_page_error' => 'Broj stranice nije u opsegu',
 );
 
-/** Upper Sorbian (Hornjoserbsce)
+/** Upper Sorbian (hornjoserbsce)
  * @author Michawiki
  */
 $messages['hsb'] = array(
@@ -664,7 +664,7 @@ $messages['ru'] = array(
 	'pdf_page_error' => 'Номер страницы вне диапазона',
 );
 
-/** Rusyn (Русиньскый)
+/** Rusyn (русиньскый)
  * @author Gazeb
  */
 $messages['rue'] = array(
