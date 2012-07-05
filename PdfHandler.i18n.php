@@ -166,8 +166,8 @@ $messages['ce'] = array(
  */
 $messages['cs'] = array(
 	'pdf-desc' => 'Ovladač pro prohlížení PDF souborů jako obrázků',
-	'pdf_no_metadata' => 'Nelze získat metadata z PDF',
-	'pdf_page_error' => 'Číslo stránky není v rozsahu',
+	'pdf_no_metadata' => 'Z PDF se nepodařilo získat metadata',
+	'pdf_page_error' => 'Číslo stránky mimo rozsah',
 );
 
 /** Welsh (Cymraeg)
