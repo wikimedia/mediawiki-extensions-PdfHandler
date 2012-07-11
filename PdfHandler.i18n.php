@@ -86,7 +86,7 @@ $messages['ast'] = array(
 	'pdf_page_error' => 'El númberu de la páxina nun ta nel rangu',
 );
 
-/** Bashkir (Башҡортса)
+/** Bashkir (башҡортса)
  * @author Assele
  */
 $messages['ba'] = array(
@@ -151,7 +151,7 @@ $messages['ca'] = array(
 	'pdf_page_error' => "Número de pàgina fora d'abast",
 );
 
-/** Chechen (Нохчийн)
+/** Chechen (нохчийн)
  * @author Sasan700
  */
 $messages['ce'] = array(
@@ -536,9 +536,7 @@ $messages['ms'] = array(
 	'pdf_page_error' => 'Nombor halaman tiada dalam julat',
 );
 
-/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
- * @author Jon Harald Søby
- */
+/** Norwegian Bokmål (‪norsk (bokmål)‬) */
 $messages['nb'] = array(
 	'pdf-desc' => 'Håndtering av PDF-visning i bildemodus',
 	'pdf_no_metadata' => 'kan ikke hente metadata fra PDF',
