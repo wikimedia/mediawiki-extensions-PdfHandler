@@ -114,6 +114,7 @@ class PdfImage {
 			$cmd = wfEscapeShellArg( $wgPdfInfo ) .
 				" -enc UTF-8 " . # Report metadata as UTF-8 text...
 				" -l 9999999 " . # Report page sizes for all pages
+				" -meta " .      # Report XMP metadata
 				wfEscapeShellArg( $this->mFilename );
 			$retval = '';
 			$dump = wfShellExec( $cmd, $retval );
@@ -157,10 +158,26 @@ class PdfImage {
 		$lines = explode( "\n", $dump );
 		$data = array();
 
+		// Metadata is always the last item, and spans multiple lines.
+		$inMetadata = false;
+
+		// Basically this loop will go through each line, splitting key value
+		// pairs on the colon, until it gets to a "Metadata:\n" at which point
+		// it will gather all remaining lines into the xmp key.
 		foreach( $lines as $line ) {
+			if ( $inMetadata ) {
+				# Handle XMP differently due to diffence in line break
+				$data['xmp'] .= "\n$line";
+				continue;
+			}
 			$bits = explode( ':', $line, 2 );
 			if( count( $bits ) > 1 ) {
 				$key = trim( $bits[0] );
+				if ( $key === 'Metadata' ) {
+					$inMetadata = true;
+					$data['xmp'] = '';
+					continue;
+				}
 				$value = trim( $bits[1] );
 				$matches = array();
 				// "Page xx rot" will be in poppler 0.20's pdfinfo output
@@ -172,6 +189,121 @@ class PdfImage {
 				}
 			}
 		}
+		$data = $this->postProcessDump( $data );
+		return $data;
+	}
+
+	/**
+	 * Postprocess the metadata (convert xmp into useful form, etc)
+	 *
+	 * This is used to generate the metadata table at the bottom
+	 * of the image description page.
+	 *
+	 * @param $data Array metadata
+	 * @return $data Array post-processed metadata
+	 */
+	protected function postProcessDump( array $data ) {
+
+		$meta = new BitmapMetadataHandler();
+		$items = array();
+		foreach( $data as $key => $val ) {
+			switch ( $key ) {
+				case 'Title':
+					$items['ObjectName'] = $val;
+					break;
+				case 'Subject':
+					$items['ImageDescription'] = $val;
+					break;
+				case 'Keywords':
+					// Sometimes we have empty keywords. This seems
+					// to be a product of how pdfinfo deals with keywords
+					// with spaces in them. Filter such empty keywords
+					$keyList = array_filter( explode( ' ', $val ) );
+					if ( count( $keyList ) > 0 ) {
+						$items['Keywords'] = $keyList;
+					}
+					break;
+				case 'Author':
+					$items['Artist'] = $val;
+					break;
+				case 'Creator':
+					// Program used to create file.
+					// Different from program used to convert to pdf.
+					$items['Software'] = $val;
+					break;
+				case 'Producer':
+					// Conversion program
+					$items['pdf-Producer'] = $val;
+					break;
+				case 'ModTime':
+					$timestamp = wfTimestamp( TS_EXIF, $val );
+					if ( $timestamp ) {
+						// 'if' is just paranoia
+						$items['DateTime'] = $timestamp;
+					}
+					break;
+				case 'CreationTime':
+					$timestamp = wfTimestamp( TS_EXIF, $val );
+					if ( $timestamp ) {
+						$items['DateTimeDigitized'] = $timestamp;
+					}
+					break;
+				// These last two (version and encryption) I was unsure
+				// if we should include in the table, since they aren't
+				// all that useful to editors. I leaned on the side
+				// of including. However not including if file
+				// is optimized/linearized since that is really useless
+				// to an editor.
+				case 'PDF version':
+					$items['pdf-Version'] = $val;
+					break;
+				case 'Encrypted':
+					// @todo: The value isn't i18n-ised. The appropriate
+					// place to do that is in FormatMetadata.php
+					// should add a hook a there.
+					// For reference, if encrypted this fields value looks like:
+					// "yes (print:yes copy:no change:no addNotes:no)"
+					$items['pdf-Encrypted'] = $val;
+					break;
+				// Note 'pages' and 'Pages' are different keys (!)
+				case 'pages':
+					// A pdf document can have multiple sized pages in it.
+					// (However 95% of the time, all pages are the same size)
+					// get a list of all the unique page sizes in document.
+					// This doesn't do anything with rotation as of yet,
+					// mostly because I am unsure of what a good way to
+					// present that information to the user would be.
+					$pageSizes = array();
+					foreach( $val as $pageNumber => $page ) {
+						if( isset( $page['Page size'] ) ) {
+							$pageSizes[ $page['Page size'] ] = true;
+						}
+					}
+
+					$pageSizeArray = array_keys( $pageSizes );
+					if ( count( $pageSizeArray ) > 0 ) {
+						$items['pdf-PageSize'] = $pageSizeArray;
+					}
+					break;
+			}
+
+		}
+		$meta->addMetadata( $items, 'native' );
+
+		if ( isset( $data['xmp'] ) && function_exists( 'xml_parser_create_ns' ) ) {
+			// func exists verifies that the xml extension required for XMPReader
+			// is present (Almost always is present)
+			// @todo: This only handles generic xmp properties. Would be improved
+			// by handling pdf xmp properties (pdf and pdfx) via XMPInfo hook.
+			$xmp = new XMPReader();
+			$xmp->parse( $data['xmp'] );
+			$xmpRes = $xmp->getResults();
+			foreach ( $xmpRes as $type => $xmpSection ) {
+				$meta->addMetadata( $xmpSection, $type );
+			}
+		}
+		unset( $data['xmp'] );
+		$data['mergedMetadata'] = $meta->getMetadataArray();
 		return $data;
 	}
 }

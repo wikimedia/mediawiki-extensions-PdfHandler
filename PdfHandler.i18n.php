@@ -9,9 +9,13 @@
 $messages = array();
 
 $messages['en'] = array(
-	'pdf-desc'        => 'Handler for viewing PDF files in image mode',
-	'pdf_no_metadata' => 'Cannot get metadata from PDF',
-	'pdf_page_error'  => 'Page number not in range',
+	'pdf-desc'           => 'Handler for viewing PDF files in image mode.',
+	'pdf_no_metadata'    => 'Cannot get metadata from PDF.',
+	'pdf_page_error'     => 'Page number not in range.',
+	'exif-pdf-producer'  => 'Conversion program',
+	'exif-pdf-version'   => 'Version of PDF format',
+	'exif-pdf-encrypted' => 'Encrypted',
+	'exif-pdf-pagesize'  => 'Page size',
 );
 
 /** Message documentation (Message documentation)
@@ -22,6 +26,10 @@ $messages['qqq'] = array(
 	'pdf-desc' => '{{desc}}',
 	'pdf_no_metadata' => 'Error message given when metadata cannot be retrieved from a PDF file',
 	'pdf_page_error' => 'Error message given when a PDF does not have the requested page number',
+	'exif-pdf-producer' => 'The label used in the metadata table at the bottom of the file description page for the program used to convert this pdf file into a pdf. This is separate from the program used to create the original file (Which is labeled by {{mw-msg|exif-software}}).',
+	'exif-pdf-version' => 'Label for the version of the pdf file format in the metadata table at the bottom of an image description page. Usually a number between 1.2 and 1.6',
+	'exif-pdf-encrypted' => 'Label for field in metadata table at bottom of an image description page to denote if pdf file is encrypted. The value of the field this references is either "no" (most common) or something like "yes (print:yes copy:no change:no addNotes:no)"',
+	'exif-pdf-pagesize' => 'Label for the field in the metadata table at the bottom of an image description page to denote the size of the pages in the pdf. If there is more than one size of page used in this document, each size is listed once.',
 );
 
 /** Afrikaans (Afrikaans)

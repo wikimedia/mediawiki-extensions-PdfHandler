@@ -273,13 +273,40 @@ class PdfHandler extends ImageHandler {
 	 * @return bool
 	 */
 	function isMetadataValid( $image, $metadata ) {
-		return !empty( $metadata ) && $metadata != serialize( array() );
+		if ( !$metadata || $metadata === serialize(array()) ) {
+			return self::METADATA_BAD;
+		} elseif ( strpos( $metadata, 'mergedMetadata' ) === false ) {
+			return self::METADATA_COMPATIBLE;
+		}
+		return self::METADATA_GOOD;
 	}
 
 	/**
 	 * @param $image File
 	 * @return bool|int
 	 */
+	function formatMetadata( $image ) {
+		$meta = $image->getMetadata();
+
+		if ( !$meta ) {
+			return false;
+		}
+		wfSuppressWarnings();
+		$meta = unserialize( $meta );
+		wfRestoreWarnings();
+
+		if ( !isset( $meta['mergedMetadata'] )
+			|| !is_array( $meta['mergedMetadata'] )
+			|| count( $meta['mergedMetadata'] ) < 1
+		) {
+			return false;
+		}
+
+		// Inherited from MediaHandler.
+		return $this->formatMetadataHelper( $meta['mergedMetadata'] );
+	}
+
+
 	function pageCount( $image ) {
 		$data = $this->getMetaArray( $image );
 		if ( !$data ) {
