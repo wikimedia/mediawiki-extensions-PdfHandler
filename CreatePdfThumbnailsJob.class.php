@@ -10,8 +10,8 @@ class CreatePdfThumbnailsJob extends Job {
 	/**
 	 * Construct a thumbnail job
 	 *
-	 * @param $title Title: Title object
-	 * @param $params Associative array of options:
+	 * @param $title Title Title object
+	 * @param $params array Associative array of options:
 	 *     page:           page number for which the thumbnail will be created
 	 *     jobtype:        CreatePDFThumbnailsJob::BIG_THUMB or CreatePDFThumbnailsJob::SMALL_THUMB
 	 *                     BIG_THUMB will create a thumbnail visible for full thumbnail view,
@@ -62,12 +62,12 @@ class CreatePdfThumbnailsJob extends Job {
 					# Calculate the thumbnail size.
 					# First case, the limiting factor is the width, not the height.
 					if ( $width / $height >= $maxWidth / $maxHeight ) {
-						$height = round( $height * $maxWidth / $width );
+						//$height = round( $height * $maxWidth / $width );
 						$width = $maxWidth;
 						# Note that $height <= $maxHeight now.
 					} else {
 						$newwidth = floor( $width * $maxHeight / $height );
-						$height = round( $height * $newwidth / $width );
+						//$height = round( $height * $newwidth / $width );
 						$width = $newwidth;
 						# Note that $height <= $maxHeight now, but might not be identical
 						# because of rounding.
@@ -78,9 +78,7 @@ class CreatePdfThumbnailsJob extends Job {
 				break;
 
 			case self::SMALL_THUMB:
-				global $wgUser;
-				$sk = $wgUser->getSkin();
-				$sk->makeThumbLinkObj( $this->title, $file, '', '', 'none', array( 'page' => $this->params['page'] ) );
+				Linker::makeThumbLinkObj( $this->title, $file, '', '', 'none', array( 'page' => $this->params['page'] ) );
 				break;
 		}
 
@@ -88,7 +86,7 @@ class CreatePdfThumbnailsJob extends Job {
 	}
 
 	/**
-	 * @param $upload
+	 * @param $upload UploadBase
 	 * @param $mime
 	 * @param $error
 	 * @return bool
@@ -104,7 +102,7 @@ class CreatePdfThumbnailsJob extends Job {
 
 		$title = $upload->getTitle();
 		$uploadFile = $upload->getLocalFile();
-		if ( is_null($uploadFile) ) {
+		if ( is_null( $uploadFile ) ) {
 			wfDebugLog('thumbnails', '$uploadFile seems to be null, should never happen...');
 			return true; // should never happen, but it's better to be secure
 		}
@@ -114,7 +112,7 @@ class CreatePdfThumbnailsJob extends Job {
 		$pages = intval( $unserialized['Pages'] );
 
 		$jobs = array();
-		for ($i = 1; $i <= $pages; $i++) {
+		for ( $i = 1; $i <= $pages; $i++ ) {
 			$jobs[] = new CreatePdfThumbnailsJob( $title, 
 								array( 'page' => $i, 'jobtype' => self::BIG_THUMB )
 							);

@@ -32,7 +32,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 $wgExtensionCredits['media'][] = array(
 	'path' => __FILE__,
 	'name' => 'PDF Handler',
-	'author' => array( 'Martin Seidel', 'Mike Połtyn'),
+	'author' => array( 'Martin Seidel', 'Mike Połtyn' ),
 	'descriptionmsg' => 'pdf-desc',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:PdfHandler',
 );

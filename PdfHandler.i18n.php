@@ -20,6 +20,8 @@ $messages['en'] = array(
  */
 $messages['qqq'] = array(
 	'pdf-desc' => '{{desc}}',
+	'pdf_no_metadata' => 'Error message given when metadata cannot be retrieved from a PDF file',
+	'pdf_page_error' => 'Error message given when a PDF does not have the requested page number',
 );
 
 /** Afrikaans (Afrikaans)

@@ -23,6 +23,9 @@
 
 class PdfHandler extends ImageHandler {
 
+	/**
+	 * @return bool
+	 */
 	function isEnabled() {
 		global $wgPdfProcessor, $wgPdfPostProcessor, $wgPdfInfo;
 
@@ -35,14 +38,27 @@ class PdfHandler extends ImageHandler {
 		return true;
 	}
 
+	/**
+	 * @param $file
+	 * @return bool
+	 */
 	function mustRender( $file ) {
 		return true;
 	}
 
+	/**
+	 * @param $file
+	 * @return bool
+	 */
 	function isMultiPage( $file ) {
 		return true;
 	}
 
+	/**
+	 * @param $name
+	 * @param $value
+	 * @return bool
+	 */
 	function validateParam( $name, $value ) {
 		if ( in_array( $name, array( 'width', 'height', 'page' ) ) ) {
 			return ( $value <= 0 ) ? false : true;
@@ -51,6 +67,10 @@ class PdfHandler extends ImageHandler {
 		}
 	}
 
+	/**
+	 * @param $params array
+	 * @return bool|string
+	 */
 	function makeParamString( $params ) {
 		$page = isset( $params['page'] ) ? $params['page'] : 1;
 		if ( !isset( $params['width'] ) ) {
@@ -59,6 +79,10 @@ class PdfHandler extends ImageHandler {
 		return "page{$page}-{$params['width']}px";
 	}
 
+	/**
+	 * @param $str string
+	 * @return array|bool
+	 */
 	function parseParamString( $str ) {
 		$m = false;
 
@@ -69,6 +93,10 @@ class PdfHandler extends ImageHandler {
 		return false;
 	}
 
+	/**
+	 * @param $params array
+	 * @return array
+	 */
 	function getScriptParams( $params ) {
 		return array(
 			'width' => $params['width'],
@@ -76,6 +104,9 @@ class PdfHandler extends ImageHandler {
 		);
 	}
 
+	/**
+	 * @return array
+	 */
 	function getParamMap() {
 		return array(
 			'img_width' => 'width',
@@ -83,11 +114,25 @@ class PdfHandler extends ImageHandler {
 		);
 	}
 
+	/**
+	 * @param $width
+	 * @param $height
+	 * @param $msg
+	 * @return MediaTransformError
+	 */
 	protected function doThumbError( $width, $height, $msg ) {
 		return new MediaTransformError( 'thumbnail_error',
 			$width, $height, wfMsgForContent( $msg ) );
 	}
 
+	/**
+	 * @param $image File
+	 * @param $dstPath string
+	 * @param $dstUrl string
+	 * @param $params array
+	 * @param $flags int
+	 * @return MediaTransformError|MediaTransformOutput|ThumbnailImage|TransformParameterError
+	 */
 	function doTransform( $image, $dstPath, $dstUrl, $params, $flags = 0 ) {
 		global $wgPdfProcessor, $wgPdfPostProcessor, $wgPdfHandlerDpi;
 
@@ -145,6 +190,11 @@ class PdfHandler extends ImageHandler {
 		}
 	}
 
+	/**
+	 * @param $image File
+	 * @param $path string
+	 * @return PdfImage
+	 */
 	function getPdfImage( $image, $path ) {
 		if ( !$image ) {
 			$pdfimg = new PdfImage( $path );
@@ -157,6 +207,10 @@ class PdfHandler extends ImageHandler {
 		return $pdfimg;
 	}
 
+	/**
+	 * @param $image File
+	 * @return bool
+	 */
 	function getMetaArray( $image ) {
 		if ( isset( $image->pdfMetaArray ) ) {
 			return $image->pdfMetaArray;
@@ -178,10 +232,21 @@ class PdfHandler extends ImageHandler {
 		return $image->pdfMetaArray;
 	}
 
+	/**
+	 * @param $image File
+	 * @param $path string
+	 * @return array|bool
+	 */
 	function getImageSize( $image, $path ) {
 		return $this->getPdfImage( $image, $path )->getImageSize();
 	}
 
+	/**
+	 * @param $ext
+	 * @param $mime string
+	 * @param $params null
+	 * @return array
+	 */
 	function getThumbType( $ext, $mime, $params = null ) {
 		global $wgPdfOutputExtension;
 		static $mime;
@@ -193,14 +258,28 @@ class PdfHandler extends ImageHandler {
 		return array( $wgPdfOutputExtension, $mime );
 	}
 
+	/**
+	 * @param $image File
+	 * @param $path string
+	 * @return string
+	 */
 	function getMetadata( $image, $path ) {
 		return serialize( $this->getPdfImage( $image, $path )->retrieveMetaData() );
 	}
 
+	/**
+	 * @param $image File
+	 * @param $metadata string
+	 * @return bool
+	 */
 	function isMetadataValid( $image, $metadata ) {
 		return !empty( $metadata ) && $metadata != serialize( array() );
 	}
 
+	/**
+	 * @param $image File
+	 * @return bool|int
+	 */
 	function pageCount( $image ) {
 		$data = $this->getMetaArray( $image );
 		if ( !$data ) {
@@ -209,11 +288,21 @@ class PdfHandler extends ImageHandler {
 		return intval( $data['Pages'] );
 	}
 
+	/**
+	 * @param $image File
+	 * @param $page int
+	 * @return array|bool
+	 */
 	function getPageDimensions( $image, $page ) {
 		$data = $this->getMetaArray( $image );
 		return PdfImage::getPageSize( $data, $page );
 	}
 
+	/**
+	 * @param $image File
+	 * @param $page int
+	 * @return bool
+	 */
 	function getPageText( $image, $page ) {
 		$data = $this->getMetaArray( $image, true );
 		if ( !$data ) {
