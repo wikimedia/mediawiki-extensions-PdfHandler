@@ -472,6 +472,14 @@ $messages['ksh'] = array(
 	'pdf_page_error' => 'En Sigge-Nommer es ußerhallef',
 );
 
+/** Kirghiz (Кыргызча)
+ * @author Chorobek
+ */
+$messages['ky'] = array(
+	'pdf-desc' => 'PDF файлдарды сүрөт түрүндө көрсөткүч',
+	'pdf_no_metadata' => 'PDF-тин метамаалыматтарын алуу мүмкүн эмес',
+);
+
 /** Luxembourgish (Lëtzebuergesch)
  * @author Robby
  */
