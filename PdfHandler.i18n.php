@@ -681,6 +681,15 @@ $messages['rue'] = array(
 	'pdf_page_error' => 'Чісло сторінкы не є в россягу',
 );
 
+/** Sanskrit (संस्कृतम्)
+ * @author Shubha
+ */
+$messages['sa'] = array(
+	'pdf-desc' => 'सुलेख(PDF)सञ्चिकाः चित्रदशायां दर्शनाय अपेक्षिता प्रणाली',
+	'pdf_no_metadata' => 'सुलेखात् मेटादत्तांशः प्राप्तुम् अशक्यः',
+	'pdf_page_error' => 'पृष्ठक्रमाङ्कः सीमायां न विद्यते',
+);
+
 /** Sakha (саха тыла)
  * @author HalanTul
  */
