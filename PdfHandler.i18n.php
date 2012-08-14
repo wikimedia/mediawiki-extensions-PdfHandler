@@ -427,9 +427,11 @@ $messages['ja'] = array(
 
 /** Javanese (Basa Jawa)
  * @author Meursault2004
+ * @author NoiX180
  */
 $messages['jv'] = array(
 	'pdf_no_metadata' => 'Ora bisa olèh metadata saka PDF',
+	'pdf_page_error' => 'Nomèr kaca nèng njaba wates',
 );
 
 /** Georgian (ქართული)
@@ -544,6 +546,13 @@ $messages['ms'] = array(
 	'pdf-desc' => 'Pengendali untuk melihat fail PDF dalam mod imej',
 	'pdf_no_metadata' => 'Metadata tidak boleh diperoleh dari PDF',
 	'pdf_page_error' => 'Nombor halaman tiada dalam julat',
+);
+
+/** Maltese (Malti)
+ * @author Chrisportelli
+ */
+$messages['mt'] = array(
+	'pdf_page_error' => 'In-numru tal-paġna ma jinsabx fl-intervall',
 );
 
 /** Norwegian Bokmål (‪norsk (bokmål)‬) */
