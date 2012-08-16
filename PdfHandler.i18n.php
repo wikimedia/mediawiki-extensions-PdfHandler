@@ -430,6 +430,7 @@ $messages['ja'] = array(
  * @author NoiX180
  */
 $messages['jv'] = array(
+	'pdf-desc' => 'Sing nadhangi kanggo ndelok berkas PDF mawa modé gambar',
 	'pdf_no_metadata' => 'Ora bisa olèh metadata saka PDF',
 	'pdf_page_error' => 'Nomèr kaca nèng njaba wates',
 );
@@ -832,6 +833,13 @@ $messages['uk'] = array(
 	'pdf-desc' => 'Оброблювач для перегляду PDF-файлів в режимі зображень',
 	'pdf_no_metadata' => 'Не виходить отримати метадані з PDF',
 	'pdf_page_error' => 'Номер сторінки не в діапазоні',
+);
+
+/** Urdu (اردو)
+ * @author පසිඳු කාවින්ද
+ */
+$messages['ur'] = array(
+	'pdf_page_error' => 'صفحہ نمبر رینج میں نہیں',
 );
 
 /** vèneto (vèneto)
