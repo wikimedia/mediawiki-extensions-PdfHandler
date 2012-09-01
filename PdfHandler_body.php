@@ -122,7 +122,7 @@ class PdfHandler extends ImageHandler {
 	 */
 	protected function doThumbError( $width, $height, $msg ) {
 		return new MediaTransformError( 'thumbnail_error',
-			$width, $height, wfMsgForContent( $msg ) );
+			$width, $height, wfMessage( $msg )->inContentLanguage()->text() );
 	}
 
 	/**
