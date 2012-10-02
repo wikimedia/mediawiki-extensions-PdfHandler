@@ -97,7 +97,7 @@ $messages['ba'] = array(
 	'pdf_page_error' => 'Бит һаны биттәр һанынан ашҡан',
 );
 
-/** Belarusian (Taraškievica orthography) (‪беларуская (тарашкевіца)‬)
+/** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
  * @author EugeneZelenko
  * @author Jim-by
  */
@@ -198,6 +198,13 @@ $messages['de'] = array(
 	'pdf-desc' => 'Stellt eine Schnittstelle zur Ansicht von PDF-Dateien im Bildermodus bereit',
 	'pdf_no_metadata' => 'Keine Metadaten im PDF vorhanden.',
 	'pdf_page_error' => 'Seitenzahl außerhalb des Dokumentes.',
+);
+
+/** Swiss High German (Schweizer Hochdeutsch)
+ * @author Geitost
+ */
+$messages['de-ch'] = array(
+	'pdf_page_error' => 'Seitenzahl ausserhalb des Dokumentes.',
 );
 
 /** Zazaki (Zazaki)
@@ -556,7 +563,7 @@ $messages['mt'] = array(
 	'pdf_page_error' => 'In-numru tal-paġna ma jinsabx fl-intervall',
 );
 
-/** Norwegian Bokmål (‪norsk (bokmål)‬) */
+/** Norwegian Bokmål (norsk (bokmål)‎) */
 $messages['nb'] = array(
 	'pdf-desc' => 'Håndtering av PDF-visning i bildemodus',
 	'pdf_no_metadata' => 'kan ikke hente metadata fra PDF',
@@ -572,7 +579,7 @@ $messages['nl'] = array(
 	'pdf_page_error' => 'Het paginanummer ligt niet binnen het bereik',
 );
 
-/** Norwegian Nynorsk (‪norsk (nynorsk)‬)
+/** Norwegian Nynorsk (norsk (nynorsk)‎)
  * @author Harald Khan
  * @author Njardarlogar
  */
@@ -745,7 +752,7 @@ $messages['sq'] = array(
 	'pdf_page_error' => 'Numri i faqes nuk është në varg',
 );
 
-/** Serbian (Cyrillic script) (‪српски (ћирилица)‬)
+/** Serbian (Cyrillic script) (српски (ћирилица)‎)
  * @author Rancher
  * @author Михајло Анђелковић
  */
@@ -755,7 +762,7 @@ $messages['sr-ec'] = array(
 	'pdf_page_error' => 'Број страница ван опсега',
 );
 
-/** Serbian (Latin script) (‪srpski (latinica)‬)
+/** Serbian (Latin script) (srpski (latinica)‎)
  * @author Michaello
  */
 $messages['sr-el'] = array(
@@ -874,14 +881,14 @@ $messages['yue'] = array(
 	'pdf_page_error' => '頁數唔響範圍度',
 );
 
-/** Simplified Chinese (‪中文（简体）‬) */
+/** Simplified Chinese (中文（简体）‎) */
 $messages['zh-hans'] = array(
 	'pdf-desc' => '在图像方式中PDF档的处理器',
 	'pdf_no_metadata' => '无法在PDF中撷取元数据',
 	'pdf_page_error' => '页数不在范围中',
 );
 
-/** Traditional Chinese (‪中文（繁體）‬)
+/** Traditional Chinese (中文（繁體）‎)
  * @author Mark85296341
  */
 $messages['zh-hant'] = array(
