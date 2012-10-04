@@ -200,7 +200,7 @@ class PdfImage {
 	 * of the image description page.
 	 *
 	 * @param $data Array metadata
-	 * @return $data Array post-processed metadata
+	 * @return Array post-processed metadata
 	 */
 	protected function postProcessDump( array $data ) {
 
@@ -274,7 +274,7 @@ class PdfImage {
 					// mostly because I am unsure of what a good way to
 					// present that information to the user would be.
 					$pageSizes = array();
-					foreach( $val as $pageNumber => $page ) {
+					foreach( $val as $page ) {
 						if( isset( $page['Page size'] ) ) {
 							$pageSizes[ $page['Page size'] ] = true;
 						}

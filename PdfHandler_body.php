@@ -139,7 +139,11 @@ class PdfHandler extends ImageHandler {
 		$metadata = $image->getMetadata();
 
 		if ( !$metadata ) {
-			return $this->doThumbError( @$params['width'], @$params['height'], 'pdf_no_metadata' );
+			return $this->doThumbError(
+				isset( $params['width'] ) ? $params['width'] : null,
+				isset( $params['height'] ) ? $params['height'] : null,
+				'pdf_no_metadata'
+			);
 		}
 
 		if ( !$this->normaliseParams( $image, $params ) ) {
@@ -306,7 +310,10 @@ class PdfHandler extends ImageHandler {
 		return $this->formatMetadataHelper( $meta['mergedMetadata'] );
 	}
 
-
+	/**
+	 * @param $image
+	 * @return bool|int
+	 */
 	function pageCount( $image ) {
 		$data = $this->getMetaArray( $image );
 		if ( !$data ) {
