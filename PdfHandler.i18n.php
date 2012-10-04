@@ -200,12 +200,17 @@ $messages['da'] = array(
 
 /** German (Deutsch)
  * @author Kghbln
+ * @author Metalhead64
  * @author Raimond Spekking
  */
 $messages['de'] = array(
 	'pdf-desc' => 'Stellt eine Schnittstelle zur Ansicht von PDF-Dateien im Bildermodus bereit',
 	'pdf_no_metadata' => 'Keine Metadaten im PDF vorhanden.',
 	'pdf_page_error' => 'Seitenzahl außerhalb des Dokumentes.',
+	'exif-pdf-producer' => 'Umwandlungsprogramm',
+	'exif-pdf-version' => 'Version des PDF-Formats',
+	'exif-pdf-encrypted' => 'Verschlüsselt',
+	'exif-pdf-pagesize' => 'Seitengröße',
 );
 
 /** Swiss High German (Schweizer Hochdeutsch)
@@ -231,6 +236,10 @@ $messages['dsb'] = array(
 	'pdf-desc' => 'Źěłowy rěd za woglědowanje PDF-datajow we wobrazowem modusu',
 	'pdf_no_metadata' => 'Metadaty njedaju se z PDF dobyś',
 	'pdf_page_error' => 'Bokowe cysło zwenka wobcerka',
+	'exif-pdf-producer' => 'Konwertěrowański program',
+	'exif-pdf-version' => 'Wersija PDF-formata',
+	'exif-pdf-encrypted' => 'Skoděrowany',
+	'exif-pdf-pagesize' => 'Wjelikosć boka',
 );
 
 /** Greek (Ελληνικά)
@@ -383,6 +392,10 @@ $messages['hsb'] = array(
 	'pdf-desc' => 'Program za wobhladowanje datajow PDF we wobrazowym modusu',
 	'pdf_no_metadata' => 'W PDF žane metadaty njejsu.',
 	'pdf_page_error' => 'Ličba strony zwonka dokumenta.',
+	'exif-pdf-producer' => 'Konwertowanski program',
+	'exif-pdf-version' => 'Wersija PDF-formata',
+	'exif-pdf-encrypted' => 'Zaklučowany',
+	'exif-pdf-pagesize' => 'Wulkosć strony',
 );
 
 /** Hungarian (magyar)
