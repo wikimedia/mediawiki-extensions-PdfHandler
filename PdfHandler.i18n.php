@@ -222,11 +222,13 @@ $messages['de-ch'] = array(
 
 /** Zazaki (Zazaki)
  * @author Aspar
+ * @author Erdemaslancan
  */
 $messages['diq'] = array(
 	'pdf-desc' => 'şuxulnayoxo ke dosyayê PDFyan modê mocnayiş de mocneno',
 	'pdf_no_metadata' => 'PDF ra metadata nêgeriyeno',
 	'pdf_page_error' => 'numreyê peli benate de niyo',
+	'exif-pdf-pagesize' => 'Ebata perer',
 );
 
 /** Lower Sorbian (dolnoserbski)
@@ -435,12 +437,17 @@ $messages['ilo'] = array(
 );
 
 /** Italian (italiano)
+ * @author Beta16
  * @author Darth Kule
  */
 $messages['it'] = array(
 	'pdf-desc' => 'Gestore per la visualizzazione di file PDF in modalità immagine',
 	'pdf_no_metadata' => 'Impossibile ottenere i metadati da PDF',
 	'pdf_page_error' => "Numero di pagina non compreso nell'intervallo",
+	'exif-pdf-producer' => 'Programma di conversione',
+	'exif-pdf-version' => 'Versione del formato PDF',
+	'exif-pdf-encrypted' => 'Crittografato',
+	'exif-pdf-pagesize' => 'Dimensioni pagina',
 );
 
 /** Japanese (日本語)
@@ -448,9 +455,13 @@ $messages['it'] = array(
  * @author Shirayuki
  */
 $messages['ja'] = array(
-	'pdf-desc' => 'PDFファイルを画像風に閲覧するためのハンドラ',
-	'pdf_no_metadata' => 'PDFからメタデータを取得できません',
-	'pdf_page_error' => '範囲内にないページ番号',
+	'pdf-desc' => 'PDF ファイルを画像のように閲覧するためのハンドラー',
+	'pdf_no_metadata' => 'PDF ファイルからメタデータを取得できません',
+	'pdf_page_error' => 'ページ番号が正しい範囲内にありません。',
+	'exif-pdf-producer' => '変換プログラム',
+	'exif-pdf-version' => 'PDF 形式のバージョン',
+	'exif-pdf-encrypted' => '暗号化済み',
+	'exif-pdf-pagesize' => 'ページのサイズ',
 );
 
 /** Javanese (Basa Jawa)
@@ -487,11 +498,16 @@ $messages['km'] = array(
 
 /** Korean (한국어)
  * @author Kwj2772
+ * @author 아라
  */
 $messages['ko'] = array(
 	'pdf-desc' => 'PDF 파일을 이미지 방식으로 볼 수 있게 하는 핸들러',
 	'pdf_no_metadata' => 'PDF 파일에서 메타데이터를 추출할 수 없습니다.',
 	'pdf_page_error' => '쪽수가 범위 안에 있지 않습니다.',
+	'exif-pdf-producer' => '변환 프로그램',
+	'exif-pdf-version' => 'PDF 형식 버전',
+	'exif-pdf-encrypted' => '암호화함',
+	'exif-pdf-pagesize' => '문서 크기',
 );
 
 /** Colognian (Ripoarisch)
@@ -546,6 +562,10 @@ $messages['mk'] = array(
 	'pdf-desc' => 'Ракувач за прегледување PDF податотеки во сликовен режим',
 	'pdf_no_metadata' => 'Не може да се земат метаподатоци од PDF',
 	'pdf_page_error' => 'Бројот на страница е надвор од опсег',
+	'exif-pdf-producer' => 'Програм за претворање',
+	'exif-pdf-version' => 'Верзија на PDF-форматот',
+	'exif-pdf-encrypted' => 'Шифрирано',
+	'exif-pdf-pagesize' => 'Големина на страницата',
 );
 
 /** Malayalam (മലയാളം)
