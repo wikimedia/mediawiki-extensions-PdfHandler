@@ -196,6 +196,10 @@ $messages['da'] = array(
 	'pdf-desc' => 'Håndtering af PDF-visning i billedtilstand',
 	'pdf_no_metadata' => 'Kan ikke hente metadata fra PDF',
 	'pdf_page_error' => 'Sidetallet er større end antallet af sider i dokumentet',
+	'exif-pdf-producer' => 'Konverteringsprogram',
+	'exif-pdf-version' => 'Version af PDF-format',
+	'exif-pdf-encrypted' => 'Krypteret',
+	'exif-pdf-pagesize' => 'Sidestørrelse',
 );
 
 /** German (Deutsch)
@@ -228,6 +232,9 @@ $messages['diq'] = array(
 	'pdf-desc' => 'şuxulnayoxo ke dosyayê PDFyan modê mocnayiş de mocneno',
 	'pdf_no_metadata' => 'PDF ra metadata nêgeriyeno',
 	'pdf_page_error' => 'numreyê peli benate de niyo',
+	'exif-pdf-producer' => 'Programa çerxiney',
+	'exif-pdf-version' => 'Versiyona babet da PDF',
+	'exif-pdf-encrypted' => 'Kodıno',
 	'exif-pdf-pagesize' => 'Ebata perer',
 );
 
@@ -822,12 +829,17 @@ $messages['stq'] = array(
 );
 
 /** Swedish (svenska)
+ * @author Ainali
  * @author M.M.S.
  */
 $messages['sv'] = array(
 	'pdf-desc' => 'Hantering av PDF-visning i bildläge',
 	'pdf_no_metadata' => 'Kan inte hämta metadata från PDF',
 	'pdf_page_error' => 'Sidnummer överstiger antal sidor i dokumentet',
+	'exif-pdf-producer' => 'Konverteringsprogram',
+	'exif-pdf-version' => 'Version av PDF-format',
+	'exif-pdf-encrypted' => 'Krypterad',
+	'exif-pdf-pagesize' => 'Sidstorlek',
 );
 
 /** Tamil (தமிழ்)
