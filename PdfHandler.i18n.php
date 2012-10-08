@@ -270,12 +270,17 @@ $messages['eo'] = array(
 );
 
 /** Spanish (español)
+ * @author Armando-Martin
  * @author Sanbec
  */
 $messages['es'] = array(
 	'pdf-desc' => 'Manejador para ver archivos PDF en modo imagen',
 	'pdf_no_metadata' => 'No se obtuvieron metadatos del PDF',
 	'pdf_page_error' => 'Número de página fuera de rango',
+	'exif-pdf-producer' => 'Programa de conversión',
+	'exif-pdf-version' => 'Versión del formato PDF',
+	'exif-pdf-encrypted' => 'Cifrado',
+	'exif-pdf-pagesize' => 'Tamaño de página',
 );
 
 /** Estonian (eesti)
@@ -611,11 +616,17 @@ $messages['mt'] = array(
 	'pdf_page_error' => 'In-numru tal-paġna ma jinsabx fl-intervall',
 );
 
-/** Norwegian Bokmål (norsk (bokmål)‎) */
+/** Norwegian Bokmål (norsk (bokmål)‎)
+ * @author Jsoby
+ */
 $messages['nb'] = array(
 	'pdf-desc' => 'Håndtering av PDF-visning i bildemodus',
 	'pdf_no_metadata' => 'kan ikke hente metadata fra PDF',
 	'pdf_page_error' => 'Sidenummer overstiger antall sider i dokumentet',
+	'exif-pdf-producer' => 'Koverteringsprogram',
+	'exif-pdf-version' => 'Versjon av PDF-format',
+	'exif-pdf-encrypted' => 'Kryptert',
+	'exif-pdf-pagesize' => 'Sidestørrelse',
 );
 
 /** Dutch (Nederlands)
@@ -912,12 +923,17 @@ $messages['vec'] = array(
 );
 
 /** Vietnamese (Tiếng Việt)
+ * @author Minh Nguyen
  * @author Vinhtantran
  */
 $messages['vi'] = array(
 	'pdf-desc' => 'Bộ xử lý để xem tập tin PDF ở dạng hình ảnh',
 	'pdf_no_metadata' => 'Không thấy truy xuất siêu dữ liệu từ PDF',
 	'pdf_page_error' => 'Số trang không nằm trong giới hạn',
+	'exif-pdf-producer' => 'Chương trình chuyển đổi',
+	'exif-pdf-version' => 'Phiên bản định dạng PDF',
+	'exif-pdf-encrypted' => 'Mã hóa',
+	'exif-pdf-pagesize' => 'Kích thước trang',
 );
 
 /** Yoruba (Yorùbá)
