@@ -108,11 +108,16 @@ $messages['ba'] = array(
 /** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
  * @author EugeneZelenko
  * @author Jim-by
+ * @author Wizardist
  */
 $messages['be-tarask'] = array(
 	'pdf-desc' => 'Апрацоўшчык для прагляду PDF-файлаў у выглядзе выяваў',
 	'pdf_no_metadata' => 'Немагчыма атрымаць мэта-зьвесткі з PDF-файла',
 	'pdf_page_error' => 'Нумар старонкі паза дыяпазонам',
+	'exif-pdf-producer' => 'Праграма канвэртацыі',
+	'exif-pdf-version' => 'Вэрсія фармату PDF',
+	'exif-pdf-encrypted' => 'Зашыфравана',
+	'exif-pdf-pagesize' => 'Памер старонкі',
 );
 
 /** Bulgarian (български)
@@ -316,6 +321,7 @@ $messages['fi'] = array(
 
 /** French (français)
  * @author Crochet.david
+ * @author Gomoko
  * @author Grondin
  * @author Verdy p
  */
@@ -323,6 +329,10 @@ $messages['fr'] = array(
 	'pdf-desc' => 'Gestionnaire permettant de visualiser les fichiers PDF en mode image',
 	'pdf_no_metadata' => 'Impossible d’obtenir les métadonnées du fichier PDF',
 	'pdf_page_error' => 'Le numéro de page est hors de l’étendue.',
+	'exif-pdf-producer' => 'Programme de conversion',
+	'exif-pdf-version' => 'Version du format PDF',
+	'exif-pdf-encrypted' => 'Crypté',
+	'exif-pdf-pagesize' => 'Taille de la page',
 );
 
 /** Franco-Provençal (arpetan)
@@ -340,8 +350,12 @@ $messages['frp'] = array(
  */
 $messages['gl'] = array(
 	'pdf-desc' => 'Manipulador para ver ficheiros PDF no modo de imaxe',
-	'pdf_no_metadata' => 'Non se puideron obter os metadatos do PDF',
-	'pdf_page_error' => 'O número da páxina non está no rango',
+	'pdf_no_metadata' => 'Non se puideron obter os metadatos do PDF.',
+	'pdf_page_error' => 'O número da páxina non está no rango.',
+	'exif-pdf-producer' => 'Programa de conversión',
+	'exif-pdf-version' => 'Versión en formato PDF',
+	'exif-pdf-encrypted' => 'Cifrado',
+	'exif-pdf-pagesize' => 'Tamaño da páxina',
 );
 
 /** Ancient Greek (Ἀρχαία ἑλληνικὴ)
@@ -372,6 +386,7 @@ $messages['gu'] = array(
 );
 
 /** Hebrew (עברית)
+ * @author Amire80
  * @author Rotemliss
  * @author YaronSh
  */
@@ -379,6 +394,10 @@ $messages['he'] = array(
 	'pdf-desc' => 'טיפול בצפייה בקובצי PDF במצב תמונה',
 	'pdf_no_metadata' => 'לא ניתן לאחזר את נתוני המסמך מה־PDF',
 	'pdf_page_error' => 'מספר הדף אינו בטווח',
+	'exif-pdf-producer' => 'תוכנת המרה',
+	'exif-pdf-version' => 'הגרסה של תסדיר PDF',
+	'exif-pdf-encrypted' => 'מוצפן',
+	'exif-pdf-pagesize' => 'גודל דף',
 );
 
 /** Hindi (हिन्दी)
