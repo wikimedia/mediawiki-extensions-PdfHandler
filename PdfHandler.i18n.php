@@ -626,6 +626,10 @@ $messages['ms'] = array(
 	'pdf-desc' => 'Pengendali untuk melihat fail PDF dalam mod imej',
 	'pdf_no_metadata' => 'Metadata tidak boleh diperoleh dari PDF',
 	'pdf_page_error' => 'Nombor halaman tiada dalam julat',
+	'exif-pdf-producer' => 'Program penukaran',
+	'exif-pdf-version' => 'Versi format PDF',
+	'exif-pdf-encrypted' => 'Disulitkan',
+	'exif-pdf-pagesize' => 'Saiz halaman',
 );
 
 /** Maltese (Malti)
