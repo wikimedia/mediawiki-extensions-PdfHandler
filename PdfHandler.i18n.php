@@ -183,6 +183,10 @@ $messages['cs'] = array(
 	'pdf-desc' => 'Ovladač pro prohlížení PDF souborů jako obrázků',
 	'pdf_no_metadata' => 'Z PDF se nepodařilo získat metadata',
 	'pdf_page_error' => 'Číslo stránky mimo rozsah',
+	'exif-pdf-producer' => 'Konverzní program',
+	'exif-pdf-version' => 'Verze formátu PDF',
+	'exif-pdf-encrypted' => 'Šifrovaný',
+	'exif-pdf-pagesize' => 'Velikost stránky',
 );
 
 /** Welsh (Cymraeg)
@@ -373,6 +377,10 @@ $messages['gsw'] = array(
 	'pdf-desc' => 'Schnittstell fir d Aasicht vu PDF-Dateien im Bilder-Modus',
 	'pdf_no_metadata' => 'Kei Metadate im PDF vorhande.',
 	'pdf_page_error' => 'Sytezahl usserhalb vum Dokumänt.',
+	'exif-pdf-producer' => 'Umwandligsprogramm',
+	'exif-pdf-version' => 'Version vum PDF-Format',
+	'exif-pdf-encrypted' => 'Verschlisslet',
+	'exif-pdf-pagesize' => 'Sytegreßi',
 );
 
 /** Gujarati (ગુજરાતી)
@@ -654,11 +662,13 @@ $messages['nb'] = array(
 
 /** Dutch (Nederlands)
  * @author Siebrand
+ * @author Wiki13
  */
 $messages['nl'] = array(
 	'pdf-desc' => 'Handelt PDF-bestanden af en maakt het mogelijk ze als afbeeldingen te bekijken',
 	'pdf_no_metadata' => 'De metadata van het PDF-bestand kan niet uitgelezen worden',
 	'pdf_page_error' => 'Het paginanummer ligt niet binnen het bereik',
+	'exif-pdf-encrypted' => 'Versleuteld',
 );
 
 /** Norwegian Nynorsk (norsk (nynorsk)‎)
