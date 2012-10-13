@@ -494,7 +494,7 @@ $messages['it'] = array(
  * @author Shirayuki
  */
 $messages['ja'] = array(
-	'pdf-desc' => 'PDF ファイルを画像のように閲覧するためのハンドラー',
+	'pdf-desc' => '画像モードで PDF ファイルを表示するためのハンドラー',
 	'pdf_no_metadata' => 'PDF ファイルからメタデータを取得できません',
 	'pdf_page_error' => 'ページ番号が正しい範囲内にありません。',
 	'exif-pdf-producer' => '変換プログラム',
