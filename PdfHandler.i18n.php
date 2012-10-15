@@ -668,7 +668,10 @@ $messages['nl'] = array(
 	'pdf-desc' => 'Handelt PDF-bestanden af en maakt het mogelijk ze als afbeeldingen te bekijken',
 	'pdf_no_metadata' => 'De metadata van het PDF-bestand kan niet uitgelezen worden',
 	'pdf_page_error' => 'Het paginanummer ligt niet binnen het bereik',
+	'exif-pdf-producer' => 'Conversieprogramma',
+	'exif-pdf-version' => 'Versie van PDF-opmaak',
 	'exif-pdf-encrypted' => 'Versleuteld',
+	'exif-pdf-pagesize' => 'Papierformaat',
 );
 
 /** Norwegian Nynorsk (norsk (nynorsk)‎)
