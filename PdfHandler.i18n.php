@@ -94,6 +94,10 @@ $messages['ast'] = array(
 	'pdf-desc' => "Xestor pa ver los ficheros PDF en mou d'imaxe",
 	'pdf_no_metadata' => 'Nun se pudieron sacar los metadatos del PDF',
 	'pdf_page_error' => 'El númberu de la páxina nun ta nel rangu',
+	'exif-pdf-producer' => 'Programa de conversión',
+	'exif-pdf-version' => 'Versión del formatu PDF',
+	'exif-pdf-encrypted' => 'Cifráu',
+	'exif-pdf-pagesize' => 'Tamañu de la páxina',
 );
 
 /** Bashkir (башҡортса)
@@ -564,7 +568,7 @@ $messages['ksh'] = array(
 	'exif-pdf-producer' => 'Ömwandelongsprojramm',
 	'exif-pdf-version' => 'PDF-Fommaat-Version',
 	'exif-pdf-encrypted' => 'Verschlößelt',
-	'exif-pdf-pagesize' => 'Dä Sigg(e) ier Jrüüße',
+	'exif-pdf-pagesize' => 'Dä Sigg(e) ier Jrüüße', # Fuzzy
 );
 
 /** Kirghiz (Кыргызча)
@@ -757,8 +761,8 @@ $messages['pt'] = array(
 );
 
 /** Brazilian Portuguese (português do Brasil)
- * @author 555
  * @author Eduardo.mps
+ * @author 555
  */
 $messages['pt-br'] = array(
 	'pdf-desc' => 'Ferramenta de visualização de arquivos PDF em modo de imagem',
@@ -988,14 +992,16 @@ $messages['yo'] = array(
 	'pdf_no_metadata' => 'Dátà-àtẹ̀yìnwá kó ṣe é mú láti inú PDF',
 );
 
-/** Cantonese (粵語) */
+/** Cantonese (粵語)
+ */
 $messages['yue'] = array(
 	'pdf-desc' => '響圖像模式睇PDF檔嘅處理器',
 	'pdf_no_metadata' => '唔能夠響PDF度拎metadata',
 	'pdf_page_error' => '頁數唔響範圍度',
 );
 
-/** Simplified Chinese (中文（简体）‎) */
+/** Simplified Chinese (中文（简体）‎)
+ */
 $messages['zh-hans'] = array(
 	'pdf-desc' => '在图像方式中PDF档的处理器',
 	'pdf_no_metadata' => '无法在PDF中撷取元数据',
@@ -1010,4 +1016,3 @@ $messages['zh-hant'] = array(
 	'pdf_no_metadata' => '無法在 PDF 中擷取元數據',
 	'pdf_page_error' => '頁數不在範圍中',
 );
-
