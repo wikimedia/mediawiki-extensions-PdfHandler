@@ -853,6 +853,10 @@ $messages['sl'] = array(
 	'pdf-desc' => 'Upravljavec ogledovanja datotek PDF v slikovnem načinu',
 	'pdf_no_metadata' => 'Ne morem pridobiti metapodatkov iz PDF',
 	'pdf_page_error' => 'Številka strani ni v dosegu',
+	'exif-pdf-producer' => 'Pretvorbeni program',
+	'exif-pdf-version' => 'Različica oblike PDF',
+	'exif-pdf-encrypted' => 'Šifrirano',
+	'exif-pdf-pagesize' => 'Velikost strani',
 );
 
 /** Albanian (shqip)
