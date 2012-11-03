@@ -772,6 +772,10 @@ $messages['pt-br'] = array(
 	'pdf-desc' => 'Ferramenta de visualização de arquivos PDF em modo de imagem',
 	'pdf_no_metadata' => 'Não foi possível obter os metadados do PDF',
 	'pdf_page_error' => 'Número de página fora do intervalo',
+	'exif-pdf-producer' => 'Programa de conversão',
+	'exif-pdf-version' => 'Versão do formato PDF',
+	'exif-pdf-encrypted' => 'Criptografado',
+	'exif-pdf-pagesize' => 'Tamanho da página',
 );
 
 /** Romanian (română)
