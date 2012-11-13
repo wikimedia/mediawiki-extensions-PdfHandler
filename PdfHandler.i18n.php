@@ -530,6 +530,7 @@ $messages['ka'] = array(
 	'pdf-desc' => 'დამამუშავებელი PDF-ფაილების სურათების სახით დასათვალიერებლად',
 	'pdf_no_metadata' => 'შეუძლებელია PDF-დან მეტამონაცემების მიღება',
 	'pdf_page_error' => 'გვერდის ნომერი არ არის დიაპაზონში',
+	'exif-pdf-pagesize' => 'გვერდის ზომა',
 );
 
 /** Khmer (ភាសាខ្មែរ)
@@ -964,12 +965,16 @@ $messages['tr'] = array(
 );
 
 /** Ukrainian (українська)
+ * @author Base
  * @author Prima klasy4na
  */
 $messages['uk'] = array(
 	'pdf-desc' => 'Оброблювач для перегляду PDF-файлів в режимі зображень',
 	'pdf_no_metadata' => 'Не виходить отримати метадані з PDF',
 	'pdf_page_error' => 'Номер сторінки не в діапазоні',
+	'exif-pdf-version' => 'Версія формату PDF',
+	'exif-pdf-encrypted' => 'Зашифровано',
+	'exif-pdf-pagesize' => 'Розмір сторінки',
 );
 
 /** Urdu (اردو)
