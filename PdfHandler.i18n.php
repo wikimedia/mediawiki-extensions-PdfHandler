@@ -530,6 +530,9 @@ $messages['ka'] = array(
 	'pdf-desc' => 'დამამუშავებელი PDF-ფაილების სურათების სახით დასათვალიერებლად',
 	'pdf_no_metadata' => 'შეუძლებელია PDF-დან მეტამონაცემების მიღება',
 	'pdf_page_error' => 'გვერდის ნომერი არ არის დიაპაზონში',
+	'exif-pdf-producer' => 'პროგრამის გარდაქმნა',
+	'exif-pdf-version' => 'ვერსია PDF ფორმატში',
+	'exif-pdf-encrypted' => 'დაშიფრული',
 	'exif-pdf-pagesize' => 'გვერდის ზომა',
 );
 
