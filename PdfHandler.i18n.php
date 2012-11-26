@@ -126,11 +126,14 @@ $messages['be-tarask'] = array(
 
 /** Bulgarian (български)
  * @author DCLXVI
+ * @author Stanqo
  * @author Turin
  */
 $messages['bg'] = array(
 	'pdf_no_metadata' => 'невъзможно е да бъдат извлечени метаданни от PDF',
 	'pdf_page_error' => 'Номерът на страница е извън обхвата',
+	'exif-pdf-encrypted' => 'Шифровано',
+	'exif-pdf-pagesize' => 'Размер на страницата',
 );
 
 /** Bengali (বাংলা)
