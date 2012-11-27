@@ -978,6 +978,7 @@ $messages['uk'] = array(
 	'pdf-desc' => 'Оброблювач для перегляду PDF-файлів в режимі зображень',
 	'pdf_no_metadata' => 'Не виходить отримати метадані з PDF',
 	'pdf_page_error' => 'Номер сторінки не в діапазоні',
+	'exif-pdf-producer' => 'програма конвертації',
 	'exif-pdf-version' => 'Версія формату PDF',
 	'exif-pdf-encrypted' => 'Зашифровано',
 	'exif-pdf-pagesize' => 'Розмір сторінки',
