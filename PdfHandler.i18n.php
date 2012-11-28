@@ -132,7 +132,7 @@ $messages['be-tarask'] = array(
 $messages['bg'] = array(
 	'pdf_no_metadata' => 'невъзможно е да бъдат извлечени метаданни от PDF',
 	'pdf_page_error' => 'Номерът на страница е извън обхвата',
-	'exif-pdf-encrypted' => 'Шифровано',
+	'exif-pdf-encrypted' => 'Криптиране',
 	'exif-pdf-pagesize' => 'Размер на страницата',
 );
 
