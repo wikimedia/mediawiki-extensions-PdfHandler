@@ -85,6 +85,9 @@ $messages['as'] = array(
 	'pdf-desc' => 'পিডিএফ ফাইল ছবি হিচাপে ব্যৱহাৰৰ পদ্ধতি',
 	'pdf_no_metadata' => 'পি.ডি.এফ.ৰ পৰা মেটাডাটা উপলদ্ধ নহয়',
 	'pdf_page_error' => 'পৃষ্ঠাৰ নম্বৰ সীমাৰ ভিতৰত নাই',
+	'exif-pdf-producer' => 'ৰূপান্তৰক প্ৰগ্ৰাম',
+	'exif-pdf-version' => 'পি.ডি.এফ. ৰূপত সংস্কৰণ',
+	'exif-pdf-pagesize' => 'পৃষ্ঠাৰ আকাৰ',
 );
 
 /** Asturian (asturianu)
@@ -98,6 +101,13 @@ $messages['ast'] = array(
 	'exif-pdf-version' => 'Versión del formatu PDF',
 	'exif-pdf-encrypted' => 'Cifráu',
 	'exif-pdf-pagesize' => 'Tamañu de la páxina',
+);
+
+/** South Azerbaijani (تورکجه)
+ * @author Amir a57
+ */
+$messages['azb'] = array(
+	'exif-pdf-pagesize' => 'صحیفه اولچوسو',
 );
 
 /** Bashkir (башҡортса)
