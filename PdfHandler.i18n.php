@@ -336,6 +336,8 @@ $messages['fa'] = array(
 );
 
 /** Finnish (suomi)
+ * @author Crt
+ * @author Kulmalukko
  * @author Nike
  * @author Vililikku
  */
@@ -343,6 +345,8 @@ $messages['fi'] = array(
 	'pdf-desc' => 'Käsittelijä PDF-tiedostojen katsomiseen kuvatilassa.',
 	'pdf_no_metadata' => 'Metatietojen hakeminen PDF-tiedostosta epäonnistui',
 	'pdf_page_error' => 'Sivunumero ei ole alueella.',
+	'exif-pdf-version' => 'PDF-muodon versio',
+	'exif-pdf-pagesize' => 'Sivun koko',
 );
 
 /** French (français)
