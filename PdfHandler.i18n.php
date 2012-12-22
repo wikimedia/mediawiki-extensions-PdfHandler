@@ -310,12 +310,14 @@ $messages['es'] = array(
 );
 
 /** Estonian (eesti)
+ * @author Avjoska
  * @author Pikne
  */
 $messages['et'] = array(
 	'pdf-desc' => 'Töötleja PDF-failide piltidena kuvamiseks',
 	'pdf_no_metadata' => 'Ei õnnestu PDF-faili meta-andmeid saada',
 	'pdf_page_error' => 'Leheküljenumber pole vahemikus.',
+	'exif-pdf-pagesize' => 'Lehe suurus',
 );
 
 /** Persian (فارسی)
@@ -858,11 +860,13 @@ $messages['sah'] = array(
 
 /** Sinhala (සිංහල)
  * @author Budhajeewa
+ * @author පසිඳු කාවින්ද
  */
 $messages['si'] = array(
 	'pdf-desc' => 'PDF ගොනු රූප මාදිලියෙන් හසුරුවනය',
 	'pdf_no_metadata' => 'PDF ගොනුවෙන් මෙටාදත්ත ගත නොහැක',
 	'pdf_page_error' => 'පිටු අංකය නිවැරදි පරාසයේ නොමැත',
+	'exif-pdf-pagesize' => 'පිටු ප්‍රමාණය',
 );
 
 /** Slovak (slovenčina)
@@ -1044,11 +1048,13 @@ $messages['yue'] = array(
 );
 
 /** Simplified Chinese (中文（简体）‎)
+ * @author Shirayuki
  */
 $messages['zh-hans'] = array(
 	'pdf-desc' => '在图像方式中PDF档的处理器',
 	'pdf_no_metadata' => '无法在PDF中撷取元数据',
 	'pdf_page_error' => '页数不在范围中',
+	'exif-pdf-pagesize' => '页面大小',
 );
 
 /** Traditional Chinese (中文（繁體）‎)
