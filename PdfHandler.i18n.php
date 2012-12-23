@@ -293,6 +293,9 @@ $messages['eo'] = array(
 	'pdf-desc' => 'Ilo por vidi PDF-dosierojn en bilda reĝimo',
 	'pdf_no_metadata' => 'Ne povas preni metadatenon el PDF',
 	'pdf_page_error' => 'Paĝnombro ekster valida intervalo',
+	'exif-pdf-version' => 'Versio de PDF-formato',
+	'exif-pdf-encrypted' => 'Ĉifrita',
+	'exif-pdf-pagesize' => 'Grandeco de paĝo',
 );
 
 /** Spanish (español)
@@ -754,12 +757,17 @@ $messages['pdc'] = array(
 
 /** Polish (polski)
  * @author Holek
+ * @author Matma Rex
  * @author Sp5uhe
  */
 $messages['pl'] = array(
 	'pdf-desc' => 'Konwerter graficznego podglądu plików PDF',
 	'pdf_no_metadata' => 'nie można pobrać metadanych z pliku PDF',
 	'pdf_page_error' => 'Numer strony poza zakresem',
+	'exif-pdf-producer' => 'Program użyty do konwersji',
+	'exif-pdf-version' => 'Wersja formatu PDF',
+	'exif-pdf-encrypted' => 'Zaszyfrowany',
+	'exif-pdf-pagesize' => 'Wymiary strony',
 );
 
 /** Piedmontese (Piemontèis)
