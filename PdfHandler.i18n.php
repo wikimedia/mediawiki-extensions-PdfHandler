@@ -960,6 +960,7 @@ $messages['ta'] = array(
 	'pdf_no_metadata' => 'PDF இருந்து மேல்தரவை பெற இயலவில்லை',
 	'pdf_page_error' => 'பக்கத்தின் எண் குறிப்பிட்ட வரையறையில் இல்லை',
 	'exif-pdf-producer' => 'மாற்றனிரல்',
+	'exif-pdf-pagesize' => 'பக்க அளவு',
 );
 
 /** Telugu (తెలుగు)
