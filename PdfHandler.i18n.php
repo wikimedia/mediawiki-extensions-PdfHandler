@@ -344,13 +344,16 @@ $messages['fa'] = array(
  * @author Crt
  * @author Kulmalukko
  * @author Nike
+ * @author VezonThunder
  * @author Vililikku
  */
 $messages['fi'] = array(
 	'pdf-desc' => 'Käsittelijä PDF-tiedostojen katsomiseen kuvatilassa.',
 	'pdf_no_metadata' => 'Metatietojen hakeminen PDF-tiedostosta epäonnistui',
 	'pdf_page_error' => 'Sivunumero ei ole alueella.',
+	'exif-pdf-producer' => 'Muunto-ohjelma',
 	'exif-pdf-version' => 'PDF-muodon versio',
+	'exif-pdf-encrypted' => 'Salattu',
 	'exif-pdf-pagesize' => 'Sivun koko',
 );
 
@@ -472,11 +475,16 @@ $messages['hsb'] = array(
 
 /** Hungarian (magyar)
  * @author Dani
+ * @author Dj
  */
 $messages['hu'] = array(
 	'pdf-desc' => 'PDF fájlok megjelenítse képként',
 	'pdf_no_metadata' => 'nem sikerült lekérni a PDF metaadatait',
 	'pdf_page_error' => 'Az oldalszám a tartományon kívül esik',
+	'exif-pdf-producer' => 'Konvertáló program',
+	'exif-pdf-version' => 'PDF formátum verziója',
+	'exif-pdf-encrypted' => 'Titkosított',
+	'exif-pdf-pagesize' => 'Lapméret',
 );
 
 /** Interlingua (interlingua)
