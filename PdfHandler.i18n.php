@@ -785,6 +785,10 @@ $messages['pms'] = array(
 	'pdf-desc' => 'Ël gestor për vëdde ij file PDF an manera image',
 	'pdf_no_metadata' => 'as peulo nen pijesse ij metadat dal PDF',
 	'pdf_page_error' => "Ël nùmer ëd pàgina a l'é pa ant ël range",
+	'exif-pdf-producer' => 'Program ëd conversion',
+	'exif-pdf-version' => 'Vërsion ëd formà PDF',
+	'exif-pdf-encrypted' => 'Criptà',
+	'exif-pdf-pagesize' => 'Dimension dla pagina',
 );
 
 /** Western Punjabi (پنجابی)
@@ -882,6 +886,8 @@ $messages['si'] = array(
 	'pdf-desc' => 'PDF ගොනු රූප මාදිලියෙන් හසුරුවනය',
 	'pdf_no_metadata' => 'PDF ගොනුවෙන් මෙටාදත්ත ගත නොහැක',
 	'pdf_page_error' => 'පිටු අංකය නිවැරදි පරාසයේ නොමැත',
+	'exif-pdf-producer' => 'හැරවුම් වැඩසටහන',
+	'exif-pdf-encrypted' => 'ගුප්තකේතීකරණය වූ',
 	'exif-pdf-pagesize' => 'පිටු ප්‍රමාණය',
 );
 
