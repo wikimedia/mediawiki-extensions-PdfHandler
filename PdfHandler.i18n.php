@@ -831,6 +831,7 @@ $messages['ro'] = array(
 	'pdf-desc' => 'Operator pentru vizualizarea fișierelor PDF în modul de imagine',
 	'pdf_no_metadata' => 'Nu se poate obține metadate din PDF',
 	'pdf_page_error' => 'Numărul paginii nu e în șir',
+	'exif-pdf-pagesize' => 'Dimensiunea paginii',
 );
 
 /** tarandíne (tarandíne)
@@ -887,6 +888,7 @@ $messages['si'] = array(
 	'pdf_no_metadata' => 'PDF ගොනුවෙන් මෙටාදත්ත ගත නොහැක',
 	'pdf_page_error' => 'පිටු අංකය නිවැරදි පරාසයේ නොමැත',
 	'exif-pdf-producer' => 'හැරවුම් වැඩසටහන',
+	'exif-pdf-version' => 'PDF ආකෘතියේ අනුවාදය',
 	'exif-pdf-encrypted' => 'ගුප්තකේතීකරණය වූ',
 	'exif-pdf-pagesize' => 'පිටු ප්‍රමාණය',
 );
@@ -1009,6 +1011,14 @@ $messages['tr'] = array(
 	'pdf-desc' => 'PDF dosyalarını görüntü modunda görüntülemek için işleyici',
 	'pdf_no_metadata' => "PDF'den metadata alınamıyor",
 	'pdf_page_error' => 'Sayfa numarası aralıkta değil',
+);
+
+/** Uyghur (Arabic script) (ئۇيغۇرچە)
+ * @author Sahran
+ */
+$messages['ug-arab'] = array(
+	'exif-pdf-encrypted' => 'شىفىرلانغان',
+	'exif-pdf-pagesize' => 'بەت چوڭلۇقى',
 );
 
 /** Ukrainian (українська)
