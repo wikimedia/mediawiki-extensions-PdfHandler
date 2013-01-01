@@ -192,6 +192,13 @@ $messages['ce'] = array(
 	'pdf_page_error' => 'Агlон терахь дозан чулацамца дац',
 );
 
+/** Sorani Kurdish (کوردی)
+ * @author Calak
+ */
+$messages['ckb'] = array(
+	'exif-pdf-pagesize' => 'قەبارەی پەڕە',
+);
+
 /** Czech (česky)
  * @author Matěj Grabovský
  * @author Mormegil
