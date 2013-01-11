@@ -1103,9 +1103,14 @@ $messages['zh-hans'] = array(
 
 /** Traditional Chinese (中文（繁體）‎)
  * @author Mark85296341
+ * @author Simon Shek
  */
 $messages['zh-hant'] = array(
 	'pdf-desc' => '在圖片模式中 PDF 檔的處理器',
 	'pdf_no_metadata' => '無法在 PDF 中擷取元數據',
 	'pdf_page_error' => '頁數不在範圍中',
+	'exif-pdf-producer' => '轉換程式',
+	'exif-pdf-version' => 'PDF格式的版本',
+	'exif-pdf-encrypted' => '加密',
+	'exif-pdf-pagesize' => '頁面大小',
 );
