@@ -62,11 +62,14 @@ $messages['an'] = array(
 
 /** Arabic (العربية)
  * @author Meno25
+ * @author Mido
  */
 $messages['ar'] = array(
 	'pdf-desc' => 'متحكم لرؤية ملفات PDF في نمط صورة',
 	'pdf_no_metadata' => 'لم يمكن أخذ معلومات ميتا من PDF',
 	'pdf_page_error' => 'رقم الصفحة ليس في النطاق',
+	'exif-pdf-producer' => 'برنامج التحويل',
+	'exif-pdf-pagesize' => 'حجم الصفحة',
 );
 
 /** Egyptian Spoken Arabic (مصرى)
@@ -755,12 +758,17 @@ $messages['oc'] = array(
 );
 
 /** Oriya (ଓଡ଼ିଆ)
+ * @author Jnanaranjan Sahu
  * @author Psubhashish
  */
 $messages['or'] = array(
 	'pdf-desc' => 'PDF ଫାଇଲକୁ ଛବି ମୋଡ଼ରେ ଦେଖିବାର ପରିଚାଳକ',
 	'pdf_no_metadata' => 'ପି.ଡ଼ି.ଏଫ.ରୁ ମେଟାଡାଟା ବାହାର କରିପାରିଲୁଁ ନାହିଁ',
 	'pdf_page_error' => 'ପୃଷ୍ଠା ସଂଖ୍ୟା ସୀମା ଭିତରେ ନାହିଁ',
+	'exif-pdf-producer' => 'ବଦଳ କାର୍ଯ୍ୟ',
+	'exif-pdf-version' => 'PDF ପ୍ରକାରର ସଂସ୍କରଣ',
+	'exif-pdf-encrypted' => 'ଏନକ୍ରିପ୍ଟ ହୋଇଥିବା',
+	'exif-pdf-pagesize' => 'ପୃଷ୍ଠା ଆକାର',
 );
 
 /** Deitsch (Deitsch)
