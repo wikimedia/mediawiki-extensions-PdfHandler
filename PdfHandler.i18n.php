@@ -1063,11 +1063,16 @@ $messages['ur'] = array(
 
 /** vèneto (vèneto)
  * @author Candalua
+ * @author GatoSelvadego
  */
 $messages['vec'] = array(
 	'pdf-desc' => 'Handler par vardar i file PDF in modalità imagine',
 	'pdf_no_metadata' => 'No se riesse a recuperar i metadati dal PDF',
 	'pdf_page_error' => "Nùmaro de pagina mia conpreso in te l'intervalo",
+	'exif-pdf-producer' => 'Programa de conversion',
+	'exif-pdf-version' => 'Version del formato PDF',
+	'exif-pdf-encrypted' => 'Critigrafà',
+	'exif-pdf-pagesize' => 'Dimension pàjina',
 );
 
 /** Vietnamese (Tiếng Việt)
