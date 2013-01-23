@@ -755,6 +755,10 @@ $messages['oc'] = array(
 	'pdf-desc' => 'Utilitari per visualizar los fichièrs PDF en mòde imatge',
 	'pdf_no_metadata' => 'Pòt pas obténer las metadonadas del fichièr PDF',
 	'pdf_page_error' => 'Lo numèro de pagina es pas dins la gama.',
+	'exif-pdf-producer' => 'Programa de conversion',
+	'exif-pdf-version' => 'Version del format PDF',
+	'exif-pdf-encrypted' => 'Chifrat',
+	'exif-pdf-pagesize' => 'Talha de la pagina',
 );
 
 /** Oriya (ଓଡ଼ିଆ)
