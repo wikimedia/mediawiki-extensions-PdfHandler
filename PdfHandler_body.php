@@ -61,10 +61,9 @@ class PdfHandler extends ImageHandler {
 	 */
 	function validateParam( $name, $value ) {
 		if ( in_array( $name, array( 'width', 'height', 'page' ) ) ) {
-			return ( $value <= 0 ) ? false : true;
-		} else {
-			return false;
+			return ( $value > 0 );
 		}
+		return false;
 	}
 
 	/**
@@ -339,13 +338,7 @@ class PdfHandler extends ImageHandler {
 	 */
 	function getPageText( $image, $page ) {
 		$data = $this->getMetaArray( $image, true );
-		if ( !$data ) {
-			return false;
-		}
-		if( !isset( $data['text'] ) ) {
-			return false;
-		}
-		if( !isset( $data['text'][$page - 1] ) ) {
+		if ( !$data || !isset( $data['text'] ) || !isset( $data['text'][$page - 1] ) ) {
 			return false;
 		}
 		return $data['text'][$page - 1];
