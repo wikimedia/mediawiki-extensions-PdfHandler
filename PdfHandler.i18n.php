@@ -798,16 +798,17 @@ $messages['pl'] = array(
 );
 
 /** Piedmontese (Piemontèis)
+ * @author Borichèt
  * @author Dragonòt
  */
 $messages['pms'] = array(
 	'pdf-desc' => 'Ël gestor për vëdde ij file PDF an manera image',
 	'pdf_no_metadata' => 'as peulo nen pijesse ij metadat dal PDF',
 	'pdf_page_error' => "Ël nùmer ëd pàgina a l'é pa ant ël range",
-	'exif-pdf-producer' => 'Program ëd conversion',
-	'exif-pdf-version' => 'Vërsion ëd formà PDF',
+	'exif-pdf-producer' => 'Programa ëd conversion',
+	'exif-pdf-version' => 'Version dël formà PDF',
 	'exif-pdf-encrypted' => 'Criptà',
-	'exif-pdf-pagesize' => 'Dimension dla pagina',
+	'exif-pdf-pagesize' => 'Dimension dla pàgina',
 );
 
 /** Western Punjabi (پنجابی)
