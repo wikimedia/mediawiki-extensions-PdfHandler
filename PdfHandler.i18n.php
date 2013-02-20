@@ -1116,11 +1116,15 @@ $messages['yue'] = array(
 
 /** Simplified Chinese (中文（简体）‎)
  * @author Shirayuki
+ * @author Yfdyh000
  */
 $messages['zh-hans'] = array(
-	'pdf-desc' => '在图像方式中PDF档的处理器',
-	'pdf_no_metadata' => '无法在PDF中撷取元数据',
-	'pdf_page_error' => '页数不在范围中',
+	'pdf-desc' => '在图像模式中查看PDF文件的处理器。',
+	'pdf_no_metadata' => '无法在PDF中获取元数据。',
+	'pdf_page_error' => '页数不在范围内。',
+	'exif-pdf-producer' => '转换程序',
+	'exif-pdf-version' => 'PDF格式的版本',
+	'exif-pdf-encrypted' => '加密',
 	'exif-pdf-pagesize' => '页面大小',
 );
 
