@@ -24,7 +24,7 @@ $messages['en'] = array(
  * @author The Evil IP address
  */
 $messages['qqq'] = array(
-	'pdf-desc' => '{{desc}}',
+	'pdf-desc' => '{{desc|name=Pdf Handler|url=http://www.mediawiki.org/wiki/Extension:PdfHandler}}',
 	'pdf_no_metadata' => 'Error message given when metadata cannot be retrieved from a PDF file',
 	'pdf_page_error' => 'Error message given when a PDF does not have the requested page number',
 	'exif-pdf-producer' => 'The label used in the metadata table at the bottom of the file description page for the program used to convert this PDF file into a PDF.
