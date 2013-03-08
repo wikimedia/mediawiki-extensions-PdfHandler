@@ -163,12 +163,15 @@ $messages['bn'] = array(
 );
 
 /** Breton (brezhoneg)
+ * @author Fohanno
  * @author Fulup
  */
 $messages['br'] = array(
 	'pdf-desc' => 'Maveg evit gwelet ar restroù PDF e mod skeudenn',
 	'pdf_no_metadata' => 'Dibosupl tapout meta-roadennoù digant ar restr PDF',
 	'pdf_page_error' => "N'emañ ket niverenn ar bajenn er skeuliad",
+	'exif-pdf-producer' => 'Program amdreiñ',
+	'exif-pdf-pagesize' => 'Ment ar bajenn',
 );
 
 /** Bosnian (bosanski)
