@@ -525,9 +525,13 @@ $messages['id'] = array(
  * @author Lam-ang
  */
 $messages['ilo'] = array(
-	'pdf-desc' => 'Agtengngel para iti papeles a PDF iti imahen a moda',
-	'pdf_no_metadata' => 'Saan a makaala ti metadata manipud idiay PDF',
-	'pdf_page_error' => 'Saan a masakup ti numero ti panid',
+	'pdf-desc' => 'Panagtengngel para iti panagkita kadagiti PDF a papeles iti moda a ladawan',
+	'pdf_no_metadata' => 'Saan a makaala ti metadata manipud idiay PDF.',
+	'pdf_page_error' => 'Saan a masakupan ti numero ti panid.',
+	'exif-pdf-producer' => 'Konbersion a programa',
+	'exif-pdf-version' => 'Bersion iti PDF a pormat',
+	'exif-pdf-encrypted' => 'Naenkripto',
+	'exif-pdf-pagesize' => 'Kadakkel ti panid',
 );
 
 /** Italian (italiano)
