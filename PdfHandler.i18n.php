@@ -619,7 +619,7 @@ $messages['ko'] = array(
  * @author Purodha
  */
 $messages['ksh'] = array(
-	'pdf-desc' => 'Määt et müjjelesch, PDF-Dateie wie Bellder ze beloore.',
+	'pdf-desc' => 'Määd et möjjelesch, PDF-Dateie wie Bellder ze beloore.',
 	'pdf_no_metadata' => 'Kann de Metta-Date nit fun dä PDF-Datei holle.',
 	'pdf_page_error' => 'En Sigge-Nommer es ußerhallef',
 	'exif-pdf-producer' => 'Ömwandelongsprojramm',
