@@ -66,12 +66,15 @@ $messages['an'] = array(
 /** Arabic (العربية)
  * @author Meno25
  * @author Mido
+ * @author أحمد
  */
 $messages['ar'] = array(
-	'pdf-desc' => 'متحكم لرؤية ملفات PDF في نمط صورة',
-	'pdf_no_metadata' => 'لم يمكن أخذ معلومات ميتا من PDF',
-	'pdf_page_error' => 'رقم الصفحة ليس في النطاق',
-	'exif-pdf-producer' => 'برنامج التحويل',
+	'pdf-desc' => 'معالج عرض ملفات PDF في طور الصور',
+	'pdf_no_metadata' => 'تعذّر استخراج البيانات الفوقية من ملف PDF',
+	'pdf_page_error' => 'رقم الصفحة خارج عن النطاق',
+	'exif-pdf-producer' => 'برمجية التحويل',
+	'exif-pdf-version' => 'إصدارة صيغة PDF',
+	'exif-pdf-encrypted' => 'مُعمّى',
 	'exif-pdf-pagesize' => 'حجم الصفحة',
 );
 
