@@ -197,9 +197,10 @@ $messages['ca'] = array(
 
 /** Chechen (нохчийн)
  * @author Sasan700
+ * @author Умар
  */
 $messages['ce'] = array(
-	'pdf-desc' => 'Хьажа аттон кечйо PDF-хlумнаш суьрта куьцехь',
+	'pdf-desc' => 'Хьажа аттон кечйо PDF-файлаш суьрта куьцехь',
 	'pdf_no_metadata' => 'схьацаэцало чура бух оцу PDF',
 	'pdf_page_error' => 'Агlон терахь дозан чулацамца дац',
 );
