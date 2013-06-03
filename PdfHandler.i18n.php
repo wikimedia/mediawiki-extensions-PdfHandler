@@ -87,7 +87,7 @@ $messages['arz'] = array(
 	'pdf_page_error' => 'رقم الصفحة ليس فى النطاق',
 );
 
-/** Assamese (অসমীয়া)
+/** Assamese (অসমীয়া)
  * @author Bishnu Saikia
  */
 $messages['as'] = array(
@@ -732,7 +732,7 @@ $messages['mt'] = array(
 	'pdf_page_error' => 'In-numru tal-paġna ma jinsabx fl-intervall',
 );
 
-/** Norwegian Bokmål (norsk (bokmål)‎)
+/** Norwegian Bokmål (norsk bokmål)
  * @author Jsoby
  */
 $messages['nb'] = array(
@@ -759,7 +759,7 @@ $messages['nl'] = array(
 	'exif-pdf-pagesize' => 'Papierformaat',
 );
 
-/** Norwegian Nynorsk (norsk (nynorsk)‎)
+/** Norwegian Nynorsk (norsk nynorsk)
  * @author Harald Khan
  * @author Njardarlogar
  */
@@ -782,7 +782,7 @@ $messages['oc'] = array(
 	'exif-pdf-pagesize' => 'Talha de la pagina',
 );
 
-/** Oriya (ଓଡ଼ିଆ)
+/** Oriya (ଓଡ଼ିଆ)
  * @author Jnanaranjan Sahu
  * @author Psubhashish
  */
