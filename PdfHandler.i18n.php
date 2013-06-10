@@ -1150,11 +1150,12 @@ $messages['zh-hans'] = array(
 );
 
 /** Traditional Chinese (中文（繁體）‎)
+ * @author Justincheng12345
  * @author Mark85296341
  * @author Simon Shek
  */
 $messages['zh-hant'] = array(
-	'pdf-desc' => '在圖片模式中 PDF 檔的處理器',
+	'pdf-desc' => '在圖片模式中查看PDF檔案的處理器',
 	'pdf_no_metadata' => '無法在 PDF 中擷取元數據',
 	'pdf_page_error' => '頁數不在範圍中',
 	'exif-pdf-producer' => '轉換程式',
