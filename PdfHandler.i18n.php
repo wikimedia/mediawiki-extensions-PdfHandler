@@ -203,6 +203,7 @@ $messages['ce'] = array(
 	'pdf-desc' => 'Хьажа аттон кечйо PDF-файлаш суьрта куьцехь',
 	'pdf_no_metadata' => 'схьацаэцало чура бух оцу PDF',
 	'pdf_page_error' => 'Агlон терахь дозан чулацамца дац',
+	'exif-pdf-pagesize' => 'АгӀона барам',
 );
 
 /** Sorani Kurdish (کوردی)
