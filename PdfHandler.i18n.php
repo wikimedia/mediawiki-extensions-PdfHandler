@@ -764,11 +764,11 @@ $messages['nb'] = array(
  * @author Wiki13
  */
 $messages['nl'] = array(
-	'pdf-desc' => 'Handelt PDF-bestanden af en maakt het mogelijk ze als afbeeldingen te bekijken',
-	'pdf_no_metadata' => 'De metadata van het PDF-bestand kan niet uitgelezen worden',
+	'pdf-desc' => 'Handelt pdfbestanden af en maakt het mogelijk ze als afbeeldingen te bekijken',
+	'pdf_no_metadata' => 'De metadata van het pdfbestand kan niet uitgelezen worden',
 	'pdf_page_error' => 'Het paginanummer ligt niet binnen het bereik',
 	'exif-pdf-producer' => 'Conversieprogramma',
-	'exif-pdf-version' => 'Versie van PDF-opmaak',
+	'exif-pdf-version' => 'Versie van pdfopmaak',
 	'exif-pdf-encrypted' => 'Versleuteld',
 	'exif-pdf-pagesize' => 'Papierformaat',
 );
