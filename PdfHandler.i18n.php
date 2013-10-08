@@ -650,7 +650,7 @@ $messages['ksh'] = array(
 	'exif-pdf-pagesize' => 'Dä Sigg(e) ier Jrüüße', # Fuzzy
 );
 
-/** Kirghiz (Кыргызча)
+/** Kyrgyz (Кыргызча)
  * @author Chorobek
  */
 $messages['ky'] = array(
