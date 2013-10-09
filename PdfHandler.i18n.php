@@ -324,6 +324,13 @@ $messages['el'] = array(
 	'pdf_page_error' => 'Αριθμός σελίδας εκτός ορίου',
 );
 
+/** British English (British English)
+ * @author Shirayuki
+ */
+$messages['en-gb'] = array(
+	'exif-pdf-producer' => 'Conversion programme',
+);
+
 /** Esperanto (Esperanto)
  * @author Yekrats
  */
