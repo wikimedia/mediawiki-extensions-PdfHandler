@@ -687,6 +687,13 @@ $messages['li'] = array(
 	'pdf_page_error' => 'paginanómmer besteit neet',
 );
 
+/** لوری (لوری)
+ * @author Mogoeilor
+ */
+$messages['lrc'] = array(
+	'exif-pdf-pagesize' => 'انازه بلگه',
+);
+
 /** Lithuanian (lietuvių)
  * @author Matasg
  */
