@@ -226,7 +226,7 @@ $messages['ckb'] = array(
 	'exif-pdf-pagesize' => 'قەبارەی پەڕە',
 );
 
-/** Czech (česky)
+/** Czech (čeština)
  * @author Matěj Grabovský
  * @author Mormegil
  */
