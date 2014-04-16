@@ -1,10 +1,10 @@
 {
-    "@metadata": {
-        "authors": [
-            "Ex13"
-        ]
-    },
-    "pdf-desc": "Program za gledanje PDF datoteka u slikovnom modu",
-    "pdf_no_metadata": "Nije moguće dobiti metapodatke iz PDF",
-    "pdf_page_error": "Broj stranice nije u opsegu"
+	"@metadata": {
+		"authors": [
+			"Ex13"
+		]
+	},
+	"pdf-desc": "Program za gledanje PDF datoteka u slikovnom modu",
+	"pdf_no_metadata": "Nije moguće dobiti metapodatke iz PDF",
+	"pdf_page_error": "Broj stranice nije u opsegu"
 }
