@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Aspar",
-			"Erdemaslancan"
+			"Erdemaslancan",
+			"Mirzali"
 		]
 	},
 	"pdf-desc": "şuxulnayoxo ke dosyayê PDFyan modê mocnayiş de mocneno",
@@ -11,5 +12,5 @@
 	"exif-pdf-producer": "Programa çerxiney",
 	"exif-pdf-version": "Versiyona babet da PDF",
 	"exif-pdf-encrypted": "Kodıno",
-	"exif-pdf-pagesize": "Ebata perer"
+	"exif-pdf-pagesize": "Ebadê pele"
 }
