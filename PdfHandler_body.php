@@ -133,7 +133,7 @@ class PdfHandler extends ImageHandler {
 	 * @return MediaTransformError|MediaTransformOutput|ThumbnailImage|TransformParameterError
 	 */
 	function doTransform( $image, $dstPath, $dstUrl, $params, $flags = 0 ) {
-		global $wgPdfProcessor, $wgPdfPostProcessor, $wgPdfHandlerDpi;
+		global $wgPdfProcessor, $wgPdfPostProcessor, $wgPdfHandlerDpi, $wgPdfHandlerJpegQuality;
 
 		$metadata = $image->getMetadata();
 
@@ -200,6 +200,8 @@ class PdfHandler extends ImageHandler {
 			$wgPdfPostProcessor,
 			"-depth",
 			"8",
+			"-quality",
+			$wgPdfHandlerJpegQuality,
 			"-resize",
 			$width,
 			"-",

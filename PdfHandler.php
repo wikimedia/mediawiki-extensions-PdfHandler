@@ -45,6 +45,7 @@ $wgPdftoText        = 'pdftotext';
 
 $wgPdfOutputExtension = 'jpg';
 $wgPdfHandlerDpi = 150;
+$wgPdfHandlerJpegQuality = 95;
 
 // This setting, if enabled, will put creating thumbnails into a job queue,
 // so they do not have to be created on-the-fly,
