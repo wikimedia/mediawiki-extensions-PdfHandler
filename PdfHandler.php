@@ -35,6 +35,7 @@ $wgExtensionCredits['media'][] = array(
 	'author' => array( 'Martin Seidel', 'Mike Połtyn' ),
 	'descriptionmsg' => 'pdf-desc',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:PdfHandler',
+	'license-name' => 'GPL-2.0+',
 );
 
 // External program requirements...
