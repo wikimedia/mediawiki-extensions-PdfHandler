@@ -65,3 +65,4 @@ $wgAutoloadClasses['CreatePdfThumbnailsJob'] = $dir . 'CreatePdfThumbnailsJob.cl
 $wgMediaHandlers['application/pdf'] = 'PdfHandler';
 $wgJobClasses['createPdfThumbnailsJob'] = 'CreatePdfThumbnailsJob';
 $wgHooks['UploadVerifyFile'][] = 'CreatePdfThumbnailsJob::insertJobs';
+$wgHooks['ResourceLoaderRegisterModules'][] = 'PdfHandler::registerWarningModule';
