@@ -325,9 +325,10 @@ class PdfHandler extends ImageHandler {
 
 	/**
 	 * @param $image File
+	 * @param bool|IContextSource $context Context to use (optional)
 	 * @return bool|int
 	 */
-	function formatMetadata( $image ) {
+	function formatMetadata( $image, $context = false ) {
 		$meta = $image->getMetadata();
 
 		if ( !$meta ) {
