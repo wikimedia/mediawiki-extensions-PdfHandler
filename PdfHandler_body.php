@@ -346,7 +346,7 @@ class PdfHandler extends ImageHandler {
 		}
 
 		// Inherited from MediaHandler.
-		return $this->formatMetadataHelper( $meta['mergedMetadata'] );
+		return $this->formatMetadataHelper( $meta['mergedMetadata'], $context );
 	}
 
 	/**
