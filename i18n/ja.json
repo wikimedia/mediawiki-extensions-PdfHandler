@@ -2,10 +2,13 @@
 	"@metadata": {
 		"authors": [
 			"Fryed-peach",
-			"Shirayuki"
+			"Shirayuki",
+			"Sujiniku"
 		]
 	},
 	"pdf-desc": "画像モードで PDF ファイルを表示するためのハンドラー",
+	"pdf-file-page-warning-header": "プライバシーの考慮事項",
+	"pdf-file-page-warning-info": "この問題の詳細について、もっと知る。",
 	"pdf_no_metadata": "PDF ファイルからメタデータを取得できません",
 	"pdf_page_error": "ページ番号が正しい範囲内にありません。",
 	"exif-pdf-producer": "変換プログラム",
