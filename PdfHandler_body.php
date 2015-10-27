@@ -375,7 +375,7 @@ class PdfHandler extends ImageHandler {
 	 * @param $page int
 	 * @return array|bool
 	 */
-	function getPageDimensions( $image, $page ) {
+	function getPageDimensions( File $image, $page ) {
 		$data = $this->getMetaArray( $image );
 		return PdfImage::getPageSize( $data, $page );
 	}
