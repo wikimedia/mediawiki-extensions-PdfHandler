@@ -385,7 +385,7 @@ class PdfHandler extends ImageHandler {
 	 * @param $page int
 	 * @return bool
 	 */
-	function getPageText( $image, $page ) {
+	function getPageText( File $image, $page ) {
 		$data = $this->getMetaArray( $image, true );
 		if ( !$data || !isset( $data['text'] ) || !isset( $data['text'][$page - 1] ) ) {
 			return false;
