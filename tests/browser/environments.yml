@@ -27,8 +27,8 @@ beta:
   mediawiki_user: Selenium_user
   # mediawiki_password: SET THIS IN THE ENVIRONMENT!
 
-test2:
-  mediawiki_url: http://test2.wikipedia.org/wiki/
+test:
+  mediawiki_url: http://test.wikipedia.org/wiki/
   mediawiki_user: Selenium_user
   # mediawiki_password: SET THIS IN THE ENVIRONMENT!
 
