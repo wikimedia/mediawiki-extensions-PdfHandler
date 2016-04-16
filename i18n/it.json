@@ -8,8 +8,8 @@
 		]
 	},
 	"pdf-desc": "Gestore per la visualizzazione di file PDF in modalità immagine",
-	"pdf-file-page-warning": "PDF è un formato complesso che in alcuni casi potrebbe rivelare alcune delle tue informazioni private. Assicurarti di configurare il visualizzatore di file PDF in modo sicuro.",
-	"pdf-file-page-warning-header": "Considerazioni sulla Privacy",
+	"pdf-file-page-warning": "PDF è un formato complesso che in alcuni casi potrebbe rivelare alcune delle tue informazioni private. Assicurati di configurare il visualizzatore di file PDF in modo sicuro.",
+	"pdf-file-page-warning-header": "Considerazioni sulla privacy",
 	"pdf-file-page-warning-footer": "Questo problema non è specifico di questo particolare file, ma è un problema generale del formato PDF.",
 	"pdf-file-page-warning-info": "Ulteriori informazioni su questo problema.",
 	"pdf_no_metadata": "Impossibile ottenere i metadati da PDF",
