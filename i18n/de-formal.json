@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kghbln"
+		]
+	},
+	"pdf-file-page-warning": "PDF ist ein komplexes Dateiformat, das in bestimmten Fällen einige Ihrer privaten Informationen preisgeben kann. Stellen Sie sicher, dass Sie Ihren PDF-Betrachter auf sichere Weise konfigurierst.",
+	"pdf-file-page-warning-info": "Erfahren Sie mehr über dieses Problem."
+}
