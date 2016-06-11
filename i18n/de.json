@@ -3,11 +3,12 @@
 		"authors": [
 			"Kghbln",
 			"Metalhead64",
-			"Raimond Spekking"
+			"Raimond Spekking",
+			"ThePiscin"
 		]
 	},
 	"pdf-desc": "Stellt eine Schnittstelle zur Ansicht von PDF-Dateien im Bildermodus bereit",
-	"pdf-file-page-warning": "PDF ist ein komplexes Dateiformat, das in bestimmten Fällen einige deiner privaten Informationen preisgeben kann. Stelle sicher, dass du deinen PDF-Betrachter auf sichere Weise konfigurierst.",
+	"pdf-file-page-warning": "PDF ist ein komplexes Dateiformat, das in bestimmten Fällen einige deiner privaten Informationen preisgeben kann. Achte darauf, dass dein PDF-Betrachter entsprechend sicher konfiguriert ist.",
 	"pdf-file-page-warning-header": "Hinweise zum Datenschutz",
 	"pdf-file-page-warning-footer": "Dieses Problem ist nicht auf diese Datei beschränkt, sondern ist ein generelles Problem mit dem PDF-Dateiformat.",
 	"pdf-file-page-warning-info": "Erfahre mehr über dieses Problem.",
