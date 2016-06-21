@@ -160,9 +160,9 @@ class PdfHandler extends ImageHandler {
 			return new TransformParameterError( $params );
 		}
 
-		$width = $params['width'];
-		$height = $params['height'];
-		$page = $params['page'];
+		$width = (int)$params['width'];
+		$height = (int)$params['height'];
+		$page = (int)$params['page'];
 
 		if ( $page > $this->pageCount( $image ) ) {
 			return $this->doThumbError( $width, $height, 'pdf_page_error' );
