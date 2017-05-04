@@ -433,4 +433,28 @@ class PdfHandler extends ImageHandler {
 			'messages' => array_values( self::$messages ),
 		) );
 	}
+
+	/**
+	* Get useful response headers for GET/HEAD requests for a file with the given metadata
+	* @param $metadata Array Contains this handler's unserialized getMetadata() for a file
+	* @return array
+	*/
+	public function getContentHeaders( $metadata ) {
+		$pagesByDimensions = [];
+		$count = intval( $metadata['Pages'] );
+		for ( $i = 1; $i <= $count; $i++ ) {
+			$dimensions = PdfImage::getPageSize( $metadata, $i );
+			$dimensionString = $dimensions['width'] . 'x' . $dimensions['height'];
+
+			if ( isset ( $pagesByDimensions[ $dimensionString ] ) ) {
+				$pagesByDimensions[ $dimensionString ][] = $i;
+			} else {
+				$pagesByDimensions[ $dimensionString ] = [ $i ];
+			}
+		}
+
+		$pageRangesByDimensions = MediaHandler::getPageRangesByDimensions( $pagesByDimensions );
+
+		return [ 'X-Content-Dimensions' => $pageRangesByDimensions ];
+	}
 }
