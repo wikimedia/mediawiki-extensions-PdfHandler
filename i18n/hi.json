@@ -2,11 +2,19 @@
 	"@metadata": {
 		"authors": [
 			"Kaustubh",
-			"NehalDaveND"
+			"NehalDaveND",
+			"Sfic"
 		]
 	},
 	"pdf-desc": "चित्र मोड में पीडीएफ फ़ाईल देखनेके लिये आवश्यक प्रणाली",
+	"pdf-file-page-warning": "PDF is a complex format that may expose some of your private information in some cases. Make sure to configure your PDF viewer in a safe way.",
+	"pdf-file-page-warning-header": "Privacy considerations",
+	"pdf-file-page-warning-footer": "This issue is not specific to this particular file, but a general issue with the PDF format.",
+	"pdf-file-page-warning-info": "Learn more about this issue.",
 	"pdf_no_metadata": "पीडीएफ से मेटाडाटा ले नहीं पायें",
 	"pdf_page_error": "पन्ने का क्रमांक सीमामें नहीं हैं",
+	"exif-pdf-producer": "Conversion program",
+	"exif-pdf-version": "Version of PDF format",
+	"exif-pdf-encrypted": "Encrypted",
 	"exif-pdf-pagesize": "पृष्ठ का आकार"
 }
