@@ -66,7 +66,7 @@ class PdfHandler extends ImageHandler {
 	 * @return bool
 	 */
 	function validateParam( $name, $value ) {
-		if ( $name === 'page' && trim( $value ) !== (string) intval( $value ) ) {
+		if ( $name === 'page' && trim( $value ) !== (string)intval( $value ) ) {
 			// Extra junk on the end of page, probably actually a caption
 			// e.g. [[File:Foo.pdf|thumb|Page 3 of the document shows foo]]
 			return false;
@@ -171,7 +171,7 @@ class PdfHandler extends ImageHandler {
 		if ( $image->getSize() >= 1e7 ) { // 10MB
 			$work = new PoolCounterWorkViaCallback( 'GetLocalFileCopy', sha1( $image->getName() ),
 				[
-					'doWork' => function() use ( $image ) {
+					'doWork' => function () use ( $image ) {
 						return $image->getLocalRefPath();
 					}
 				]
@@ -264,7 +264,7 @@ class PdfHandler extends ImageHandler {
 			'PdfHandler-unserialize-metadata',
 			$image->getName(),
 			[
-				'doWork' => function() use ( $image, $metadata ) {
+				'doWork' => function () use ( $image, $metadata ) {
 					wfSuppressWarnings();
 					$image->pdfMetaArray = unserialize( $metadata );
 					wfRestoreWarnings();
