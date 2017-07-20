@@ -7,6 +7,7 @@
 		]
 	},
 	"pdf-desc": "Ferramenta de visualização de arquivos PDF em modo de imagem.",
+	"pdf-file-page-warning-header": "Considerações sobre privacidade",
 	"pdf_no_metadata": "Não foi possível obter os metadados do PDF.",
 	"pdf_page_error": "Número de página fora do intervalo.",
 	"exif-pdf-producer": "Programa de conversão",
