@@ -113,7 +113,6 @@ class PdfImage {
 		global $wgPdfInfo, $wgPdftoText;
 
 		if ( $wgPdfInfo ) {
-			wfProfileIn( 'pdfinfo' );
 			$cmd = wfEscapeShellArg( $wgPdfInfo ) .
 				" -enc UTF-8 " . # Report metadata as UTF-8 text...
 				" -l 9999999 " . # Report page sizes for all pages
@@ -122,19 +121,16 @@ class PdfImage {
 			$retval = '';
 			$dump = wfShellExec( $cmd, $retval );
 			$data = $this->convertDumpToArray( $dump );
-			wfProfileOut( 'pdfinfo' );
 		} else {
 			$data = null;
 		}
 
 		// Read text layer
 		if ( isset( $wgPdftoText ) ) {
-			wfProfileIn( 'pdftotext' );
 			$cmd = wfEscapeShellArg( $wgPdftoText ) . ' '. wfEscapeShellArg( $this->mFilename ) . ' - ';
 			wfDebug( __METHOD__.": $cmd\n" );
 			$retval = '';
 			$txt = wfShellExec( $cmd, $retval );
-			wfProfileOut( 'pdftotext' );
 			if ( $retval == 0 ) {
 				$txt = str_replace( "\r\n", "\n", $txt );
 				$pages = explode( "\f", $txt );
