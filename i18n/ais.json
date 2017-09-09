@@ -2,9 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Tokoabibi",
-			"Bunukwiki"
+			"Bunukwiki",
+			"Benel"
 		]
 	},
+	"pdf-file-page-warning-header": "mizateng tu midimut kasikazan",
 	"exif-pdf-producer": "miliyaw cengse",
-	"exif-pdf-encrypted": "pamimatu"
+	"exif-pdf-encrypted": "pamimatu",
+	"exif-pdf-pagesize": "kasabelih hacica-tabaki"
 }
