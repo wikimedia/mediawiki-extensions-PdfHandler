@@ -45,7 +45,7 @@ class PdfHandler extends ImageHandler {
 	}
 
 	/**
-	 * @param $file
+	 * @param File $file
 	 * @return bool
 	 */
 	function mustRender( $file ) {
@@ -53,7 +53,7 @@ class PdfHandler extends ImageHandler {
 	}
 
 	/**
-	 * @param $file
+	 * @param File $file
 	 * @return bool
 	 */
 	function isMultiPage( $file ) {
@@ -61,8 +61,8 @@ class PdfHandler extends ImageHandler {
 	}
 
 	/**
-	 * @param $name
-	 * @param $value
+	 * @param string $name
+	 * @param string $value
 	 * @return bool
 	 */
 	function validateParam( $name, $value ) {
@@ -78,7 +78,7 @@ class PdfHandler extends ImageHandler {
 	}
 
 	/**
-	 * @param $params array
+	 * @param array $params
 	 * @return bool|string
 	 */
 	function makeParamString( $params ) {
@@ -90,7 +90,7 @@ class PdfHandler extends ImageHandler {
 	}
 
 	/**
-	 * @param $str string
+	 * @param string $str
 	 * @return array|bool
 	 */
 	function parseParamString( $str ) {
@@ -104,7 +104,7 @@ class PdfHandler extends ImageHandler {
 	}
 
 	/**
-	 * @param $params array
+	 * @param array $params
 	 * @return array
 	 */
 	function getScriptParams( $params ) {
@@ -125,9 +125,9 @@ class PdfHandler extends ImageHandler {
 	}
 
 	/**
-	 * @param $width
-	 * @param $height
-	 * @param $msg
+	 * @param int $width
+	 * @param int $height
+	 * @param string $msg
 	 * @return MediaTransformError
 	 */
 	protected function doThumbError( $width, $height, $msg ) {
@@ -136,11 +136,11 @@ class PdfHandler extends ImageHandler {
 	}
 
 	/**
-	 * @param $image File
-	 * @param $dstPath string
-	 * @param $dstUrl string
-	 * @param $params array
-	 * @param $flags int
+	 * @param File $image
+	 * @param string $dstPath
+	 * @param string $dstUrl
+	 * @param array $params
+	 * @param int $flags
 	 * @return MediaTransformError|MediaTransformOutput|ThumbnailImage|TransformParameterError
 	 */
 	function doTransform( $image, $dstPath, $dstUrl, $params, $flags = 0 ) {
@@ -228,8 +228,8 @@ class PdfHandler extends ImageHandler {
 	}
 
 	/**
-	 * @param $image File
-	 * @param $path string
+	 * @param File $image
+	 * @param string $path
 	 * @return PdfImage
 	 */
 	function getPdfImage( $image, $path ) {
@@ -245,7 +245,7 @@ class PdfHandler extends ImageHandler {
 	}
 
 	/**
-	 * @param $image File
+	 * @param File $image
 	 * @return bool
 	 */
 	function getMetaArray( $image ) {
@@ -277,8 +277,8 @@ class PdfHandler extends ImageHandler {
 	}
 
 	/**
-	 * @param $image File
-	 * @param $path string
+	 * @param File $image
+	 * @param string $path
 	 * @return array|bool
 	 */
 	function getImageSize( $image, $path ) {
@@ -286,9 +286,9 @@ class PdfHandler extends ImageHandler {
 	}
 
 	/**
-	 * @param $ext
-	 * @param $mime string
-	 * @param $params null
+	 * @param string $ext
+	 * @param string $mime
+	 * @param null $params
 	 * @return array
 	 */
 	function getThumbType( $ext, $mime, $params = null ) {
@@ -303,8 +303,8 @@ class PdfHandler extends ImageHandler {
 	}
 
 	/**
-	 * @param $image File
-	 * @param $path string
+	 * @param File $image
+	 * @param string $path
 	 * @return string
 	 */
 	function getMetadata( $image, $path ) {
@@ -312,8 +312,8 @@ class PdfHandler extends ImageHandler {
 	}
 
 	/**
-	 * @param $image File
-	 * @param $metadata string
+	 * @param File $image
+	 * @param string $metadata
 	 * @return bool
 	 */
 	function isMetadataValid( $image, $metadata ) {
@@ -326,7 +326,7 @@ class PdfHandler extends ImageHandler {
 	}
 
 	/**
-	 * @param $image File
+	 * @param File $image
 	 * @param bool|IContextSource $context Context to use (optional)
 	 * @return bool|array
 	 */
@@ -362,8 +362,8 @@ class PdfHandler extends ImageHandler {
 	}
 
 	/**
-	 * @param $image File
-	 * @param $page int
+	 * @param File $image
+	 * @param int $page
 	 * @return array|bool
 	 */
 	function getPageDimensions( File $image, $page ) {
@@ -402,8 +402,8 @@ class PdfHandler extends ImageHandler {
 	}
 
 	/**
-	 * @param $image File
-	 * @param $page int
+	 * @param File $image
+	 * @param int $page
 	 * @return bool
 	 */
 	function getPageText( File $image, $page ) {
@@ -430,7 +430,7 @@ class PdfHandler extends ImageHandler {
 
 	/**
 	 * Register a module with the warning messages in it.
-	 * @param &$resourceLoader ResourceLoader
+	 * @param ResourceLoader &$resourceLoader
 	 */
 	static function registerWarningModule( &$resourceLoader ) {
 		$resourceLoader->register( 'pdfhandler.messages', [
