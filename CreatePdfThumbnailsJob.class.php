@@ -10,8 +10,8 @@ class CreatePdfThumbnailsJob extends Job {
 	/**
 	 * Construct a thumbnail job
 	 *
-	 * @param $title Title Title object
-	 * @param $params array Associative array of options:
+	 * @param Title $title Title object
+	 * @param array $params Associative array of options:
 	 *     page:    page number for which the thumbnail will be created
 	 *     jobtype: CreatePDFThumbnailsJob::BIG_THUMB or CreatePDFThumbnailsJob::SMALL_THUMB
 	 *              BIG_THUMB will create a thumbnail visible for full thumbnail view,
@@ -87,9 +87,9 @@ class CreatePdfThumbnailsJob extends Job {
 	}
 
 	/**
-	 * @param $upload UploadBase
-	 * @param $mime
-	 * @param $error
+	 * @param UploadBase $upload
+	 * @param string $mime
+	 * @param string &$error
 	 * @return bool
 	 */
 	public static function insertJobs( $upload, $mime, &$error ) {

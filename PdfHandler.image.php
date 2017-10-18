@@ -30,7 +30,7 @@ use UtfNormal\Validator;
 class PdfImage {
 
 	/**
-	 * @param $filename
+	 * @param string $filename
 	 */
 	function __construct( $filename ) {
 		$this->mFilename = $filename;
@@ -60,8 +60,8 @@ class PdfImage {
 	}
 
 	/**
-	 * @param $data array
-	 * @param $page
+	 * @param array $data
+	 * @param int $page
 	 * @return array|bool
 	 */
 	public static function getPageSize( $data, $page ) {
@@ -146,7 +146,7 @@ class PdfImage {
 	}
 
 	/**
-	 * @param $dump string
+	 * @param string $dump
 	 * @return array|bool
 	 */
 	protected function convertDumpToArray( $dump ) {
@@ -198,8 +198,8 @@ class PdfImage {
 	 * This is used to generate the metadata table at the bottom
 	 * of the image description page.
 	 *
-	 * @param $data Array metadata
-	 * @return Array post-processed metadata
+	 * @param array $data metadata
+	 * @return array post-processed metadata
 	 */
 	protected function postProcessDump( array $data ) {
 		$meta = new BitmapMetadataHandler();
