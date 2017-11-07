@@ -20,6 +20,7 @@
  */
 
 use MediaWiki\Logger\LoggerFactory;
+use MediaWiki\Shell\Shell;
 use UtfNormal\Validator;
 
 /**
@@ -113,13 +114,17 @@ class PdfImage {
 		global $wgPdfInfo, $wgPdftoText;
 
 		if ( $wgPdfInfo ) {
-			$cmd = wfEscapeShellArg( $wgPdfInfo ) .
-				" -enc UTF-8 " . # Report metadata as UTF-8 text...
-				" -l 9999999 " . # Report page sizes for all pages
-				" -meta " .      # Report XMP metadata
-				wfEscapeShellArg( $this->mFilename );
-			$retval = '';
-			$dump = wfShellExec( $cmd, $retval );
+			$cmd = [
+				$wgPdfInfo,
+				'-enc', 'UTF-8', # Report metadata as UTF-8 text...
+				'-l', '9999999', # Report page sizes for all pages
+				'-meta',         # Report XMP metadata
+				$this->mFilename,
+			];
+			$result = Shell::command( $cmd )
+				->execute();
+
+			$dump = $result->getStdout();
 			$data = $this->convertDumpToArray( $dump );
 		} else {
 			$data = null;
@@ -127,10 +132,11 @@ class PdfImage {
 
 		// Read text layer
 		if ( isset( $wgPdftoText ) ) {
-			$cmd = wfEscapeShellArg( $wgPdftoText ) . ' '. wfEscapeShellArg( $this->mFilename ) . ' - ';
-			wfDebug( __METHOD__.": $cmd\n" );
-			$retval = '';
-			$txt = wfShellExec( $cmd, $retval );
+			$cmd = [ $wgPdftoText,  $this->mFilename, '-' ];
+			$result = Shell::command( $cmd )
+				->execute();
+			$retval = $result->getExitCode();
+			$txt = $result->getStdout();
 			if ( $retval == 0 ) {
 				$txt = str_replace( "\r\n", "\n", $txt );
 				$pages = explode( "\f", $txt );
