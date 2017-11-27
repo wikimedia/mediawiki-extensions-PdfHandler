@@ -97,7 +97,8 @@ class CreatePdfThumbnailsJob extends Job {
 		if ( !$wgPdfCreateThumbnailsInJobQueue ) {
 			return true;
 		}
-		if ( !MimeMagic::singleton()->isMatchingExtension( 'pdf', $mime ) ) {
+		$magic = MediaWiki\MediaWikiServices::getInstance()->getMimeAnalyzer();
+		if ( !$magic->isMatchingExtension( 'pdf', $mime ) ) {
 			return true; // not a PDF, abort
 		}
 

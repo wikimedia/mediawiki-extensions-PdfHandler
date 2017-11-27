@@ -296,7 +296,7 @@ class PdfHandler extends ImageHandler {
 		static $mime;
 
 		if ( !isset( $mime ) ) {
-			$magic = MimeMagic::singleton();
+			$magic = MediaWiki\MediaWikiServices::getInstance()->getMimeAnalyzer();
 			$mime = $magic->guessTypesForExtension( $wgPdfOutputExtension );
 		}
 		return [ $wgPdfOutputExtension, $mime ];
