@@ -159,7 +159,11 @@ class PdfHandler extends ImageHandler {
 		}
 
 		if ( $flags & self::TRANSFORM_LATER ) {
-			return new ThumbnailImage( $image, $dstUrl, $width, $height, false, $page );
+			return new ThumbnailImage( $image, $dstUrl, false, [
+				'width' => $width,
+				'height' => $height,
+				'page' => $page,
+			] );
 		}
 
 		if ( !wfMkdirParents( dirname( $dstPath ), null, __METHOD__ ) ) {
@@ -223,7 +227,11 @@ class PdfHandler extends ImageHandler {
 				wfHostname(), $retval, trim( $err ), $cmd ) );
 			return new MediaTransformError( 'thumbnail_error', $width, $height, $err );
 		} else {
-			return new ThumbnailImage( $image, $dstUrl, $width, $height, $dstPath, $page );
+			return new ThumbnailImage( $image, $dstUrl, $dstPath, [
+				'width' => $width,
+				'height' => $height,
+				'page' => $page,
+			] );
 		}
 	}
 
@@ -231,6 +239,7 @@ class PdfHandler extends ImageHandler {
 	 * @param File $image
 	 * @param string $path
 	 * @return PdfImage
+	 * @suppress PhanUndeclaredProperty
 	 */
 	function getPdfImage( $image, $path ) {
 		if ( !$image ) {
@@ -246,7 +255,8 @@ class PdfHandler extends ImageHandler {
 
 	/**
 	 * @param File $image
-	 * @return bool
+	 * @return bool|array
+	 * @suppress PhanUndeclaredProperty
 	 */
 	function getMetaArray( $image ) {
 		if ( isset( $image->pdfMetaArray ) ) {
@@ -264,6 +274,9 @@ class PdfHandler extends ImageHandler {
 			'PdfHandler-unserialize-metadata',
 			$image->getName(),
 			[
+				/**
+				 * @suppress PhanUndeclaredProperty
+				 */
 				'doWork' => function () use ( $image, $metadata ) {
 					wfSuppressWarnings();
 					$image->pdfMetaArray = unserialize( $metadata );

@@ -31,6 +31,11 @@ use UtfNormal\Validator;
 class PdfImage {
 
 	/**
+	 * @var string
+	 */
+	private $mFilename;
+
+	/**
 	 * @param string $filename
 	 */
 	function __construct( $filename ) {
