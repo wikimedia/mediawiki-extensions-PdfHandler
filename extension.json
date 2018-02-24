@@ -41,9 +41,9 @@
 		"application/pdf": "PdfHandler"
 	},
 	"AutoloadClasses": {
-		"PdfImage": "PdfHandler.image.php",
-		"PdfHandler": "PdfHandler_body.php",
-		"CreatePdfThumbnailsJob": "CreatePdfThumbnailsJob.class.php"
+		"PdfImage": "includes/PdfImage.php",
+		"PdfHandler": "includes/PdfHandler.php",
+		"CreatePdfThumbnailsJob": "includes/CreatePdfThumbnailsJob.php"
 	},
 	"manifest_version": 1
 }
