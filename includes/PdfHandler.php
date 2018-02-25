@@ -94,7 +94,7 @@ class PdfHandler extends ImageHandler {
 	 * @return array|bool
 	 */
 	function parseParamString( $str ) {
-		$m = false;
+		$m = [];
 
 		if ( preg_match( '/^page(\d+)-(\d+)px$/', $str, $m ) ) {
 			return [ 'width' => $m[2], 'page' => $m[1] ];
