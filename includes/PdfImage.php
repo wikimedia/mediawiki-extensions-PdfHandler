@@ -119,17 +119,28 @@ class PdfImage {
 		global $wgPdfInfo, $wgPdftoText;
 
 		if ( $wgPdfInfo ) {
-			$cmd = [
+			// Note in poppler 0.26 the -meta and page data options worked together,
+			// but as of poppler 0.48 they must be queried separately.
+			// https://bugs.freedesktop.org/show_bug.cgi?id=96801
+			$cmdMeta = [
 				$wgPdfInfo,
 				'-enc', 'UTF-8', # Report metadata as UTF-8 text...
-				'-l', '9999999', # Report page sizes for all pages
 				'-meta',         # Report XMP metadata
 				$this->mFilename,
 			];
-			$result = Shell::command( $cmd )
+			$resultMeta = Shell::command( $cmdMeta )
 				->execute();
 
-			$dump = $result->getStdout();
+			$cmdPages = [
+				$wgPdfInfo,
+				'-enc', 'UTF-8', # Report metadata as UTF-8 text...
+				'-l', '9999999', # Report page sizes for all pages
+				$this->mFilename,
+			];
+			$resultPages = Shell::command( $cmdPages )
+				->execute();
+
+			$dump = $resultMeta->getStdout() . $resultPages->getStdout();
 			$data = $this->convertDumpToArray( $dump );
 		} else {
 			$data = null;
