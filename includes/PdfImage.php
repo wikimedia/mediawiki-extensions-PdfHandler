@@ -39,7 +39,7 @@ class PdfImage {
 	/**
 	 * @param string $filename
 	 */
-	function __construct( $filename ) {
+	public function __construct( $filename ) {
 		$this->mFilename = $filename;
 	}
 
