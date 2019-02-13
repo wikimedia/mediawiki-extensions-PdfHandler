@@ -278,9 +278,9 @@ class PdfHandler extends ImageHandler {
 				 * @suppress PhanUndeclaredProperty
 				 */
 				'doWork' => function () use ( $image, $metadata ) {
-					wfSuppressWarnings();
+					Wikimedia\suppressWarnings();
 					$image->pdfMetaArray = unserialize( $metadata );
-					wfRestoreWarnings();
+					Wikimedia\restoreWarnings();
 				},
 			]
 		);
@@ -349,9 +349,9 @@ class PdfHandler extends ImageHandler {
 		if ( !$meta ) {
 			return false;
 		}
-		wfSuppressWarnings();
+		Wikimedia\suppressWarnings();
 		$meta = unserialize( $meta );
-		wfRestoreWarnings();
+		Wikimedia\restoreWarnings();
 
 		if ( !isset( $meta['mergedMetadata'] )
 			|| !is_array( $meta['mergedMetadata'] )
