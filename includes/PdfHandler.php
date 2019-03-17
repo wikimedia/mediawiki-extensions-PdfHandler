@@ -82,7 +82,7 @@ class PdfHandler extends ImageHandler {
 	 * @return bool|string
 	 */
 	public function makeParamString( $params ) {
-		$page = isset( $params['page'] ) ? $params['page'] : 1;
+		$page = $params['page'] ?? 1;
 		if ( !isset( $params['width'] ) ) {
 			return false;
 		}
@@ -256,7 +256,6 @@ class PdfHandler extends ImageHandler {
 	/**
 	 * @param File $image
 	 * @return bool|array
-	 * @suppress PhanUndeclaredProperty
 	 */
 	private function getMetaArray( $image ) {
 		if ( isset( $image->pdfMetaArray ) ) {
