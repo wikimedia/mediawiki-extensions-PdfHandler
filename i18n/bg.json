@@ -9,6 +9,8 @@
 	},
 	"pdf_no_metadata": "Извличането метаданни от PDF е невъзможно.",
 	"pdf_page_error": "Номерът на страница е извън обхвата",
+	"exif-pdf-producer": "Софтуер за преобразуване",
+	"exif-pdf-version": "Версия на PDF-формата",
 	"exif-pdf-encrypted": "Криптиране",
 	"exif-pdf-pagesize": "Размер на страницата"
 }
