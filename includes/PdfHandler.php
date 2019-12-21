@@ -212,7 +212,7 @@ class PdfHandler extends ImageHandler {
 			"-quality",
 			$wgPdfHandlerJpegQuality,
 			"-resize",
-			$width,
+			(string)$width,
 			"-",
 			$dstPath
 		);
@@ -329,7 +329,7 @@ class PdfHandler extends ImageHandler {
 	/**
 	 * @param File $image
 	 * @param string $metadata
-	 * @return bool
+	 * @return bool|int
 	 */
 	public function isMetadataValid( $image, $metadata ) {
 		if ( !$metadata || $metadata === serialize( [] ) ) {
