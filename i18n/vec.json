@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Candalua",
-			"GatoSelvadego"
+			"GatoSelvadego",
+			"Conky77"
 		]
 	},
 	"pdf-desc": "Handler par vardar i file PDF in modalità imagine",
@@ -11,5 +12,5 @@
 	"exif-pdf-producer": "Programa de conversion",
 	"exif-pdf-version": "Version del formato PDF",
 	"exif-pdf-encrypted": "Critigrafà",
-	"exif-pdf-pagesize": "Dimension pàjina"
+	"exif-pdf-pagesize": "Dimension pàgina"
 }
