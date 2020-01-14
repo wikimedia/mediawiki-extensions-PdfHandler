@@ -104,7 +104,7 @@ class CreatePdfThumbnailsJob extends Job {
 
 		$title = $upload->getTitle();
 		$uploadFile = $upload->getLocalFile();
-		if ( is_null( $uploadFile ) ) {
+		if ( $uploadFile === null ) {
 			wfDebugLog( 'thumbnails', '$uploadFile seems to be null, should never happen...' );
 			return true; // should never happen, but it's better to be secure
 		}
