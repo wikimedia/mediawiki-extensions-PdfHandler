@@ -2,9 +2,9 @@
 	"@metadata": {
 		"authors": [
 			"Base",
+			"Madvin",
 			"Prima klasy4na",
-			"Ата",
-			"Madvin"
+			"Ата"
 		]
 	},
 	"pdf-desc": "Оброблювач для перегляду PDF-файлів в режимі зображень",
