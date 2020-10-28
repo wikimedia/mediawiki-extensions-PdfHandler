@@ -367,6 +367,29 @@ class PdfHandler extends ImageHandler {
 		return $this->formatMetadataHelper( $meta['mergedMetadata'], $context );
 	}
 
+	/** @inheritDoc */
+	protected function formatTag( string $key, $vals, $context = false ) {
+		switch ( $key ) {
+			case 'pdf-Producer':
+			case 'pdf-Version':
+				return htmlspecialchars( $vals );
+			case 'pdf-PageSize':
+				foreach ( $vals as &$val ) {
+					$val = htmlspecialchars( $val );
+				}
+				return $vals;
+			case 'pdf-Encrypted':
+				// @todo: The value isn't i18n-ised; should be done here.
+				// For reference, if encrypted this field's value looks like:
+				// "yes (print:yes copy:no change:no addNotes:no)"
+				return htmlspecialchars( $vals );
+			default:
+				break;
+		}
+		// Use default formatting
+		return false;
+	}
+
 	/**
 	 * @param File $image
 	 * @return bool|int

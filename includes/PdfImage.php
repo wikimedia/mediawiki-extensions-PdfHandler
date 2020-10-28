@@ -279,11 +279,6 @@ class PdfImage {
 					$items['pdf-Version'] = $val;
 					break;
 				case 'Encrypted':
-					// @todo: The value isn't i18n-ised. The appropriate
-					// place to do that is in FormatMetadata.php
-					// should add a hook a there.
-					// For reference, if encrypted this fields value looks like:
-					// "yes (print:yes copy:no change:no addNotes:no)"
 					$items['pdf-Encrypted'] = $val;
 					break;
 				// Note 'pages' and 'Pages' are different keys (!)
