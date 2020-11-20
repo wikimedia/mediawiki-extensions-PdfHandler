@@ -153,6 +153,7 @@ class PdfHandler extends ImageHandler {
 			return new TransformParameterError( $params );
 		}
 
+		// @phan-suppress-next-line PhanTypePossiblyInvalidDimOffset
 		$width = (int)$params['width'];
 		$height = (int)$params['height'];
 		$page = (int)$params['page'];
