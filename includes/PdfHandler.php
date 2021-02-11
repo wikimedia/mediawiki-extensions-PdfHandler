@@ -1,6 +1,18 @@
 <?php
 
+namespace MediaWiki\Extension\PdfHandler;
+
+use File;
+use IContextSource;
+use ImageHandler;
+use MediaTransformError;
+use MediaTransformOutput;
 use MediaWiki\MediaWikiServices;
+use PoolCounterWorkViaCallback;
+use ResourceLoader;
+use ThumbnailImage;
+use TransformParameterError;
+use Wikimedia\AtEase\AtEase;
 
 /**
  * Copyright © 2007 Martin Seidel (Xarax) <jodeldi@gmx.de>
@@ -282,9 +294,9 @@ class PdfHandler extends ImageHandler {
 				 * @suppress PhanUndeclaredProperty
 				 */
 				'doWork' => function () use ( $image, $metadata ) {
-					Wikimedia\suppressWarnings();
+					AtEase::suppressWarnings();
 					$image->pdfMetaArray = unserialize( $metadata );
-					Wikimedia\restoreWarnings();
+					AtEase::restoreWarnings();
 				},
 			]
 		);
@@ -313,7 +325,7 @@ class PdfHandler extends ImageHandler {
 		static $mime;
 
 		if ( !isset( $mime ) ) {
-			$magic = MediaWiki\MediaWikiServices::getInstance()->getMimeAnalyzer();
+			$magic = MediaWikiServices::getInstance()->getMimeAnalyzer();
 			$mime = $magic->guessTypesForExtension( $wgPdfOutputExtension );
 		}
 		return [ $wgPdfOutputExtension, $mime ];
@@ -353,9 +365,9 @@ class PdfHandler extends ImageHandler {
 		if ( !$meta ) {
 			return false;
 		}
-		Wikimedia\suppressWarnings();
+		AtEase::suppressWarnings();
 		$meta = unserialize( $meta );
-		Wikimedia\restoreWarnings();
+		AtEase::restoreWarnings();
 
 		if ( !isset( $meta['mergedMetadata'] )
 			|| !is_array( $meta['mergedMetadata'] )

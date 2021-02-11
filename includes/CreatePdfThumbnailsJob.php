@@ -1,6 +1,14 @@
 <?php
 
+namespace MediaWiki\Extension\PdfHandler;
+
+use Job;
+use JobQueueGroup;
+use Linker;
 use MediaWiki\MediaWikiServices;
+use Title;
+use UploadBase;
+use User;
 
 class CreatePdfThumbnailsJob extends Job {
 	/**
@@ -100,7 +108,7 @@ class CreatePdfThumbnailsJob extends Job {
 		if ( !$wgPdfCreateThumbnailsInJobQueue ) {
 			return true;
 		}
-		$magic = MediaWiki\MediaWikiServices::getInstance()->getMimeAnalyzer();
+		$magic = MediaWikiServices::getInstance()->getMimeAnalyzer();
 		if ( !$magic->isMatchingExtension( 'pdf', $mime ) ) {
 			return true; // not a PDF, abort
 		}

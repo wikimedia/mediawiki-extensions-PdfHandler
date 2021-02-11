@@ -19,6 +19,9 @@
  * http://www.gnu.org/copyleft/gpl.html
  */
 
+namespace MediaWiki\Extension\PdfHandler;
+
+use BitmapMetadataHandler;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\Shell\Shell;
 use UtfNormal\Validator;
