@@ -128,8 +128,10 @@ class PdfImage {
 			// https://bugs.freedesktop.org/show_bug.cgi?id=96801
 			$cmdMeta = [
 				$wgPdfInfo,
-				'-enc', 'UTF-8', # Report metadata as UTF-8 text...
-				'-meta',         # Report XMP metadata
+				# Report metadata as UTF-8 text...
+				'-enc', 'UTF-8',
+				# Report XMP metadata
+				'-meta',
 				$this->mFilename,
 			];
 			$resultMeta = Shell::command( $cmdMeta )
@@ -137,8 +139,10 @@ class PdfImage {
 
 			$cmdPages = [
 				$wgPdfInfo,
-				'-enc', 'UTF-8', # Report metadata as UTF-8 text...
-				'-l', '9999999', # Report page sizes for all pages
+				# Report metadata as UTF-8 text...
+				'-enc', 'UTF-8',
+				# Report page sizes for all pages
+				'-l', '9999999',
 				$this->mFilename,
 			];
 			$resultPages = Shell::command( $cmdPages )

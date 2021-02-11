@@ -37,12 +37,17 @@ use Wikimedia\AtEase\AtEase;
  */
 
 class PdfHandler extends ImageHandler {
-	public static $messages = [
+	private const MESSAGES = [
 		'main' => 'pdf-file-page-warning',
 		'header' => 'pdf-file-page-warning-header',
 		'info' => 'pdf-file-page-warning-info',
 		'footer' => 'pdf-file-page-warning-footer',
 	];
+
+	/**
+	 * 10MB is considered a large file
+	 */
+	private const LARGE_FILE = 1e7;
 
 	/**
 	 * @return bool
@@ -188,7 +193,7 @@ class PdfHandler extends ImageHandler {
 
 		// Thumbnail extraction is very inefficient for large files.
 		// Provide a way to pool count limit the number of downloaders.
-		if ( $image->getSize() >= 1e7 ) { // 10MB
+		if ( $image->getSize() >= self::LARGE_FILE ) {
 			$work = new PoolCounterWorkViaCallback( 'GetLocalFileCopy', sha1( $image->getName() ),
 				[
 					'doWork' => function () use ( $image ) {
@@ -201,7 +206,8 @@ class PdfHandler extends ImageHandler {
 			$srcPath = $image->getLocalRefPath();
 		}
 
-		if ( $srcPath === false ) { // could not download original
+		if ( $srcPath === false ) {
+			// could not download original
 			return $this->doThumbError( $width, $height, 'filemissing' );
 		}
 
@@ -419,7 +425,8 @@ class PdfHandler extends ImageHandler {
 	 * @return array|bool
 	 */
 	public function getPageDimensions( File $image, $page ) {
-		$index = $page; // MW starts pages at 1, as they are stored here
+		// MW starts pages at 1, as they are stored here
+		$index = $page;
 
 		$info = $this->getDimensionInfo( $image );
 		if ( $info && isset( $info['dimensionsByPage'][$index] ) ) {
@@ -439,7 +446,9 @@ class PdfHandler extends ImageHandler {
 				if ( !$data || !isset( $data['Pages'] ) ) {
 					return false;
 				}
-				unset( $data['text'] ); // lower peak RAM
+
+				// lower peak RAM
+				unset( $data['text'] );
 
 				$dimsByPage = [];
 				$count = intval( $data['Pages'] );
@@ -474,7 +483,7 @@ class PdfHandler extends ImageHandler {
 	 */
 	public function getWarningConfig( $file ) {
 		return [
-			'messages' => self::$messages,
+			'messages' => self::MESSAGES,
 			'link' => '//www.mediawiki.org/wiki/Special:MyLanguage/Help:Security/PDF_files',
 			'module' => 'pdfhandler.messages',
 		];
@@ -486,7 +495,7 @@ class PdfHandler extends ImageHandler {
 	 */
 	public static function registerWarningModule( &$resourceLoader ) {
 		$resourceLoader->register( 'pdfhandler.messages', [
-			'messages' => array_values( self::$messages ),
+			'messages' => array_values( self::MESSAGES ),
 		] );
 	}
 }

@@ -39,13 +39,17 @@ class CreatePdfThumbnailsJob extends Job {
 		if ( !isset( $this->params['page'] ) ) {
 			wfDebugLog( 'thumbnails', 'A page for thumbnails job of ' . $this->title->getText() .
 				' was not specified! That should never happen!' );
-			return true; // no page set? that should never happen
+			// no page set? that should never happen
+			return true;
 		}
 
+		// we just want a local file
 		$file = MediaWikiServices::getInstance()->getRepoGroup()->getLocalRepo()
-			->newFile( $this->title ); // we just want a local file
+			->newFile( $this->title );
+
 		if ( !$file ) {
-			return true; // Just silently fail, perhaps the file was already deleted, don't bother
+			// Just silently fail, perhaps the file was already deleted, don't bother
+			return true;
 		}
 
 		switch ( $this->params['jobtype'] ) {
@@ -110,14 +114,16 @@ class CreatePdfThumbnailsJob extends Job {
 		}
 		$magic = MediaWikiServices::getInstance()->getMimeAnalyzer();
 		if ( !$magic->isMatchingExtension( 'pdf', $mime ) ) {
-			return true; // not a PDF, abort
+			// not a PDF, abort
+			return true;
 		}
 
 		$title = $upload->getTitle();
 		$uploadFile = $upload->getLocalFile();
 		if ( $uploadFile === null ) {
 			wfDebugLog( 'thumbnails', '$uploadFile seems to be null, should never happen...' );
-			return true; // should never happen, but it's better to be secure
+			// should never happen, but it's better to be secure
+			return true;
 		}
 
 		$metadata = $uploadFile->getMetadata();
