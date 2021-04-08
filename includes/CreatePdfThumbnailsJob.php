@@ -57,7 +57,7 @@ class CreatePdfThumbnailsJob extends Job {
 				global $wgImageLimits;
 				// Ignore user preferences, do default thumbnails
 				// everything here shamelessy copied and reused from includes/ImagePage.php
-				if ( method_exists( '\MediaWiki\User\UserOptionsLookup', 'getDefaultOption' ) ) {
+				if ( method_exists( \MediaWiki\User\UserOptionsLookup::class, 'getDefaultOption' ) ) {
 					// MW 1.35+
 					$userOptionsLookup = MediaWikiServices::getInstance()->getUserOptionsLookup();
 					$sizeSel = $userOptionsLookup->getDefaultOption( 'imagesize' );
