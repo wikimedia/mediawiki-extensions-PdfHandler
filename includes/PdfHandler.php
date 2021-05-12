@@ -196,7 +196,7 @@ class PdfHandler extends ImageHandler {
 		if ( $image->getSize() >= self::LARGE_FILE ) {
 			$work = new PoolCounterWorkViaCallback( 'GetLocalFileCopy', sha1( $image->getName() ),
 				[
-					'doWork' => function () use ( $image ) {
+					'doWork' => static function () use ( $image ) {
 						return $image->getLocalRefPath();
 					}
 				]
@@ -299,7 +299,7 @@ class PdfHandler extends ImageHandler {
 				/**
 				 * @suppress PhanUndeclaredProperty
 				 */
-				'doWork' => function () use ( $image, $metadata ) {
+				'doWork' => static function () use ( $image, $metadata ) {
 					AtEase::suppressWarnings();
 					$image->pdfMetaArray = unserialize( $metadata );
 					AtEase::restoreWarnings();
