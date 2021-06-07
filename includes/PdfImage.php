@@ -134,8 +134,10 @@ class PdfImage {
 			$resultPages = Shell::command( $cmdPages )
 				->execute();
 
-			$dump = $resultMeta->getStdout() . $resultPages->getStdout();
-			$data = $this->convertDumpToArray( $dump );
+			$data = $this->convertDumpToArray(
+				$resultMeta->getStdout(),
+				$resultPages->getStdout()
+			);
 		} else {
 			$data = [];
 		}
@@ -162,15 +164,16 @@ class PdfImage {
 	}
 
 	/**
-	 * @param string $dump
+	 * @param string $metaDump
+	 * @param string $infoDump
 	 * @return array
 	 */
-	protected function convertDumpToArray( $dump ): array {
-		if ( strval( $dump ) == '' ) {
+	protected function convertDumpToArray( $metaDump, $infoDump ): array {
+		if ( strval( $infoDump ) == '' ) {
 			return [];
 		}
 
-		$lines = explode( "\n", $dump );
+		$lines = explode( "\n", $infoDump );
 		$data = [];
 
 		// Metadata is always the last item, and spans multiple lines.
@@ -203,6 +206,10 @@ class PdfImage {
 					$data[$key] = $value;
 				}
 			}
+		}
+		$metaDump = trim( $metaDump );
+		if ( $metaDump !== '' ) {
+			$data['xmp'] = $metaDump;
 		}
 		$data = $this->postProcessDump( $data );
 		return $data;
