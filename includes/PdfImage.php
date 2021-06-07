@@ -39,6 +39,8 @@ class PdfImage {
 	 */
 	private $mFilename;
 
+	public const ITEMS_FOR_PAGE_SIZE = [ 'Pages', 'pages', 'Page size', 'Page rot' ];
+
 	/**
 	 * @param string $filename
 	 */
@@ -51,22 +53,6 @@ class PdfImage {
 	 */
 	public function isValid() {
 		return true;
-	}
-
-	/**
-	 * @return array|bool
-	 */
-	public function getImageSize() {
-		$data = $this->retrieveMetadata();
-		$size = self::getPageSize( $data, 1 );
-
-		if ( $size ) {
-			$width = $size['width'];
-			$height = $size['height'];
-			return [ $width, $height, 'Pdf',
-				"width=\"$width\" height=\"$height\"" ];
-		}
-		return false;
 	}
 
 	/**
@@ -117,9 +103,9 @@ class PdfImage {
 	}
 
 	/**
-	 * @return array|bool|null
+	 * @return array
 	 */
-	public function retrieveMetaData() {
+	public function retrieveMetaData(): array {
 		global $wgPdfInfo, $wgPdftoText;
 
 		if ( $wgPdfInfo ) {
@@ -151,7 +137,7 @@ class PdfImage {
 			$dump = $resultMeta->getStdout() . $resultPages->getStdout();
 			$data = $this->convertDumpToArray( $dump );
 		} else {
-			$data = null;
+			$data = [];
 		}
 
 		// Read text layer
@@ -177,11 +163,11 @@ class PdfImage {
 
 	/**
 	 * @param string $dump
-	 * @return array|bool
+	 * @return array
 	 */
-	protected function convertDumpToArray( $dump ) {
+	protected function convertDumpToArray( $dump ): array {
 		if ( strval( $dump ) == '' ) {
-			return false;
+			return [];
 		}
 
 		$lines = explode( "\n", $dump );
