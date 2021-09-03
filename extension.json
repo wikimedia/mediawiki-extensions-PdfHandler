@@ -39,10 +39,15 @@
 			"i18n"
 		]
 	},
-	"Hooks": {
-		"ResourceLoaderRegisterModules": [
-			"MediaWiki\\Extension\\PdfHandler\\PdfHandler::registerWarningModule"
-		]
+	"ResourceModules": {
+		"pdfhandler.messages": {
+			"messages": [
+				"pdf-file-page-warning",
+				"pdf-file-page-warning-header",
+				"pdf-file-page-warning-info",
+				"pdf-file-page-warning-footer"
+			]
+		}
 	},
 	"MediaHandlers": {
 		"application/pdf": "MediaWiki\\Extension\\PdfHandler\\PdfHandler"

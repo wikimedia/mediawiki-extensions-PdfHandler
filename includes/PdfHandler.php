@@ -9,7 +9,6 @@ use MediaTransformError;
 use MediaTransformOutput;
 use MediaWiki\MediaWikiServices;
 use PoolCounterWorkViaCallback;
-use ResourceLoader;
 use ThumbnailImage;
 use TransformParameterError;
 
@@ -36,6 +35,11 @@ use TransformParameterError;
  */
 
 class PdfHandler extends ImageHandler {
+	/**
+	 * Keep in sync with pdfhandler.messages in extension.json
+	 *
+	 * @see getWarningConfig
+	 */
 	private const MESSAGES = [
 		'main' => 'pdf-file-page-warning',
 		'header' => 'pdf-file-page-warning-header',
@@ -445,16 +449,6 @@ class PdfHandler extends ImageHandler {
 			'link' => '//www.mediawiki.org/wiki/Special:MyLanguage/Help:Security/PDF_files',
 			'module' => 'pdfhandler.messages',
 		];
-	}
-
-	/**
-	 * Register a module with the warning messages in it.
-	 * @param ResourceLoader &$resourceLoader
-	 */
-	public static function registerWarningModule( &$resourceLoader ) {
-		$resourceLoader->register( 'pdfhandler.messages', [
-			'messages' => array_values( self::MESSAGES ),
-		] );
 	}
 
 	public function useSplitMetadata() {
