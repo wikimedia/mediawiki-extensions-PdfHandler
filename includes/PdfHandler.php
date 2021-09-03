@@ -63,21 +63,6 @@ class PdfHandler extends ImageHandler {
 	private const STATE_DIMENSION_INFO = 'pdfDimensionInfo';
 
 	/**
-	 * @return bool
-	 */
-	public function isEnabled() {
-		global $wgPdfProcessor, $wgPdfPostProcessor, $wgPdfInfo;
-
-		if ( !isset( $wgPdfProcessor ) || !isset( $wgPdfPostProcessor ) || !isset( $wgPdfInfo ) ) {
-			wfDebug( "PdfHandler is disabled, please set the following\n" );
-			wfDebug( "variables in LocalSettings.php:\n" );
-			wfDebug( "\$wgPdfProcessor, \$wgPdfPostProcessor, \$wgPdfInfo\n" );
-			return false;
-		}
-		return true;
-	}
-
-	/**
 	 * @param File $file
 	 * @return bool
 	 */
