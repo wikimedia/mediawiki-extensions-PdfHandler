@@ -23,7 +23,7 @@ namespace MediaWiki\Extension\PdfHandler;
 
 use BitmapMetadataHandler;
 use MediaWiki\Logger\LoggerFactory;
-use MediaWiki\Shell\Shell;
+use MediaWiki\MediaWikiServices;
 use UtfNormal\Validator;
 use Wikimedia\XMPReader\Reader as XMPReader;
 
@@ -106,59 +106,61 @@ class PdfImage {
 	 * @return array
 	 */
 	public function retrieveMetaData(): array {
-		global $wgPdfInfo, $wgPdftoText;
+		global $wgPdfInfo, $wgPdftoText, $wgPdfHandlerShell;
 
-		if ( $wgPdfInfo ) {
-			// Note in poppler 0.26 the -meta and page data options worked together,
-			// but as of poppler 0.48 they must be queried separately.
-			// https://bugs.freedesktop.org/show_bug.cgi?id=96801
-			$cmdMeta = [
-				$wgPdfInfo,
-				# Report metadata as UTF-8 text...
-				'-enc', 'UTF-8',
-				# Report XMP metadata
-				'-meta',
-				$this->mFilename,
-			];
-			$resultMeta = Shell::command( $cmdMeta )
-				->execute();
+		$command = MediaWikiServices::getInstance()->getShellCommandFactory()
+			->createBoxed( 'pdfhandler' )
+			->disableNetwork()
+			->firejailDefaultSeccomp()
+			->routeName( 'pdfhandler-metadata' );
 
-			$cmdPages = [
-				$wgPdfInfo,
-				# Report metadata as UTF-8 text...
-				'-enc', 'UTF-8',
-				# Report page sizes for all pages
-				'-l', '9999999',
-				$this->mFilename,
-			];
-			$resultPages = Shell::command( $cmdPages )
-				->execute();
+		$result = $command
+			->params( $wgPdfHandlerShell, 'scripts/retrieveMetaData.sh' )
+			->inputFileFromFile(
+				'scripts/retrieveMetaData.sh',
+				__DIR__ . '/../scripts/retrieveMetaData.sh' )
+			->inputFileFromFile( 'file.pdf', $this->mFilename )
+			->outputFileToString( 'meta' )
+			->outputFileToString( 'pages' )
+			->outputFileToString( 'text' )
+			->outputFileToString( 'text_exit_code' )
+			->environment( [
+				'PDFHANDLER_INFO' => $wgPdfInfo,
+				'PDFHANDLER_TOTEXT' => $wgPdftoText,
+			] )
+			->execute();
 
+		// Record in statsd
+		MediaWikiServices::getInstance()->getStatsdDataFactory()
+			->increment( 'pdfhandler.shell.retrieve_meta_data' );
+
+		$resultMeta = $result->getFileContents( 'meta' );
+		$resultPages = $result->getFileContents( 'pages' );
+		if ( $resultMeta !== null || $resultPages !== null ) {
 			$data = $this->convertDumpToArray(
-				$resultMeta->getStdout(),
-				$resultPages->getStdout()
+				$resultMeta ?? '',
+				$resultPages ?? ''
 			);
 		} else {
 			$data = [];
 		}
 
 		// Read text layer
-		if ( isset( $wgPdftoText ) ) {
-			$cmd = [ $wgPdftoText,  $this->mFilename, '-' ];
-			$result = Shell::command( $cmd )
-				->execute();
-
-			if ( $result->getExitCode() === 0 ) {
-				$txt = str_replace( "\r\n", "\n", $result->getStdout() );
-				$pages = explode( "\f", $txt );
-				foreach ( $pages as $page => $pageText ) {
-					// Get rid of invalid UTF-8, strip control characters
-					// Note we need to do this per page, as \f page feed would be stripped.
-					$pages[$page] = Validator::cleanUp( $pageText );
-				}
-				$data['text'] = $pages;
+		$retval = $result->wasReceived( 'text_exit_code' )
+			? (int)trim( $result->getFileContents( 'text_exit_code' ) )
+			: 1;
+		$txt = $result->getFileContents( 'text' );
+		if ( $retval == 0 && strlen( $txt ) ) {
+			$txt = str_replace( "\r\n", "\n", $txt );
+			$pages = explode( "\f", $txt );
+			foreach ( $pages as $page => $pageText ) {
+				// Get rid of invalid UTF-8, strip control characters
+				// Note we need to do this per page, as \f page feed would be stripped.
+				$pages[$page] = Validator::cleanUp( $pageText );
 			}
+			$data['text'] = $pages;
 		}
+
 		return $data;
 	}
 
