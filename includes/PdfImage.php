@@ -64,32 +64,32 @@ class PdfImage {
 		global $wgPdfHandlerDpi;
 
 		if ( isset( $data['pages'][$page]['Page size'] ) ) {
-			$o = $data['pages'][$page]['Page size'];
+			$pageSize = $data['pages'][$page]['Page size'];
 		} elseif ( isset( $data['Page size'] ) ) {
-			$o = $data['Page size'];
+			$pageSize = $data['Page size'];
 		} else {
-			$o = false;
+			$pageSize = false;
 		}
 
-		if ( $o ) {
+		if ( $pageSize ) {
 			if ( isset( $data['pages'][$page]['Page rot'] ) ) {
-				$r = $data['pages'][$page]['Page rot'];
+				$pageRotation = $data['pages'][$page]['Page rot'];
 			} elseif ( isset( $data['Page rot'] ) ) {
-				$r = $data['Page rot'];
+				$pageRotation = $data['Page rot'];
 			} else {
-				$r = 0;
+				$pageRotation = 0;
 			}
-			$size = explode( 'x', $o, 2 );
+			$size = explode( 'x', $pageSize, 2 );
 
 			if ( $size ) {
 				$width  = intval( trim( $size[0] ) / 72 * $wgPdfHandlerDpi );
 				$height = explode( ' ', trim( $size[1] ), 2 );
 				$height = intval( trim( $height[0] ) / 72 * $wgPdfHandlerDpi );
-				if ( ( $r / 90 ) & 1 ) {
+				if ( ( $pageRotation / 90 ) & 1 ) {
 					// Swap width and height for landscape pages
-					$t = $width;
+					$temp = $width;
 					$width = $height;
-					$height = $t;
+					$height = $temp;
 				}
 
 				return [
@@ -147,10 +147,9 @@ class PdfImage {
 			$cmd = [ $wgPdftoText,  $this->mFilename, '-' ];
 			$result = Shell::command( $cmd )
 				->execute();
-			$retval = $result->getExitCode();
-			$txt = $result->getStdout();
-			if ( $retval == 0 ) {
-				$txt = str_replace( "\r\n", "\n", $txt );
+
+			if ( $result->getExitCode() === 0 ) {
+				$txt = str_replace( "\r\n", "\n", $result->getStdout() );
 				$pages = explode( "\f", $txt );
 				foreach ( $pages as $page => $pageText ) {
 					// Get rid of invalid UTF-8, strip control characters
@@ -169,7 +168,7 @@ class PdfImage {
 	 * @return array
 	 */
 	protected function convertDumpToArray( $metaDump, $infoDump ): array {
-		if ( strval( $infoDump ) == '' ) {
+		if ( strval( $infoDump ) === '' ) {
 			return [];
 		}
 
@@ -184,7 +183,7 @@ class PdfImage {
 		// it will gather all remaining lines into the xmp key.
 		foreach ( $lines as $line ) {
 			if ( $inMetadata ) {
-				// Handle XMP differently due to diffence in line break
+				// Handle XMP differently due to difference in line break
 				$data['xmp'] .= "\n$line";
 				continue;
 			}
@@ -211,8 +210,8 @@ class PdfImage {
 		if ( $metaDump !== '' ) {
 			$data['xmp'] = $metaDump;
 		}
-		$data = $this->postProcessDump( $data );
-		return $data;
+
+		return $this->postProcessDump( $data );
 	}
 
 	/**
