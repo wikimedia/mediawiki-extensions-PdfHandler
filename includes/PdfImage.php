@@ -81,9 +81,9 @@ class PdfImage {
 			}
 			$size = explode( 'x', $pageSize, 2 );
 
-			$width  = intval( trim( $size[0] ) / 72 * $wgPdfHandlerDpi );
+			$width  = intval( (int)trim( $size[0] ) / 72 * $wgPdfHandlerDpi );
 			$height = explode( ' ', trim( $size[1] ), 2 );
-			$height = intval( trim( $height[0] ) / 72 * $wgPdfHandlerDpi );
+			$height = intval( (int)trim( $height[0] ) / 72 * $wgPdfHandlerDpi );
 			if ( ( $pageRotation / 90 ) & 1 ) {
 				// Swap width and height for landscape pages
 				$temp = $width;

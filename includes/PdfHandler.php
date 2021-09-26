@@ -230,7 +230,7 @@ class PdfHandler extends ImageHandler {
 			"-quality",
 			$wgPdfHandlerJpegQuality,
 			"-resize",
-			$width,
+			(string)$width,
 			"-",
 			$dstPath
 		);
@@ -304,7 +304,7 @@ class PdfHandler extends ImageHandler {
 
 	/**
 	 * @param File $file
-	 * @return bool
+	 * @return bool|int
 	 */
 	public function isFileMetadataValid( $file ) {
 		$data = $file->getMetadataItems( [ 'mergedMetadata', 'pages' ] );
