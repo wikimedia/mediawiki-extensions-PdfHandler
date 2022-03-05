@@ -385,6 +385,10 @@ class PdfHandler extends ImageHandler {
 		return false;
 	}
 
+	/**
+	 * @param File $file
+	 * @return bool|mixed
+	 */
 	protected function getDimensionInfo( File $file ) {
 		$info = $file->getHandlerState( self::STATE_DIMENSION_INFO );
 		if ( !$info ) {
