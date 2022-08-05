@@ -217,6 +217,8 @@ class PdfHandler extends ImageHandler {
 			"-dLastPage={$page}",
 			"-dSAFER",
 			"-r{$wgPdfHandlerDpi}",
+			// CropBox defines the region that the PDF viewer application is expected to display or print.
+			"-dUseCropBox",
 			"-dBATCH",
 			"-dNOPAUSE",
 			"-q",
