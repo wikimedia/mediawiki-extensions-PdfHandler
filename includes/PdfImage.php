@@ -104,7 +104,7 @@ class PdfImage {
 	 * @return array
 	 */
 	public function retrieveMetaData(): array {
-		global $wgPdfInfo, $wgPdftoText, $wgPdfHandlerShell;
+		global $wgPdfInfo, $wgPdftoText, $wgShellboxShell;
 
 		$command = MediaWikiServices::getInstance()->getShellCommandFactory()
 			->createBoxed( 'pdfhandler' )
@@ -113,7 +113,7 @@ class PdfImage {
 			->routeName( 'pdfhandler-metadata' );
 
 		$result = $command
-			->params( $wgPdfHandlerShell, 'scripts/retrieveMetaData.sh' )
+			->params( $wgShellboxShell, 'scripts/retrieveMetaData.sh' )
 			->inputFileFromFile(
 				'scripts/retrieveMetaData.sh',
 				__DIR__ . '/../scripts/retrieveMetaData.sh' )
