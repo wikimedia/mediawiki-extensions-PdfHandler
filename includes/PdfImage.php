@@ -132,6 +132,13 @@ class PdfImage {
 		MediaWikiServices::getInstance()->getStatsdDataFactory()
 			->increment( 'pdfhandler.shell.retrieve_meta_data' );
 
+		// Metadata retrieval is allowed to fail, but we'd like to know why
+		if ( $result->getExitCode() != 0 ) {
+			wfDebug( __METHOD__ . ': retrieveMetaData.sh' .
+			"\n\nExitcode: " . $result->getExitCode() . "\n\n"
+			. $result->getStderr() );
+		}
+
 		$resultMeta = $result->getFileContents( 'meta' );
 		$resultPages = $result->getFileContents( 'pages' );
 		if ( $resultMeta !== null || $resultPages !== null ) {
