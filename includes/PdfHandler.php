@@ -444,6 +444,7 @@ class PdfHandler extends ImageHandler {
 		];
 	}
 
+	/** @inheritDoc */
 	public function useSplitMetadata() {
 		return true;
 	}
