@@ -2,11 +2,11 @@
 
 namespace MediaWiki\Extension\PdfHandler;
 
-use File;
 use ImageHandler;
 use MediaTransformError;
 use MediaTransformOutput;
 use MediaWiki\Context\IContextSource;
+use MediaWiki\FileRepo\File\File;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\PoolCounter\PoolCounterWorkViaCallback;
 use ThumbnailImage;
