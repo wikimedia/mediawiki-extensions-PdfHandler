@@ -227,13 +227,13 @@ class PdfHandler extends ImageHandler {
 		);
 		$cmd .= " | " . wfEscapeShellArg(
 			$wgPdfPostProcessor,
+			"-",
 			"-depth",
 			"8",
 			"-quality",
 			$wgPdfHandlerJpegQuality,
 			"-resize",
 			(string)$width,
-			"-",
 			$dstPath
 		);
 		$cmd .= ")";
