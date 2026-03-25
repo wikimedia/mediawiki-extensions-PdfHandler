@@ -84,13 +84,15 @@ class PdfHandler extends ImageHandler {
 	 * @return bool
 	 */
 	public function validateParam( $name, $value ) {
-		if ( $name === 'page' && trim( $value ) !== (string)intval( $value ) ) {
+		if ( $name === 'page' &&
+			( !is_string( $value ) || trim( $value ) !== (string)intval( $value ) )
+		) {
 			// Extra junk on the end of page, probably actually a caption
 			// e.g. [[File:Foo.pdf|thumb|Page 3 of the document shows foo]]
 			return false;
 		}
 		if ( in_array( $name, [ 'width', 'height', 'page', 'physicalWidth', 'physicalHeight' ] ) ) {
-			return ( $value > 0 );
+			return (int)$value > 0;
 		}
 		return false;
 	}
@@ -100,7 +102,7 @@ class PdfHandler extends ImageHandler {
 	 * @return bool|string
 	 */
 	public function makeParamString( $params ) {
-		$page = $params['page'] ?? 1;
+		$page = trim( $params['page'] ?? '1' );
 		$width = $params['physicalWidth'] ?? $params['width'] ?? null;
 		if ( !$width ) {
 			return false;
