@@ -21,6 +21,7 @@
 namespace MediaWiki\Extension\PdfHandler;
 
 use ImageHandler;
+use MediaHandlerState;
 use MediaTransformError;
 use MediaTransformOutput;
 use MediaWiki\Context\IContextSource;
@@ -81,7 +82,7 @@ class PdfHandler extends ImageHandler {
 
 	/**
 	 * @param string $name
-	 * @param string $value
+	 * @param mixed $value
 	 * @return bool
 	 */
 	public function validateParam( $name, $value ) {
@@ -100,24 +101,22 @@ class PdfHandler extends ImageHandler {
 
 	/**
 	 * @param array $params
-	 * @return bool|string
+	 * @return string|false
 	 */
 	public function makeParamString( $params ) {
-		$page = trim( $params['page'] ?? '1' );
 		$width = $params['physicalWidth'] ?? $params['width'] ?? null;
 		if ( !$width ) {
 			return false;
 		}
+		$page = trim( $params['page'] ?? '1' );
 		return "page{$page}-{$width}px";
 	}
 
 	/**
 	 * @param string $str
-	 * @return array|bool
+	 * @return array|false
 	 */
 	public function parseParamString( $str ) {
-		$m = [];
-
 		if ( preg_match( '/^page(\d+)-(\d+)px$/', $str, $m ) ) {
 			return [ 'width' => $m[2], 'page' => $m[1] ];
 		}
@@ -280,7 +279,7 @@ class PdfHandler extends ImageHandler {
 	}
 
 	/**
-	 * @param \MediaHandlerState $state
+	 * @param MediaHandlerState $state
 	 * @param string $path
 	 * @return PdfImage
 	 */
@@ -294,9 +293,9 @@ class PdfHandler extends ImageHandler {
 	}
 
 	/**
-	 * @param \MediaHandlerState $state
+	 * @param MediaHandlerState $state
 	 * @param string $path
-	 * @return array|bool
+	 * @return array|null
 	 */
 	public function getSizeAndMetadata( $state, $path ) {
 		$metadata = $this->getPdfImage( $state, $path )->retrieveMetaData();
@@ -311,7 +310,7 @@ class PdfHandler extends ImageHandler {
 	/**
 	 * @param string $ext
 	 * @param string $mime
-	 * @param null $params
+	 * @param array|null $params
 	 * @return array
 	 */
 	public function getThumbType( $ext, $mime, $params = null ) {
@@ -344,8 +343,8 @@ class PdfHandler extends ImageHandler {
 
 	/**
 	 * @param File $image
-	 * @param bool|IContextSource $context Context to use (optional)
-	 * @return bool|array
+	 * @param IContextSource|false $context Context to use (optional)
+	 * @return array|false
 	 */
 	public function formatMetadata( $image, $context = false ) {
 		$mergedMetadata = $image->getMetadataItem( 'mergedMetadata' );
@@ -383,7 +382,7 @@ class PdfHandler extends ImageHandler {
 
 	/**
 	 * @param File $image
-	 * @return bool|int
+	 * @return int|false
 	 */
 	public function pageCount( File $image ) {
 		$info = $this->getDimensionInfo( $image );
@@ -394,7 +393,7 @@ class PdfHandler extends ImageHandler {
 	/**
 	 * @param File $image
 	 * @param int $page
-	 * @return array|bool
+	 * @return array|false
 	 */
 	public function getPageDimensions( File $image, $page ) {
 		// MW starts pages at 1, as they are stored here
@@ -410,7 +409,7 @@ class PdfHandler extends ImageHandler {
 
 	/**
 	 * @param File $file
-	 * @return bool|mixed
+	 * @return array|false
 	 */
 	protected function getDimensionInfo( File $file ) {
 		$info = $file->getHandlerState( self::STATE_DIMENSION_INFO );
@@ -442,7 +441,7 @@ class PdfHandler extends ImageHandler {
 	/**
 	 * @param File $image
 	 * @param int $page
-	 * @return bool
+	 * @return string|false
 	 */
 	public function getPageText( File $image, $page ) {
 		$pageTexts = $image->getMetadataItem( 'text' );
