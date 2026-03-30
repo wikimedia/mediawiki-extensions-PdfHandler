@@ -27,6 +27,7 @@ use MediaWiki\Context\IContextSource;
 use MediaWiki\FileRepo\File\File;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\PoolCounter\PoolCounterWorkViaCallback;
+use MediaWiki\Shell\Shell;
 use ThumbnailImage;
 use TransformParameterError;
 
@@ -211,7 +212,7 @@ class PdfHandler extends ImageHandler {
 			return $this->doThumbError( $width, $height, 'filemissing' );
 		}
 
-		$cmd = '(' . wfEscapeShellArg(
+		$cmd = '(' . Shell::escape(
 			$wgPdfProcessor,
 			"-sDEVICE=jpeg",
 			"-sOutputFile=-",
@@ -227,7 +228,7 @@ class PdfHandler extends ImageHandler {
 			"-q",
 			$srcPath
 		);
-		$cmd .= " | " . wfEscapeShellArg(
+		$cmd .= " | " . Shell::escape(
 			$wgPdfPostProcessor,
 			"-",
 			"-depth",
@@ -241,16 +242,16 @@ class PdfHandler extends ImageHandler {
 		$cmd .= ")";
 
 		wfDebug( __METHOD__ . ": $cmd\n" );
-		$retval = '';
-		$err = wfShellExecWithStderr( $cmd, $retval );
+		$err = Shell::command( $cmd )->execute();
+		$retval = $err->getExitCode();
 
 		$removed = $this->removeBadFile( $dstPath, $retval );
 
 		if ( $retval != 0 || $removed ) {
 			wfDebugLog( 'thumbnail',
 				sprintf( 'thumbnail failed on %s: error %d "%s" from "%s"',
-				wfHostname(), $retval, trim( $err ), $cmd ) );
-			return new MediaTransformError( 'thumbnail_error', $width, $height, $err );
+				wfHostname(), $retval, trim( $err->getStderr() ), $cmd ) );
+			return new MediaTransformError( 'thumbnail_error', $width, $height, $err->getStderr() );
 		}
 
 		return new ThumbnailImage( $image, $dstUrl, $dstPath, [
