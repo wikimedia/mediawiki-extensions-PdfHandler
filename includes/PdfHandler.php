@@ -242,7 +242,7 @@ class PdfHandler extends ImageHandler {
 		$cmd .= ")";
 
 		wfDebug( __METHOD__ . ": $cmd\n" );
-		$err = Shell::command( $cmd )->execute();
+		$err = Shell::command()->unsafeParams( $cmd )->execute();
 		$retval = $err->getExitCode();
 
 		$removed = $this->removeBadFile( $dstPath, $retval );
