@@ -64,18 +64,12 @@ class PdfHandler extends ImageHandler {
 	 */
 	private const STATE_DIMENSION_INFO = 'pdfDimensionInfo';
 
-	/**
-	 * @param File $file
-	 * @return bool
-	 */
+	/** @inheritDoc */
 	public function mustRender( $file ) {
 		return true;
 	}
 
-	/**
-	 * @param File $file
-	 * @return bool
-	 */
+	/** @inheritDoc */
 	public function isMultiPage( $file ) {
 		return true;
 	}
@@ -114,7 +108,7 @@ class PdfHandler extends ImageHandler {
 
 	/**
 	 * @param string $str
-	 * @return array|false
+	 * @return array{width: string, page: string}|false
 	 */
 	public function parseParamString( $str ) {
 		if ( preg_match( '/^page(\d+)-(\d+)px$/', $str, $m ) ) {
@@ -124,10 +118,7 @@ class PdfHandler extends ImageHandler {
 		return false;
 	}
 
-	/**
-	 * @param array $params
-	 * @return array
-	 */
+	/** @inheritDoc */
 	public function getScriptParams( $params ) {
 		return [
 			'width' => $params['width'],
@@ -136,7 +127,7 @@ class PdfHandler extends ImageHandler {
 	}
 
 	/**
-	 * @return array
+	 * @return array<string,string>
 	 */
 	public function getParamMap() {
 		return [
@@ -295,7 +286,7 @@ class PdfHandler extends ImageHandler {
 	/**
 	 * @param MediaHandlerState $state
 	 * @param string $path
-	 * @return array|null
+	 * @return array{width?: int, height?: int, metadata: array}
 	 */
 	public function getSizeAndMetadata( $state, $path ) {
 		$metadata = $this->getPdfImage( $state, $path )->retrieveMetaData();
@@ -311,7 +302,7 @@ class PdfHandler extends ImageHandler {
 	 * @param string $ext
 	 * @param string $mime
 	 * @param array|null $params
-	 * @return array
+	 * @return array{0: string, 1: ?string}
 	 */
 	public function getThumbType( $ext, $mime, $params = null ) {
 		global $wgPdfOutputExtension;
@@ -324,12 +315,9 @@ class PdfHandler extends ImageHandler {
 		return [ $wgPdfOutputExtension, $mime ];
 	}
 
-	/**
-	 * @param File $file
-	 * @return bool|int
-	 */
-	public function isFileMetadataValid( $file ) {
-		$data = $file->getMetadataItems( [ 'mergedMetadata', 'pages' ] );
+	/** @inheritDoc */
+	public function isFileMetadataValid( $image ) {
+		$data = $image->getMetadataItems( [ 'mergedMetadata', 'pages' ] );
 		if ( !isset( $data['pages'] ) ) {
 			return self::METADATA_BAD;
 		}
@@ -344,7 +332,7 @@ class PdfHandler extends ImageHandler {
 	/**
 	 * @param File $image
 	 * @param IContextSource|false $context Context to use (optional)
-	 * @return array|false
+	 * @return array<string,array[]>|false
 	 */
 	public function formatMetadata( $image, $context = false ) {
 		$mergedMetadata = $image->getMetadataItem( 'mergedMetadata' );
@@ -380,12 +368,9 @@ class PdfHandler extends ImageHandler {
 		return false;
 	}
 
-	/**
-	 * @param File $image
-	 * @return int|false
-	 */
-	public function pageCount( File $image ) {
-		$info = $this->getDimensionInfo( $image );
+	/** @inheritDoc */
+	public function pageCount( File $file ) {
+		$info = $this->getDimensionInfo( $file );
 
 		return $info ? $info['pageCount'] : false;
 	}
@@ -393,7 +378,7 @@ class PdfHandler extends ImageHandler {
 	/**
 	 * @param File $image
 	 * @param int $page
-	 * @return array|false
+	 * @return array{width: int, height: int}|false
 	 */
 	public function getPageDimensions( File $image, $page ) {
 		// MW starts pages at 1, as they are stored here
@@ -409,7 +394,7 @@ class PdfHandler extends ImageHandler {
 
 	/**
 	 * @param File $file
-	 * @return array|false
+	 * @return array{pageCount: int, dimensionsByPage: array<int,array{width: int, height: int}>}|false
 	 */
 	protected function getDimensionInfo( File $file ) {
 		$info = $file->getHandlerState( self::STATE_DIMENSION_INFO );
@@ -438,11 +423,7 @@ class PdfHandler extends ImageHandler {
 		return $info;
 	}
 
-	/**
-	 * @param File $image
-	 * @param int $page
-	 * @return string|false
-	 */
+	/** @inheritDoc */
 	public function getPageText( File $image, $page ) {
 		$pageTexts = $image->getMetadataItem( 'text' );
 		if ( !is_array( $pageTexts ) || !isset( $pageTexts[$page - 1] ) ) {

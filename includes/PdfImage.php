@@ -56,7 +56,7 @@ class PdfImage {
 	/**
 	 * @param array $data
 	 * @param int $page
-	 * @return array|bool
+	 * @return array{width: int, height: int}|false
 	 */
 	public static function getPageSize( $data, $page ) {
 		global $wgPdfHandlerDpi;
