@@ -20,17 +20,17 @@
 
 namespace MediaWiki\Extension\PdfHandler;
 
-use ImageHandler;
-use MediaHandlerState;
-use MediaTransformError;
-use MediaTransformOutput;
 use MediaWiki\Context\IContextSource;
 use MediaWiki\FileRepo\File\File;
+use MediaWiki\Media\ImageHandler;
+use MediaWiki\Media\MediaHandlerState;
+use MediaWiki\Media\MediaTransformError;
+use MediaWiki\Media\MediaTransformOutput;
+use MediaWiki\Media\ThumbnailImage;
+use MediaWiki\Media\TransformParameterError;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\PoolCounter\PoolCounterWorkViaCallback;
 use MediaWiki\Shell\Shell;
-use ThumbnailImage;
-use TransformParameterError;
 
 /**
  * Inspired by djvuhandler from Tim Starling

@@ -20,8 +20,8 @@
 
 namespace MediaWiki\Extension\PdfHandler;
 
-use BitmapMetadataHandler;
 use MediaWiki\Logger\LoggerFactory;
+use MediaWiki\Media\BitmapMetadataHandler;
 use MediaWiki\MediaWikiServices;
 use UtfNormal\Validator;
 use Wikimedia\XMPReader\Reader as XMPReader;
