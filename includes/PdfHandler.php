@@ -74,23 +74,16 @@ class PdfHandler extends ImageHandler {
 		return true;
 	}
 
-	/**
-	 * @param string $name
-	 * @param mixed $value
-	 * @return bool
-	 */
+	/** @inheritDoc */
 	public function validateParam( $name, $value ) {
-		if ( $name === 'page' &&
-			( !is_string( $value ) || trim( $value ) !== (string)intval( $value ) )
-		) {
+		if ( $name === 'page' ) {
 			// Extra junk on the end of page, probably actually a caption
 			// e.g. [[File:Foo.pdf|thumb|Page 3 of the document shows foo]]
-			return false;
+			return is_int( $value ) ||
+				( is_string( $value ) && ctype_digit( trim( $value ) ) );
 		}
-		if ( in_array( $name, [ 'width', 'height', 'page', 'physicalWidth', 'physicalHeight' ] ) ) {
-			return (int)$value > 0;
-		}
-		return false;
+		return in_array( $name, [ 'width', 'height', 'page', 'physicalWidth', 'physicalHeight' ] ) &&
+			(int)$value > 0;
 	}
 
 	/**
