@@ -20,6 +20,7 @@
 
 namespace MediaWiki\Extension\PdfHandler;
 
+use MediaWiki\Config\Config;
 use MediaWiki\Context\IContextSource;
 use MediaWiki\FileRepo\File\File;
 use MediaWiki\Media\ImageHandler;
@@ -63,6 +64,12 @@ class PdfHandler extends ImageHandler {
 	 * Key for getHandlerState for dimension info
 	 */
 	private const STATE_DIMENSION_INFO = 'pdfDimensionInfo';
+
+	private readonly Config $config;
+
+	public function __construct() {
+		$this->config = MediaWikiServices::getInstance()->getMainConfig();
+	}
 
 	/** @inheritDoc */
 	public function mustRender( $file ) {
@@ -149,8 +156,6 @@ class PdfHandler extends ImageHandler {
 	 * @return MediaTransformError|MediaTransformOutput|ThumbnailImage|TransformParameterError
 	 */
 	public function doTransform( $image, $dstPath, $dstUrl, $params, $flags = 0 ) {
-		global $wgPdfProcessor, $wgPdfPostProcessor, $wgPdfHandlerDpi, $wgPdfHandlerJpegQuality;
-
 		if ( !$this->normaliseParams( $image, $params ) ) {
 			return new TransformParameterError( $params );
 		}
@@ -195,15 +200,20 @@ class PdfHandler extends ImageHandler {
 			return $this->doThumbError( $width, $height, 'filemissing' );
 		}
 
+		$pdfProcessor = $this->config->get( 'PdfProcessor' );
+		$pdfPostProcessor = $this->config->get( 'PdfPostProcessor' );
+		$dpi = $this->config->get( 'PdfHandlerDpi' );
+		$jpegQuality = $this->config->get( 'PdfHandlerJpegQuality' );
+
 		$cmd = '(' . Shell::escape(
-			$wgPdfProcessor,
+			$pdfProcessor,
 			"-sDEVICE=jpeg",
 			"-sOutputFile=-",
 			"-sstdout=%stderr",
 			"-dFirstPage={$page}",
 			"-dLastPage={$page}",
 			"-dSAFER",
-			"-r{$wgPdfHandlerDpi}",
+			"-r{$dpi}",
 			// CropBox defines the region that the PDF viewer application is expected to display or print.
 			"-dUseCropBox",
 			"-dBATCH",
@@ -212,12 +222,12 @@ class PdfHandler extends ImageHandler {
 			$srcPath
 		);
 		$cmd .= " | " . Shell::escape(
-			$wgPdfPostProcessor,
+			$pdfPostProcessor,
 			"-",
 			"-depth",
 			"8",
 			"-quality",
-			$wgPdfHandlerJpegQuality,
+			$jpegQuality,
 			"-resize",
 			(string)$width,
 			$dstPath
@@ -270,7 +280,7 @@ class PdfHandler extends ImageHandler {
 	private function getPdfImage( $state, $path ) {
 		$pdfImg = $state->getHandlerState( self::STATE_PDF_IMAGE );
 		if ( !$pdfImg ) {
-			$pdfImg = new PdfImage( $path );
+			$pdfImg = new PdfImage( $path, $this->config );
 			$state->setHandlerState( self::STATE_PDF_IMAGE, $pdfImg );
 		}
 		return $pdfImg;
@@ -298,14 +308,14 @@ class PdfHandler extends ImageHandler {
 	 * @return array{0: string, 1: ?string}
 	 */
 	public function getThumbType( $ext, $mime, $params = null ) {
-		global $wgPdfOutputExtension;
 		static $mime;
+		$outputExtension = $this->config->get( 'PdfOutputExtension' );
 
 		if ( $mime === null ) {
 			$magic = MediaWikiServices::getInstance()->getMimeAnalyzer();
-			$mime = $magic->guessTypesForExtension( $wgPdfOutputExtension );
+			$mime = $magic->guessTypesForExtension( $outputExtension );
 		}
-		return [ $wgPdfOutputExtension, $mime ];
+		return [ $outputExtension, $mime ];
 	}
 
 	/** @inheritDoc */
