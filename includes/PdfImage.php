@@ -162,14 +162,15 @@ class PdfImage {
 			? (int)trim( $result->getFileContents( 'text_exit_code' ) )
 			: 1;
 		$txt = $result->getFileContents( 'text' );
-		if ( $retval == 0 && strlen( $txt ) ) {
+		if ( $retval === 0 && $txt != '' ) {
 			$txt = str_replace( "\r\n", "\n", $txt );
 			$pages = explode( "\f", $txt );
-			foreach ( $pages as $page => $pageText ) {
-				// Get rid of invalid UTF-8, strip control characters
-				// Note we need to do this per page, as \f page feed would be stripped.
-				$pages[$page] = Validator::cleanUp( $pageText );
-			}
+			// Get rid of invalid UTF-8, strip control characters
+			// Note we need to do this per page, as \f page feed would be stripped.
+			$pages = array_filter(
+				array_map( static fn ( string $p ) => Validator::cleanUp( $p ), $pages ),
+				static fn ( string $t ) => $t !== ''
+			);
 			$data['text'] = $pages;
 		}
 
