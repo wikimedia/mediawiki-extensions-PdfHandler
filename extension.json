@@ -49,6 +49,15 @@
 			]
 		}
 	},
+	"HookHandlers": {
+		"PdfHandlerHooks": {
+			"class": "MediaWiki\\Extension\\PdfHandler\\PdfHandlerHooks",
+			"services": [ "MainWANObjectCache" ]
+		}
+	},
+	"Hooks": {
+		"LocalFilePurgeThumbnails": "PdfHandlerHooks"
+	},
 	"MediaHandlers": {
 		"application/pdf": "MediaWiki\\Extension\\PdfHandler\\PdfHandler"
 	},
