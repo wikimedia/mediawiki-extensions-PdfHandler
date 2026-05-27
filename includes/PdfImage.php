@@ -29,7 +29,7 @@ use UtfNormal\Validator;
 use Wikimedia\XMPReader\Reader as XMPReader;
 
 /**
- * Inspired by djvuimage from Brion Vibber
+ * Inspired by djvuimage from Brooke Vibber
  * Modified and written by xarax
  */
 class PdfImage {
