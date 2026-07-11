@@ -136,7 +136,6 @@ class PdfImage {
 		// Record in statsd
 		MediaWikiServices::getInstance()->getStatsFactory()
 			->getCounter( 'pdfhandler_shell_retrievemetadata_total' )
-			->copyToStatsdAt( 'pdfhandler.shell.retrieve_meta_data' )
 			->increment();
 
 		// Metadata retrieval is allowed to fail, but we'd like to know why
