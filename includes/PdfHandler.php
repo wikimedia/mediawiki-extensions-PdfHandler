@@ -65,6 +65,11 @@ class PdfHandler extends ImageHandler {
 	 */
 	private const STATE_DIMENSION_INFO = 'pdfDimensionInfo';
 
+	/**
+	 * Cache key prefix for dimension info
+	 */
+	public const DIMENSIONS_CACHE_KEY = 'file-pdf-dimensions';
+
 	private readonly Config $config;
 
 	public function __construct() {
@@ -404,7 +409,7 @@ class PdfHandler extends ImageHandler {
 		if ( !$info ) {
 			$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 			$info = $cache->getWithSetCallback(
-				$cache->makeKey( 'file-pdf-dimensions', $file->getSha1() ),
+				$cache->makeKey( self::DIMENSIONS_CACHE_KEY, $file->getSha1() ),
 				$cache::TTL_MONTH,
 				static function () use ( $file ) {
 					$data = $file->getMetadataItems( PdfImage::ITEMS_FOR_PAGE_SIZE );

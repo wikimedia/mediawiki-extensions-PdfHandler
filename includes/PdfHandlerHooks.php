@@ -39,7 +39,7 @@ class PdfHandlerHooks implements LocalFilePurgeThumbnailsHook {
 			return;
 		}
 		$this->mainWANObjectCache->delete(
-			$this->mainWANObjectCache->makeKey( 'file-pdf-dimensions', $file->getSha1() )
+			$this->mainWANObjectCache->makeKey( PdfHandler::DIMENSIONS_CACHE_KEY, $file->getSha1() )
 		);
 	}
 }
