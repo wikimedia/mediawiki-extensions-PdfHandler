@@ -23,6 +23,7 @@ namespace MediaWiki\Extension\PdfHandler;
 use MediaWiki\Config\Config;
 use MediaWiki\Context\IContextSource;
 use MediaWiki\FileRepo\File\File;
+use MediaWiki\FileRepo\File\LocalFile;
 use MediaWiki\Media\ImageHandler;
 use MediaWiki\Media\MediaHandlerState;
 use MediaWiki\Media\MediaTransformError;
@@ -282,10 +283,16 @@ class PdfHandler extends ImageHandler {
 	 * @param string $path
 	 * @return PdfImage
 	 */
-	private function getPdfImage( $state, $path ) {
+	private function getPdfImage( $state, $path ): PdfImage {
 		$pdfImg = $state->getHandlerState( self::STATE_PDF_IMAGE );
 		if ( !$pdfImg ) {
-			$pdfImg = new PdfImage( $path, $this->config );
+			// Only LocalFile is safe to pass by reference: stash and unregistered
+			// files are not at the public-zone virtual URL (or have no repo at all)
+			// TODO: Passing $state here as a File reference goes against MediaHandlerState
+			// being intentionally flat; PdfImage only needs it to reach the shellbox storage
+			// URL via File::addToShellboxCommand(). Revisit once there's a cleaner way to
+			// expose that URL without smuggling the File object through handler state.
+			$pdfImg = new PdfImage( $path, $this->config, $state instanceof LocalFile ? $state : null );
 			$state->setHandlerState( self::STATE_PDF_IMAGE, $pdfImg );
 		}
 		return $pdfImg;

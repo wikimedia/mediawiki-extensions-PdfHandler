@@ -21,6 +21,7 @@
 namespace MediaWiki\Extension\PdfHandler;
 
 use MediaWiki\Config\Config;
+use MediaWiki\FileRepo\File\File;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MainConfigNames;
 use MediaWiki\Media\BitmapMetadataHandler;
@@ -29,27 +30,30 @@ use UtfNormal\Validator;
 use Wikimedia\XMPReader\Reader as XMPReader;
 
 /**
- * Inspired by djvuimage from Brooke Vibber
+ * Inspired by djvuimage from Brion Vibber
  * Modified and written by xarax
  */
 class PdfImage {
 
-	/**
-	 * @var string
-	 */
-	private $mFilename;
+	private string $mFilename;
 
 	private Config $config;
+
+	private ?File $file;
 
 	public const ITEMS_FOR_PAGE_SIZE = [ 'Pages', 'pages', 'Page size', 'Page rot' ];
 
 	/**
-	 * @param string $filename
+	 * @param string $filename Local filesystem path to the PDF.
 	 * @param Config $config
+	 * @param File|null $file When provided, addToShellboxCommand() is used instead of
+	 *   inputFileFromFile(), allowing backends such as SwiftFileBackend with TempURL
+	 *   support to pass a reference to Shellbox rather than uploading the file body.
 	 */
-	public function __construct( $filename, Config $config ) {
+	public function __construct( string $filename, Config $config, ?File $file = null ) {
 		$this->mFilename = $filename;
 		$this->config = $config;
+		$this->file = $file;
 	}
 
 	/**
@@ -117,12 +121,11 @@ class PdfImage {
 			->firejailDefaultSeccomp()
 			->routeName( 'pdfhandler-metadata' );
 
-		$result = $command
+		$command
 			->params( $shellboxShell, 'scripts/retrieveMetaData.sh' )
 			->inputFileFromFile(
 				'scripts/retrieveMetaData.sh',
 				__DIR__ . '/../scripts/retrieveMetaData.sh' )
-			->inputFileFromFile( 'file.pdf', $this->mFilename )
 			->outputFileToString( 'meta' )
 			->outputFileToString( 'pages' )
 			->outputFileToString( 'text' )
@@ -130,8 +133,21 @@ class PdfImage {
 			->environment( [
 				'PDFHANDLER_INFO' => $pdfInfo,
 				'PDFHANDLER_TOTEXT' => $pdftoText,
-			] )
-			->execute();
+			] );
+
+		if ( $this->file !== null ) {
+			$status = $this->file->addToShellboxCommand( $command, 'file.pdf' );
+			if ( !$status->isOK() ) {
+				throw new PdfMetadataException(
+					'PDF file shellbox url unavailable, metadata cannot be retrieved for {file}: {status}',
+					[ 'file' => $this->file->getName(), 'status' => (string)$status ]
+				);
+			}
+		} else {
+			$command->inputFileFromFile( 'file.pdf', $this->mFilename );
+		}
+
+		$result = $command->execute();
 
 		// Record in statsd
 		MediaWikiServices::getInstance()->getStatsFactory()

@@ -3,10 +3,13 @@
 namespace MediaWiki\Extension\PdfHandler\Test\Integration;
 
 use MediaWiki\Extension\PdfHandler\PdfImage;
+use MediaWiki\Extension\PdfHandler\PdfMetadataException;
+use MediaWiki\FileRepo\File\File;
 use MediaWiki\Shell\CommandFactory;
 use MediaWikiIntegrationTestCase;
 use Shellbox\Command\BoxedCommand;
 use Shellbox\Command\BoxedResult;
+use StatusValue;
 use Wikimedia\TestingAccessWrapper;
 
 /**
@@ -44,6 +47,49 @@ class PdfImageTest extends MediaWikiIntegrationTestCase {
 		$data = ( new PdfImage( self::FILE_NAME, $config ) )->retrieveMetaData();
 
 		$this->assertFixtureMetadata( $data );
+	}
+
+	public function testRetrieveMetaDataWithFile() {
+		$this->markTestSkippedIfNoTools();
+
+		// Stand-in for File::addToShellboxCommand() resolving the file on its
+		// backend; expects( once() ) verifies the by-reference path is taken.
+		$file = $this->createMock( File::class );
+		$file->expects( $this->once() )
+			->method( 'addToShellboxCommand' )
+			->willReturnCallback( static function ( BoxedCommand $command, string $boxedName ) {
+				$command->inputFileFromFile( $boxedName, self::FILE_NAME );
+				return StatusValue::newGood();
+			} );
+
+		$config = $this->getServiceContainer()->getMainConfig();
+		$data = ( new PdfImage( self::FILE_NAME, $config, $file ) )->retrieveMetaData();
+
+		$this->assertFixtureMetadata( $data );
+	}
+
+	public function testRetrieveMetaDataThrowsOnMissingFile() {
+		$command = $this->createMock( BoxedCommand::class );
+		foreach ( [
+			'disableNetwork', 'firejailDefaultSeccomp', 'routeName',
+			'params', 'inputFileFromFile', 'outputFileToString', 'environment',
+		] as $method ) {
+			$command->method( $method )->willReturnSelf();
+		}
+		$command->expects( $this->never() )->method( 'execute' );
+
+		$factory = $this->createMock( CommandFactory::class );
+		$factory->method( 'createBoxed' )->willReturn( $command );
+		$this->setService( 'ShellCommandFactory', $factory );
+
+		$file = $this->createMock( File::class );
+		$file->expects( $this->once() )
+			->method( 'addToShellboxCommand' )
+			->willReturn( StatusValue::newFatal( 'backend-fail-notexists', 'file.pdf' ) );
+
+		$config = $this->getServiceContainer()->getMainConfig();
+		$this->expectException( PdfMetadataException::class );
+		( new PdfImage( 'missing.pdf', $config, $file ) )->retrieveMetaData();
 	}
 
 	/**
