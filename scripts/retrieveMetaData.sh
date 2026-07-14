@@ -16,8 +16,9 @@ runInfo() {
 		file.pdf 1> meta
 
 	# Check for errors and forward them
-	if [ $? -ne 0 ]; then
-		exit 1;
+	ec=$?
+	if [ "$ec" -ne 0 ]; then
+		exit "$ec";
 	fi
 
 	# Report metadata as UTF-8 text...and report page sizes for all pages
@@ -27,8 +28,9 @@ runInfo() {
 		file.pdf 1> pages
 
 	# Check for errors and forward them
-	if [ $? -ne 0 ]; then
-		exit 1;
+	ec=$?
+	if [ "$ec" -ne 0 ]; then
+		exit "$ec";
 	fi
 }
 
