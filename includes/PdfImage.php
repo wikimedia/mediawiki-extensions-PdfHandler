@@ -57,6 +57,19 @@ class PdfImage {
 	}
 
 	/**
+	 * Shell exit codes that indicate a transient failure (timeout, OOM kill,
+	 * SIGTERM) rather than pdfinfo rejecting the file. Callers should retry.
+	 */
+	private const TRANSIENT_EXIT_CODES = [
+		// GNU coreutils timeout
+		124,
+		// SIGKILL (commonly OOM)
+		137,
+		// SIGTERM
+		143,
+	];
+
+	/**
 	 * @return bool
 	 */
 	public function isValid() {
@@ -154,11 +167,26 @@ class PdfImage {
 			->getCounter( 'pdfhandler_shell_retrievemetadata_total' )
 			->increment();
 
-		// Metadata retrieval is allowed to fail, but we'd like to know why
-		if ( $result->getExitCode() != 0 ) {
-			wfDebug( __METHOD__ . ': retrieveMetaData.sh' .
-			"\n\nExitcode: " . $result->getExitCode() . "\n\n"
-			. $result->getStderr() );
+		$exitCode = $result->getExitCode();
+		if ( $exitCode !== 0 ) {
+			LoggerFactory::getInstance( 'PdfHandler' )->warning(
+				'retrieveMetaData.sh failed',
+				[
+					'exitCode' => $exitCode,
+					'stderr' => $result->getStderr(),
+				]
+			);
+
+			// Discard any partial output: a killed pdfinfo can leave Pages: N
+			// with only some pages described, which then renders as 0x0 (T420341).
+			if ( in_array( $exitCode, self::TRANSIENT_EXIT_CODES, true ) ) {
+				// Empty metadata → METADATA_BAD → LocalFile retries later.
+				return [];
+			}
+
+			// Permanent failure (pdfinfo rejected the file). Record an error
+			// marker so isFileMetadataValid() stops retrying forever.
+			return [ 'error' => "pdfinfo exited with code {$exitCode}" ];
 		}
 
 		$resultMeta = $result->getFileContents( 'meta' );

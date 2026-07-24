@@ -332,9 +332,30 @@ class PdfHandler extends ImageHandler {
 
 	/** @inheritDoc */
 	public function isFileMetadataValid( $image ) {
-		$data = $image->getMetadataItems( [ 'mergedMetadata', 'pages' ] );
-		if ( !isset( $data['pages'] ) ) {
+		$data = $image->getMetadataItems( [ 'mergedMetadata', 'pages', 'Pages', 'error' ] );
+
+		// Permanent extraction failure recorded by PdfImage::retrieveMetaData().
+		// Treat as good so LocalFile does not keep re-extracting a broken file.
+		if ( isset( $data['error'] ) ) {
+			return self::METADATA_GOOD;
+		}
+
+		if ( !isset( $data['pages'] ) || !isset( $data['Pages'] ) ) {
 			return self::METADATA_BAD;
+		}
+
+		$pageCount = (int)$data['Pages'];
+		if ( $pageCount < 1 ) {
+			return self::METADATA_BAD;
+		}
+
+		// Incomplete or zero-size page lists leave Multipage/MediaViewer with
+		// 0x0 dimensions (T420341). Ask for a refresh when metadata updates run.
+		for ( $i = 1; $i <= $pageCount; $i++ ) {
+			$size = PdfImage::getPageSize( $data, $i );
+			if ( !$size || $size['width'] < 1 || $size['height'] < 1 ) {
+				return self::METADATA_COMPATIBLE;
+			}
 		}
 
 		if ( !isset( $data['mergedMetadata'] ) ) {

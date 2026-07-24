@@ -141,9 +141,10 @@ class PdfHandlerTest extends MediaWikiIntegrationTestCase {
 			2 => [ 'Page size' => '612 x 792 pts (letter)', 'Page rot' => '90' ],
 		];
 		return [
-			'error marker' => [
+			'permanent error marker' => [
 				[ 'error' => 'pdfinfo exited with code 1' ],
-				MediaHandler::METADATA_BAD,
+				// Bad metadata, but not retryable
+				MediaHandler::METADATA_GOOD,
 			],
 			'empty metadata' => [ [], MediaHandler::METADATA_BAD ],
 			'missing page list' => [ [ 'Pages' => '2' ], MediaHandler::METADATA_BAD ],

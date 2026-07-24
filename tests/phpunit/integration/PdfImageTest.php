@@ -124,20 +124,23 @@ class PdfImageTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
-	 * pdfinfo failing with no output currently yields empty metadata, which is
-	 * treated as invalid and re-extracted on every access.
+	 * Permanent pdfinfo failures record an error marker so metadata is not
+	 * re-extracted on every page view.
 	 */
-	public function testRetrieveMetaDataWithNonZeroExitCode() {
+	public function testRetrieveMetaDataWithPermanentFailure() {
 		$this->mockShellResult( 1, [] );
 
 		$config = $this->getServiceContainer()->getMainConfig();
-		$this->assertSame( [], ( new PdfImage( 'test.pdf', $config ) )->retrieveMetaData() );
+		$this->assertSame(
+			[ 'error' => 'pdfinfo exited with code 1' ],
+			( new PdfImage( 'test.pdf', $config ) )->retrieveMetaData()
+		);
 	}
 
 	/**
-	 * A run killed after emitting a partial page list currently keeps that
-	 * truncated output: 'Pages' claims 3, but only one page is described, so
-	 * the remaining pages render as 0x0 (T420341).
+	 * A run killed mid-extraction must discard partial output. Keeping a
+	 * truncated page list (Pages: 3 with only page 1 described) causes the
+	 * remaining pages to render as 0x0 (T420341).
 	 */
 	public function testRetrieveMetaDataWhenKilledMidExtraction() {
 		$this->mockShellResult( 137, [
@@ -146,14 +149,12 @@ class PdfImageTest extends MediaWikiIntegrationTestCase {
 		] );
 
 		$config = $this->getServiceContainer()->getMainConfig();
-		$data = ( new PdfImage( 'test.pdf', $config ) )->retrieveMetaData();
-		$this->assertSame( '3', $data['Pages'] ?? null );
-		$this->assertCount( 1, $data['pages'] ?? [] );
+		$this->assertSame( [], ( new PdfImage( 'test.pdf', $config ) )->retrieveMetaData() );
 	}
 
 	/**
-	 * A successful run whose page list is shorter than 'Pages' is currently
-	 * kept as well, with the same 0x0 consequence (T420341).
+	 * A successful run whose page list is shorter than 'Pages' is kept;
+	 * isFileMetadataValid() marks it METADATA_COMPATIBLE so it can be refreshed.
 	 */
 	public function testRetrieveMetaDataWithTruncatedPageList() {
 		$this->mockShellResult( 0, [
