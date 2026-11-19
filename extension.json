@@ -9,7 +9,7 @@
 	"license-name": "GPL-2.0-or-later",
 	"type": "media",
 	"requires": {
-		"MediaWiki": ">= 1.47.0"
+		"MediaWiki": ">= 1.48.0"
 	},
 	"config": {
 		"PdfOutputExtension": {
@@ -52,7 +52,9 @@
 	"HookHandlers": {
 		"PdfHandlerHooks": {
 			"class": "MediaWiki\\Extension\\PdfHandler\\PdfHandlerHooks",
-			"services": [ "MainWANObjectCache" ]
+			"services": [
+				"MainWANObjectCache"
+			]
 		}
 	},
 	"Hooks": {
